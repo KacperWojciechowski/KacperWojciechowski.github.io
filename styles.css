@@ -249,6 +249,10 @@ iframe {
     border-radius: 15px;
 }
 
+.main-window { 
+    height: 100%;
+}
+
 @media (max-width: 768px) {
     .right-sidebar {
         display: none; /* Hide right sidebar on mobile */
@@ -266,6 +270,27 @@ iframe {
     .sidebar {
         display: none; /* Hide sidebar on mobile */
     }
+
+    .main-window {
+        height: auto;
+        width: 100%;
+    }
+
+    .profile-photo {
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        z-index: 2;
+    }
+    
+    .profile-photo img {
+        border-radius: 50%;
+        width: 75px;
+        height: 87px;
+        border: 3px solid rgb(119, 151, 194);
+        box-shadow: 0 0 0 5px rgba(122, 193, 252, 0.5), 
+                    0 0 5px rgba(89, 140, 235, 0.5) inset;
+    }
 }
 
 @media (min-width: 769px) {
@@ -279,5 +304,25 @@ iframe {
 
     .right-sidebar {
         display: block; /* Show right sidebar on desktop */
+    }
+
+    .main-window {
+        width: calc(100% - 240px);;
+    }
+
+    .profile-photo {
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        z-index: 2;
+    }
+    
+    .profile-photo img {
+        border-radius: 50%;
+        width: 150px;
+        height: 175px;
+        border: 5px solid rgb(119, 151, 194);
+        box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), 
+                    0 0 10px rgba(89, 140, 235, 0.5) inset;
     }
 }
