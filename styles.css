@@ -18,34 +18,34 @@ body {
     color: white;
     padding: 20px;
     position: relative;
-    height: 200px; /* Increase the height of the banner */
+    height: 200px;
 }
 
 .profile-photo {
     position: absolute;
-    top: 25px; /* Adjust this value as needed */
-    left: 40px; /* Position 20px from the left side */
-    z-index: 2; /* Ensure the photo is in front of the menu bar */
+    top: 25px;
+    left: 40px;
+    z-index: 2;
 }
 
 .profile-photo img {
     border-radius: 50%;
-    width: 150px; /* Increase the size of the photo */
-    height: 175px; /* Increase the size of the photo */
-    border: 5px solid rgb(119, 151, 194); /* Optional: Add a white border around the photo */
-    box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), /* Outer silver ring */
-                0 0 10px rgba(89, 140, 235, 0.5) inset; /* Inner convex effect */
+    width: 150px;
+    height: 175px;
+    border: 5px solid rgb(119, 151, 194);
+    box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), 
+                0 0 10px rgba(89, 140, 235, 0.5) inset;
 }
 
 .menu-bar {
     width: 100%;
-    background-color: #0A1F44; /* Dark Blue background */
-    padding: 20px 0; /* Increase the height of the menu bar */
+    background-color: #0A1F44;
+    padding: 20px 0;
     text-align: center;
     position: relative;
-    z-index: 1; /* Ensure the menu bar is behind the photo */
-    border-radius: 15px; /* Add rounded corners */
-    margin-top: 100px; /* Offset the vertical placement of the menu bar */
+    z-index: 1;
+    border-radius: 15px;
+    margin-top: 100px;
 }
 
 .menu-bar ul {
@@ -69,20 +69,20 @@ body {
     transform: translateY(-50%);
     width: 1px;
     height: 50%;
-    background-color: white; /* Vertical line color */
+    background-color: white;
 }
 
 .menu-bar ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 40px; /* Increase the width of the buttons */
+    padding: 10px 40px;
     border-radius: 15px;
-    background-color: #0c2757; /* Slightly darker blue buttons */
+    background-color: #0c2757;
     transition: background-color 0.3s;
 }
 
 .menu-bar ul li a:hover {
-    background-color: #0056b3; /* Darker Electric Blue on hover */
+    background-color: #0056b3;
 }
 
 .container {
@@ -97,94 +97,94 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align items to the left */
-    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .sidebar h2 {
     text-align: center;
-    width: 180px; /* Set the width of the h2 element */
+    width: 180px;
     height: 50px;
     margin-top: 0;
-    padding: 0px 10px; /* Add padding inside the rounded rectangle */
-    background-image: url('pictures/arrow-1988452_1280.png'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the entire h2 element */
-    background-position: center; /* Center the background image */
-    border-radius: 15px; /* Rounded corners */
-    color: white; /* Text color */
+    padding: 0px 10px;
+    background-image: url('pictures/arrow-1988452_1280.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    color: white;
     display: flex;
-    align-items: flex-end; /* Align text to the bottom */
-    justify-content: center; /* Center text horizontally */
-    padding-bottom: 25px; /* Add padding to move text slightly lower */
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 25px;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the contact items horizontally */
+    align-items: center;
 }
 
 .contact-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the label and value horizontally */
-    margin-bottom: 8px; /* Add some space between contact items */
+    align-items: center;
+    margin-bottom: 8px;
 }
 
 .contact-item:last-child {
-    margin-bottom: 30px; /* Add more space after the last contact item */
+    margin-bottom: 30px;
 }
 
 .contact-label {
     font-weight: bold;
-    margin-bottom: 5px; /* Add some space between the label and value */
+    margin-bottom: 5px;
 }
 
 .contact-value {
-    color: white; /* Ensure the value text color is white */
+    color: white;
 }
 
 .social-media-container {
     display: flex;
-    justify-content: center; /* Center the div horizontally */
-    width: 100%; /* Ensure the div takes the full width of the sidebar */
+    justify-content: center;
+    width: 100%;
 }
 
 .github-icon {
-    width: 80px; /* Set the width of the GitHub icon */
-    height: 25px; /* Set the height of the GitHub icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 80px;
+    height: 25px;
+    margin-bottom: 10px;
 }
 
 .linkedin-icon {
-    width: 90px; /* Set the width of the LinkedIn icon */
-    height: 25px; /* Set the height of the LinkedIn icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 90px;
+    height: 25px;
+    margin-bottom: 10px;
 }
 
 .facebook-icon {
-    width: 100px; /* Set the width of the Facebook icon */
-    height: 25px; /* Set the height of the Facebook icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 100px;
+    height: 25px;
+    margin-bottom: 10px;
 }
 
 .researchgate-icon {
-    width: 130px; /* Set the width of the ResearchGate icon */
-    height: 25px; /* Set the height of the ResearchGate icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 130px;
+    height: 25px;
+    margin-bottom: 10px;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
+    margin: 0;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 .sidebar ul li {
-    margin-bottom: 5px; /* Reduce space between list items */
+    margin-bottom: 5px;
 }
 
 .sidebar ul li a {
@@ -195,22 +195,22 @@ body {
 
 .main-content {
     flex-grow: 1;
-    padding: 0; /* Remove padding from the main content */
-    margin: 0; /* Remove margin from the main content */
-    border: none; /* Remove any border from the main content */
-    overflow: hidden; /* Ensure the iframe fills the main content area */
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
-    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 0px 0; /* Adjust padding to change the height */
-    height: 50px; /* Set a fixed height if needed */
+    padding: 0px 0;
+    height: 50px;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -221,32 +221,32 @@ body {
 }
 
 iframe {
-    border: none; /* Remove the border from the iframe */
+    border: none;
     width: 100%;
     height: 100%;
-    display: block; /* Ensure the iframe is displayed as a block element */
+    display: block;
 }
 
 .right-sidebar {
     width: 200px;
-    background-image: url('pictures/StockCake-Futuristic\ Virtual\ Reality_1728060885.jpg'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the entire sidebar */
-    background-position: center; /* Center the background image */
+    background-image: url('pictures/StockCake-Futuristic\ Virtual\ Reality_1728060885.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    justify-content: flex-start;
     position: absolute;
     right: 0;
-    top: 240px; /* Position below the banner */
-    height: calc(100% - 240px - 50px); /* Adjust height to fill the remaining space */
+    top: 240px;
+    height: calc(100% - 240px - 50px);
 }
 
 .right-sidebar img {
     width: 100%;
-    border-radius: 15px; /* Optional: Add rounded corners to the image */
+    border-radius: 15px;
 }
 
 /* Media Queries for Responsiveness */
@@ -272,5 +272,62 @@ iframe {
     iframe {
         width: 100%;
         height: auto;
+    }
+}
+
+/* Media Queries for Vertical Displays */
+@media (max-aspect-ratio: 9/16) {
+    .banner {
+        height: 150px;
+    }
+
+    .profile-photo img {
+        width: 100px;
+        height: 125px;
+    }
+
+    .menu-bar {
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+
+    .menu-bar ul li a {
+        padding: 5px 20px;
+    }
+
+    .sidebar {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .sidebar h2 {
+        width: 140px;
+        height: 40px;
+    }
+
+    .contact-item {
+        margin-bottom: 5px;
+    }
+
+    .contact-item:last-child {
+        margin-bottom: 20px;
+    }
+
+    .github-icon,
+    .linkedin-icon,
+    .facebook-icon,
+    .researchgate-icon {
+        width: 70px;
+        height: 20px;
+    }
+
+    .right-sidebar {
+        width: 150px;
+        top: 180px;
+        height: calc(100% - 180px - 50px);
+    }
+
+    .right-sidebar img {
+        width: 100%;
     }
 }

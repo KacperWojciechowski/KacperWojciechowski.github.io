@@ -6,7 +6,7 @@ body {
     color: black; /* Default text color */
     font-family: Arial, sans-serif; /* Default font */
     margin: 0;
-    padding: 20px; /* Add padding to ensure content does not touch the edges */
+    padding: 1.11vh; /* Add padding to ensure content does not touch the edges */
     height: 100vh; /* Ensure the background fills the whole viewport */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
@@ -14,7 +14,7 @@ body {
 /* Heading styles */
 h1, h2, h3, h4, h5, h6 {
     color: black;
-    margin: 20px 0;
+    margin: 1.11vh 0;
 }
 
 /* Link styles */
@@ -26,7 +26,7 @@ a {
 /* Custom horizontal rule */
 .custom-hr {
     border: 0;
-    height: 2px; /* Increase the height */
+    height: 0.11vh; /* Increase the height */
     background: rgba(0, 0, 0, 0.8); /* Ensure good contrast */
     margin: 0 0; /* Add margin above and below */
 }
@@ -38,21 +38,21 @@ p {
 }
 .content-container {
     background-color: #fffacd; /* Pastel yellow background */
-    border: 2px solid white; /* White border */
-    border-radius: 15px; /* Rounded edges */
-    padding: 20px; /* Padding inside the div */
-    margin: 20px 0; /* Margin around the div */
+    border: 0.11vh solid white; /* White border */
+    border-radius: 0.83vh; /* Rounded edges */
+    padding: 1.11vh; /* Padding inside the div */
+    margin: 1.11vh 0; /* Margin around the div */
 }
 .custom-h1 {
     text-align: left;
     margin-top: 0;
-    padding: 25px 35px; /* Add padding inside the rounded rectangle */
+    padding: 1.39vh 1.94vh; /* Add padding inside the rounded rectangle */
     background-image: url('pictures/arrow-1988452_1280.png'); /* Set the background image */
     background-size: contain;
     background-position: center; /* Center the background image */
     background-clip: border-box;
     background-origin: border-box;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 1.11vh; /* Rounded corners */
     color: white; /* Text color */
     display: inline-block;
     align-items: center; /* Center text vertically */
