@@ -87,7 +87,7 @@ body {
     position: relative;
     z-index: 1;
     border-radius: 1.5vw;
-    margin-top: 13vh;
+    margin-top: 127px;
 }
 
 .menu-bar-mobile ul {
@@ -305,12 +305,8 @@ iframe {
         width: 100vw;
     }
 
-    .menu-bar {
-        margin-top: 127px;
-    }
-
-    .menu-bar ul li {
-        margin: 0 0.5vw;
+    .menu-bar-mobile {
+        display: block;
     }
 
     .profile-photo {
@@ -336,10 +332,6 @@ iframe {
     .banner {
         height: 100px;
         width: 100%;
-    }
-
-    .menu-bar-mobile {
-        display: block;
     }
 
     .menu-bar {
