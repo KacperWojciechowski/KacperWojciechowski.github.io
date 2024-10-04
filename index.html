@@ -1,66 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kacper Wojciechowski</title>
-    <link rel="stylesheet" type="text/css" href="mainpage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="flow-container">
-            <img src="banner.png" alt="Banner Image" width="150" height="150">
-            <h1>Hello, I'm Kacper Wojciechowski!</h1>
+    <header class="banner">
+        <div class="profile-photo">
+            <img src="path/to/your/photo.jpg" alt="Profile Photo">
         </div>
+        <nav class="menu-bar">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p> I am a software developer with master's degree in computer science. I have a
-                passion for C++ programming and enjoy working on projects with vast structural
-                designs and complex algorithms. I am always eager to learn new technologies and
-                deepen my knowledge of software development.
-                </p>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <h3><a href="https://github.com/KacperWojciechowski/Graphs">Graphs</a></h3>
-                    <p>Implementation of graph support for C++ language.
-
-                        Started as a university project, later developed into a standalone library,
-                        offering a number of functionalities such as graph coloring and finding the shortest path.
-
-                        Currently under a major refactor, aiming to improve the code quality and add new features.
-                    </p>
-                </li>
-                <li>
-                    <h3>Project 2</h3>
-                    <p>Description of project 2.</p>
-                </li>
-                <!-- Add more projects as needed -->
-            </ul>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>C++</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Object-Oriented Programming</li>
-                <!-- Add more skills as needed -->
-            </ul>
-        </section>
-
-        <section>
+    <div class="container">
+        <aside class="sidebar">
             <h2>Contact</h2>
-            <p>Provide your contact information, such as email or social media handles, for potential employers or collaborators to reach out to you.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2022 Your Name</p>
-    </footer>
+            <p>Email: your.email@example.com</p>
+            <p>Phone: +1234567890</p>
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://github.com/yourprofile">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+                <!-- Add more social media links as needed -->
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section id="about-me">
+                <h1>About Me</h1>
+                <p>Write about yourself here.</p>
+            </section>
+            <section id="education">
+                <h1>Education</h1>
+                <p>Details about your education.</p>
+            </section>
+            <section id="experience">
+                <h1>Experience</h1>
+                <p>Details about your work experience.</p>
+            </section>
+            <section id="skills">
+                <h1>Skills</h1>
+                <p>Details about your skills.</p>
+            </section>
+            <section id="projects">
+                <h1>Projects</h1>
+                <p>Details about your projects.</p>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
