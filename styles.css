@@ -299,7 +299,7 @@ iframe {
     }
 
     .main-window {
-        height: 100%;
+        height: calc(100% - 6vh);
         width: 100vw;
     }
 
