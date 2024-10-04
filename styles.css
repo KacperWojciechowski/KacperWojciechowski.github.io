@@ -8,8 +8,6 @@ body {
 }
 
 .banner {
-    height: 27vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +85,7 @@ body {
     position: relative;
     z-index: 1;
     border-radius: 1.5vw;
-    margin-top: 127px + 1.5vw;
+    margin-top: calc(40px + 5vh + 1.5vw);
 }
 
 .menu-bar-mobile ul {
@@ -330,6 +328,7 @@ iframe {
     }
 
     .banner {
+        height: calc(40px + 5vh + 1.5vw + 6vw + 3vw);
         width: 100%;
     }
 
@@ -383,5 +382,10 @@ iframe {
 
     .menu-bar {
         display: block;
+    }
+
+    .banner {
+        height: 27vh;
+        width: 100%;
     }
 }
