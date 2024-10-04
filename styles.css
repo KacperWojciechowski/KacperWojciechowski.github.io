@@ -87,7 +87,7 @@ body {
     position: relative;
     z-index: 1;
     border-radius: 1.5vw;
-    margin-top: 127px;
+    margin-top: 127px + 1.5vw;
 }
 
 .menu-bar-mobile ul {
@@ -318,8 +318,8 @@ iframe {
     
     .profile-photo img {
         border-radius: 50%;
-        width: 75px;
-        height: 87px;
+        width: 14vw;
+        height: 5vh;
         border: 3px solid rgb(119, 151, 194);
         box-shadow: 0 0 0 5px rgba(122, 193, 252, 0.5), 
                     0 0 5px rgba(89, 140, 235, 0.5) inset;
@@ -330,7 +330,6 @@ iframe {
     }
 
     .banner {
-        height: 100px;
         width: 100%;
     }
 
