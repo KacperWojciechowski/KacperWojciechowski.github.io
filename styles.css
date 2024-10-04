@@ -2,72 +2,226 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .banner {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #333;
+    justify-content: center;
+    background-image: url('pictures/StockCake-Advanced\ circuit\ technology_1728060876.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
+    position: relative;
+    height: 200px; /* Increase the height of the banner */
+}
+
+.profile-photo {
+    position: absolute;
+    top: 25px; /* Adjust this value as needed */
+    left: 35px; /* Position 20px from the left side */
+    z-index: 2; /* Ensure the photo is in front of the menu bar */
 }
 
 .profile-photo img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 175px; /* Increase the size of the photo */
+    height: 175px; /* Increase the size of the photo */
+    border: 5px solid rgb(119, 151, 194); /* Optional: Add a white border around the photo */
+    box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), /* Outer silver ring */
+                0 0 10px rgba(89, 140, 235, 0.5) inset; /* Inner convex effect */
+}
+
+.menu-bar {
+    width: 100%;
+    background-color: #0A1F44; /* Dark Blue background */
+    padding: 20px 0; /* Increase the height of the menu bar */
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure the menu bar is behind the photo */
+    border-radius: 15px; /* Add rounded corners */
+    margin-top: 100px; /* Offset the vertical placement of the menu bar */
 }
 
 .menu-bar ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
 
 .menu-bar ul li {
     margin: 0 15px;
+    position: relative;
+}
+
+.menu-bar ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+    background-color: white; /* Vertical line color */
 }
 
 .menu-bar ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px 40px; /* Increase the width of the buttons */
+    border-radius: 15px;
+    background-color: #0c2757; /* Slightly darker blue buttons */
+    transition: background-color 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #0056b3; /* Darker Electric Blue on hover */
 }
 
 .container {
     display: flex;
+    flex-grow: 1;
 }
 
 .sidebar {
     width: 200px;
-    background-color: #f4f4f4;
+    background-color: rgb(15, 54, 90);
+    color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items to the left */
+    justify-content: flex-start; /* Align items to the top */
 }
 
 .sidebar h2 {
+    text-align: center;
+    width: 180px; /* Set the width of the h2 element */
+    height: 50px;
     margin-top: 0;
+    padding: 0px 10px; /* Add padding inside the rounded rectangle */
+    background-image: url('arrow-1988452_1280.png'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire h2 element */
+    background-position: center; /* Center the background image */
+    border-radius: 15px; /* Rounded corners */
+    color: white; /* Text color */
+    display: flex;
+    align-items: flex-end; /* Align text to the bottom */
+    justify-content: center; /* Center text horizontally */
+    padding-bottom: 25px; /* Add padding to move text slightly lower */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the contact items horizontally */
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the label and value horizontally */
+    margin-bottom: 8px; /* Add some space between contact items */
+}
+
+.contact-item:last-child {
+    margin-bottom: 30px; /* Add more space after the last contact item */
+}
+
+.contact-label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Add some space between the label and value */
+}
+
+.contact-value {
+    color: white; /* Ensure the value text color is white */
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: center; /* Center the div horizontally */
+    width: 100%; /* Ensure the div takes the full width of the sidebar */
+}
+
+.github-icon {
+    width: 80px; /* Set the width of the GitHub icon */
+    height: 30px; /* Set the height of the GitHub icon */
+    margin-bottom: 10px; /* Add some space below the icon */
+}
+
+.linkedin-icon {
+    width: 90px; /* Set the width of the LinkedIn icon */
+    height: 30px; /* Set the height of the LinkedIn icon */
+    margin-bottom: 10px; /* Add some space below the icon */
+}
+
+.facebook-icon {
+    width: 100px; /* Set the width of the Facebook icon */
+    height: 30px; /* Set the height of the Facebook icon */
+    margin-bottom: 10px; /* Add some space below the icon */
+}
+
+.researchgate-icon {
+    width: 130px; /* Set the width of the ResearchGate icon */
+    height: 30px; /* Set the height of the ResearchGate icon */
+    margin-bottom: 10px; /* Add some space below the icon */
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduce space between list items */
 }
 
 .sidebar ul li a {
+    display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: white;
 }
 
 .main-content {
     flex-grow: 1;
-    padding: 20px;
+    padding: 0; /* Remove padding from the main content */
+    margin: 0; /* Remove margin from the main content */
+    border: none; /* Remove any border from the main content */
+    overflow: hidden; /* Ensure the iframe fills the main content area */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Align content to the top */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .main-content section {
     margin-bottom: 40px;
+}
+
+iframe {
+    border: none; /* Remove the border from the iframe */
+    width: 100%;
+    height: 100%;
+    display: block; /* Ensure the iframe is displayed as a block element */
 }

@@ -1,0 +1,35 @@
+/* common-styles.css */
+
+/* Background color */
+body {
+    background-color: #add8e6; /* Pastel light blue */
+    color: black; /* Default text color */
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 0;
+    padding: 20px; /* Add padding to ensure content does not touch the edges */
+    height: 100vh; /* Ensure the background fills the whole viewport */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #black;
+    margin: 20px 0;
+}
+
+/* Paragraph styles */
+p {
+    color: #black;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Link styles */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
