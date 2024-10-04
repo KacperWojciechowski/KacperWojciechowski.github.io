@@ -80,12 +80,12 @@ body {
 .menu-bar-mobile {
     width: 95vw;
     background-color: #0A1F44;
-    padding: 1.5vw 0;
+    padding: 5vw 0;
     text-align: center;
     position: relative;
     z-index: 1;
     border-radius: 1.5vw;
-    margin-top: calc(40px + 5vh + 1.5vw);
+    margin-top: calc(20px + 5vh + 1.5vw);
 }
 
 .menu-bar-mobile ul {
@@ -317,7 +317,7 @@ iframe {
     .profile-photo img {
         border-radius: 50%;
         width: 14vw;
-        height: 5vh;
+        height: 6.5vh;
         border: 3px solid rgb(119, 151, 194);
         box-shadow: 0 0 0 5px rgba(122, 193, 252, 0.5), 
                     0 0 5px rgba(89, 140, 235, 0.5) inset;
@@ -328,7 +328,7 @@ iframe {
     }
 
     .banner {
-        height: calc(40px + 5vh + 1.5vw + 6vw + 3vw);
+        height: calc(40px + 7vh + 5vw + 6vw + 3vw);
         width: 100%;
     }
 
