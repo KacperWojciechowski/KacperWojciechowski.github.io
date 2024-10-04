@@ -16,36 +16,36 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 20px;
+    padding: 1.11vw; /* 20px */
     position: relative;
-    height: 200px; /* Increase the height of the banner */
+    height: 11.11vh; /* 200px */
 }
 
 .profile-photo {
     position: absolute;
-    top: 25px; /* Adjust this value as needed */
-    left: 40px; /* Position 20px from the left side */
-    z-index: 2; /* Ensure the photo is in front of the menu bar */
+    top: 1.39vh; /* 25px */
+    left: 1.39vw; /* 40px */
+    z-index: 2;
 }
 
 .profile-photo img {
     border-radius: 50%;
-    width: 150px; /* Increase the size of the photo */
-    height: 175px; /* Increase the size of the photo */
-    border: 5px solid rgb(119, 151, 194); /* Optional: Add a white border around the photo */
-    box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), /* Outer silver ring */
-                0 0 10px rgba(89, 140, 235, 0.5) inset; /* Inner convex effect */
+    width: 5.21vw; /* 150px */
+    height: 9.72vh; /* 175px */
+    border: 0.17vw solid rgb(119, 151, 194); /* 5px */
+    box-shadow: 0 0 0 0.35vw rgba(122, 193, 252, 0.5), /* 10px */
+                0 0 0.35vw rgba(89, 140, 235, 0.5) inset; /* 10px */
 }
 
 .menu-bar {
     width: 100%;
-    background-color: #0A1F44; /* Dark Blue background */
-    padding: 20px 0; /* Increase the height of the menu bar */
+    background-color: #0A1F44;
+    padding: 1.11vh 0; /* 20px */
     text-align: center;
     position: relative;
-    z-index: 1; /* Ensure the menu bar is behind the photo */
-    border-radius: 15px; /* Add rounded corners */
-    margin-top: 100px; /* Offset the vertical placement of the menu bar */
+    z-index: 1;
+    border-radius: 0.52vw; /* 15px */
+    margin-top: 5.56vh; /* 100px */
 }
 
 .menu-bar ul {
@@ -57,32 +57,32 @@ body {
 }
 
 .menu-bar ul li {
-    margin: 0 15px;
+    margin: 0 0.52vw; /* 15px */
     position: relative;
 }
 
 .menu-bar ul li:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: -15px;
+    right: -0.52vw; /* 15px */
     top: 50%;
     transform: translateY(-50%);
-    width: 1px;
+    width: 0.035vw; /* 1px */
     height: 50%;
-    background-color: white; /* Vertical line color */
+    background-color: white;
 }
 
 .menu-bar ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 40px; /* Increase the width of the buttons */
-    border-radius: 15px;
-    background-color: #0c2757; /* Slightly darker blue buttons */
+    padding: 0.56vh 1.39vw; /* 10px 40px */
+    border-radius: 0.52vw; /* 15px */
+    background-color: #0c2757;
     transition: background-color 0.3s;
 }
 
 .menu-bar ul li a:hover {
-    background-color: #0056b3; /* Darker Electric Blue on hover */
+    background-color: #0056b3;
 }
 
 .container {
@@ -91,100 +91,100 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 6.94vw; /* 200px */
     background-color: rgb(15, 54, 90);
     color: white;
-    padding: 20px;
+    padding: 1.11vw; /* 20px */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align items to the left */
-    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .sidebar h2 {
     text-align: center;
-    width: 180px; /* Set the width of the h2 element */
-    height: 50px;
+    width: 6.25vw; /* 180px */
+    height: 2.78vh; /* 50px */
     margin-top: 0;
-    padding: 0px 10px; /* Add padding inside the rounded rectangle */
-    background-image: url('pictures/arrow-1988452_1280.png'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the entire h2 element */
-    background-position: center; /* Center the background image */
-    border-radius: 15px; /* Rounded corners */
-    color: white; /* Text color */
+    padding: 0 0.35vw; /* 10px */
+    background-image: url('pictures/arrow-1988452_1280.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.52vw; /* 15px */
+    color: white;
     display: flex;
-    align-items: flex-end; /* Align text to the bottom */
-    justify-content: center; /* Center text horizontally */
-    padding-bottom: 25px; /* Add padding to move text slightly lower */
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1.39vh; /* 25px */
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the contact items horizontally */
+    align-items: center;
 }
 
 .contact-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the label and value horizontally */
-    margin-bottom: 8px; /* Add some space between contact items */
+    align-items: center;
+    margin-bottom: 0.44vh; /* 8px */
 }
 
 .contact-item:last-child {
-    margin-bottom: 30px; /* Add more space after the last contact item */
+    margin-bottom: 1.67vh; /* 30px */
 }
 
 .contact-label {
     font-weight: bold;
-    margin-bottom: 5px; /* Add some space between the label and value */
+    margin-bottom: 0.28vh; /* 5px */
 }
 
 .contact-value {
-    color: white; /* Ensure the value text color is white */
+    color: white;
 }
 
 .social-media-container {
     display: flex;
-    justify-content: center; /* Center the div horizontally */
-    width: 100%; /* Ensure the div takes the full width of the sidebar */
+    justify-content: center;
+    width: 100%;
 }
 
 .github-icon {
-    width: 80px; /* Set the width of the GitHub icon */
-    height: 25px; /* Set the height of the GitHub icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 2.78vw; /* 80px */
+    height: 1.39vh; /* 25px */
+    margin-bottom: 0.56vh; /* 10px */
 }
 
 .linkedin-icon {
-    width: 90px; /* Set the width of the LinkedIn icon */
-    height: 25px; /* Set the height of the LinkedIn icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 3.13vw; /* 90px */
+    height: 1.39vh; /* 25px */
+    margin-bottom: 0.56vh; /* 10px */
 }
 
 .facebook-icon {
-    width: 100px; /* Set the width of the Facebook icon */
-    height: 25px; /* Set the height of the Facebook icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 3.47vw; /* 100px */
+    height: 1.39vh; /* 25px */
+    margin-bottom: 0.56vh; /* 10px */
 }
 
 .researchgate-icon {
-    width: 130px; /* Set the width of the ResearchGate icon */
-    height: 25px; /* Set the height of the ResearchGate icon */
-    margin-bottom: 10px; /* Add some space below the icon */
+    width: 4.51vw; /* 130px */
+    height: 1.39vh; /* 25px */
+    margin-bottom: 0.56vh; /* 10px */
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
+    margin: 0;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 .sidebar ul li {
-    margin-bottom: 5px; /* Reduce space between list items */
+    margin-bottom: 0.28vh; /* 5px */
 }
 
 .sidebar ul li a {
@@ -195,58 +195,58 @@ body {
 
 .main-content {
     flex-grow: 1;
-    padding: 0; /* Remove padding from the main content */
-    margin: 0; /* Remove margin from the main content */
-    border: none; /* Remove any border from the main content */
-    overflow: hidden; /* Ensure the iframe fills the main content area */
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
-    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 0px 0; /* Adjust padding to change the height */
-    height: 50px; /* Set a fixed height if needed */
+    padding: 0;
+    height: 2.78vh; /* 50px */
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 .main-content section {
-    margin-bottom: 40px;
+    margin-bottom: 2.22vh; /* 40px */
 }
 
 iframe {
-    border: none; /* Remove the border from the iframe */
+    border: none;
     width: 100%;
     height: 100%;
-    display: block; /* Ensure the iframe is displayed as a block element */
+    display: block;
 }
 
 .right-sidebar {
-    width: 200px;
-    background-image: url('pictures/StockCake-Futuristic\ Virtual\ Reality_1728060885.jpg'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the entire sidebar */
-    background-position: center; /* Center the background image */
+    width: 6.94vw; /* 200px */
+    background-image: url('pictures/StockCake-Futuristic\ Virtual\ Reality_1728060885.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 20px;
+    padding: 1.11vw; /* 20px */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+    justify-content: flex-start;
     position: absolute;
     right: 0;
-    top: 240px; /* Position below the banner */
-    height: calc(100% - 240px - 50px); /* Adjust height to fill the remaining space */
+    top: 13.33vh; /* 240px */
+    height: calc(100% - 13.33vh - 2.78vh); /* 240px - 50px */
 }
 
 .right-sidebar img {
     width: 100%;
-    border-radius: 15px; /* Optional: Add rounded corners to the image */
+    border-radius: 0.52vw; /* 15px */
 }
 
 /* Media Queries for Responsiveness */
@@ -256,7 +256,7 @@ iframe {
         height: auto;
         position: relative;
         top: 0;
-        padding: 10px;
+        padding: 0.56vw; /* 10px */
     }
 
     .right-sidebar img {
@@ -266,7 +266,7 @@ iframe {
 
     .footer {
         height: auto;
-        padding: 10px 0;
+        padding: 0.56vh 0; /* 10px */
     }
 
     iframe {
