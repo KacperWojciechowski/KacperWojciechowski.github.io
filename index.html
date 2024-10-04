@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kacper Wojciechowski</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function adjustIframeHeight() {
+            var iframe = document.querySelector('.main-window');
+            var footerHeight = document.querySelector('.footer').offsetHeight;
+            var bannerHeight = document.querySelector('.banner').offsetHeight;
+            var iframeDocument = iframe.contentWindow.document;
+
+            // Reset the iframe height to auto to get the correct scrollHeight
+            iframe.style.height = 'auto';
+
+            var contentHeight = iframeDocument.body.scrollHeight;
+            var availableHeight = window.innerHeight - bannerHeight - footerHeight;
+
+            if (contentHeight <= availableHeight) {
+                iframe.style.height = availableHeight + 'px';
+            } else {
+                iframe.style.height = contentHeight + footerHeight + 20 + 'px';
+            }
+
+            iframe.style.overflow = 'hidden'; // Make iframe not scrollable
+        }
+    </script>
 </head>
 <body>
     <header class="banner">
@@ -55,17 +77,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://linkedin.com/in/kacper-wojciechowski-knik-uz/" target="_blank">
+                        <a href="https://www.linkedin.com/in/kacper-wojciechowski-knik-uz/" target="_blank">
                             <img class="linkedin-icon" src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white" alt="LinkedIn">
                         </a>
                     </li>
                     <li>
-                        <a href="https://facebook.com/kacper-wojciechowski-knik-uz/" target="_blank">
+                        <a href="https://www.facebook.com/profile.php?id=100004812454449" target="_blank">
                             <img class="facebook-icon" src="https://img.shields.io/badge/-Facebook-blue?style=flat&logo=Facebook&logoColor=white" alt="Facebook">
                         </a>
                     </li>
                     <li>
-                        <a href="https://researchgate.net/profile/Kacper-Wojciechowski" target="_blank">
+                        <a href="https://www.researchgate.net/profile/Kacper-Wojciechowski-2" target="_blank">
                             <img class="researchgate-icon" src="https://img.shields.io/badge/-ResearchGate-darkgreen?style=flat&logo=ResearchGate&logoColor=white" alt="ResearchGate">
                         </a>
                     </li>
@@ -73,10 +95,8 @@
             </div>
         </aside>
         <main class="main-content">
-            <iframe class="main-window" name="content-frame" src="about-me.html" frameborder="0"></iframe>
+            <iframe class="main-window" name="content-frame" src="about-me.html" frameborder="0" onload="adjustIframeHeight()"></iframe>
         </main>
-        <aside class="right-sidebar">
-        </aside>
     </div>
     <footer class="footer">
         <p>&copy; 2024 Wojciechowski Kacper</p>
