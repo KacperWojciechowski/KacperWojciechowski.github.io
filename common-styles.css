@@ -60,3 +60,9 @@ p {
     width: auto;
     white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+    .custom-h1 {
+        padding: 1.39vw 1.94vw;
+    }
+}

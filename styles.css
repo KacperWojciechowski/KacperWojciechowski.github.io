@@ -8,6 +8,8 @@ body {
 }
 
 .banner {
+    height: 27vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,36 +18,28 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 20px;
+    padding: 0px;
     position: relative;
-    height: 200px;
 }
 
 .profile-photo {
     position: absolute;
-    top: 25px;
-    left: 40px;
     z-index: 2;
 }
 
 .profile-photo img {
     border-radius: 50%;
-    width: 150px;
-    height: 175px;
-    border: 5px solid rgb(119, 151, 194);
-    box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), 
-                0 0 10px rgba(89, 140, 235, 0.5) inset;
 }
 
 .menu-bar {
-    width: 100%;
+    width: 95vw;
     background-color: #0A1F44;
-    padding: 20px 0;
+    padding: 1.5vw 0;
     text-align: center;
     position: relative;
     z-index: 1;
-    border-radius: 15px;
-    margin-top: 100px;
+    border-radius: 1.5vw;
+    margin-top: 13vh;
 }
 
 .menu-bar ul {
@@ -57,14 +51,14 @@ body {
 }
 
 .menu-bar ul li {
-    margin: 0 15px;
+    margin: 0 1vw;
     position: relative;
 }
 
 .menu-bar ul li:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: -15px;
+    right: -1vw;
     top: 50%;
     transform: translateY(-50%);
     width: 1px;
@@ -75,7 +69,7 @@ body {
 .menu-bar ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 40px;
+    padding: 1vh 3vw;
     border-radius: 15px;
     background-color: #0c2757;
     transition: background-color 0.3s;
@@ -91,10 +85,11 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 12vw;
+    padding-left: 1.5vw;
+    padding-right: 2.5vw;    
     background-color: rgb(15, 54, 90);
     color: white;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,19 +98,18 @@ body {
 
 .sidebar h2 {
     text-align: center;
-    width: 180px;
-    height: 50px;
-    margin-top: 0;
-    padding: 0px 10px;
+    width: 12vw;
+    height: 6vh;
     background-image: url('pictures/arrow-1988452_1280.png');
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
     color: white;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 25px;
+    padding-bottom: 12%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .contact-info {
@@ -210,9 +204,8 @@ body {
     color: white;
     text-align: center;
     padding: 0px 0;
-    height: 50px;
+    height: 6%;
     position: fixed;
-    width: 100%;
     bottom: 0;
 }
 
@@ -222,35 +215,28 @@ body {
 
 iframe {
     border: none;
-    width: 100%;
-    height: 100%;
     display: block;
 }
 
 .right-sidebar {
-    width: 200px;
+    width: 12vw;
     background-image: url('pictures/StockCake-Futuristic\ Virtual\ Reality_1728060885.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 20px;
+    padding: 1.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     position: absolute;
     right: 0;
-    top: 240px;
-    height: calc(100% - 240px - 50px);
+    top: 27vh;
+    height: calc(100% - 27vh - 6%);
 }
 
 .right-sidebar img {
     width: 100%;
-    border-radius: 15px;
-}
-
-.main-window { 
-    height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -258,9 +244,9 @@ iframe {
         display: none; /* Hide right sidebar on mobile */
     }
 
-    iframe {
+    .main-window {
+        height: 100%;
         width: 100%;
-        height: auto;
     }
 
     .contact-menu-item {
@@ -272,8 +258,8 @@ iframe {
     }
 
     .main-window {
-        height: auto;
-        width: 100%;
+        height: 100%;
+        width: 100vw;
     }
 
     .profile-photo {
@@ -291,6 +277,19 @@ iframe {
         box-shadow: 0 0 0 5px rgba(122, 193, 252, 0.5), 
                     0 0 5px rgba(89, 140, 235, 0.5) inset;
     }
+
+    .footer {
+        width: 100%;
+    }
+
+    .banner {
+        height: 100px;
+        width: 100%;
+    }
+
+    .menu-bar {
+        width: 100%;
+    }
 }
 
 @media (min-width: 769px) {
@@ -307,22 +306,28 @@ iframe {
     }
 
     .main-window {
-        width: calc(100% - 240px);;
+        width: 69vw;
+        height: 100%;
     }
 
     .profile-photo {
         position: absolute;
-        top: 25px;
-        left: 40px;
+        top: 10%;
+        left: 2%;
         z-index: 2;
     }
     
     .profile-photo img {
         border-radius: 50%;
-        width: 150px;
-        height: 175px;
-        border: 5px solid rgb(119, 151, 194);
-        box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), 
-                    0 0 10px rgba(89, 140, 235, 0.5) inset;
+        width: 10vw;
+        height: 20vh;
+        border: 0.4vw solid rgb(119, 151, 194);
+        box-shadow: 0 0 0 0.7vw rgba(122, 193, 252, 0.5), 
+                    0 0 0.7vw rgba(89, 140, 235, 0.5) inset;
+    }
+
+    .footer {
+        width: 100%;
+        height: 5.5%;
     }
 }
