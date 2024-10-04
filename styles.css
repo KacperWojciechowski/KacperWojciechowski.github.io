@@ -24,13 +24,13 @@ body {
 .profile-photo {
     position: absolute;
     top: 25px; /* Adjust this value as needed */
-    left: 35px; /* Position 20px from the left side */
+    left: 40px; /* Position 20px from the left side */
     z-index: 2; /* Ensure the photo is in front of the menu bar */
 }
 
 .profile-photo img {
     border-radius: 50%;
-    width: 175px; /* Increase the size of the photo */
+    width: 150px; /* Increase the size of the photo */
     height: 175px; /* Increase the size of the photo */
     border: 5px solid rgb(119, 151, 194); /* Optional: Add a white border around the photo */
     box-shadow: 0 0 0 10px rgba(122, 193, 252, 0.5), /* Outer silver ring */
@@ -107,7 +107,7 @@ body {
     height: 50px;
     margin-top: 0;
     padding: 0px 10px; /* Add padding inside the rounded rectangle */
-    background-image: url('arrow-1988452_1280.png'); /* Set the background image */
+    background-image: url('pictures/arrow-1988452_1280.png'); /* Set the background image */
     background-size: cover; /* Ensure the image covers the entire h2 element */
     background-position: center; /* Center the background image */
     border-radius: 15px; /* Rounded corners */
@@ -209,7 +209,8 @@ body {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 0px 0; /* Adjust padding to change the height */
+    height: 50px; /* Set a fixed height if needed */
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -224,4 +225,26 @@ iframe {
     width: 100%;
     height: 100%;
     display: block; /* Ensure the iframe is displayed as a block element */
+}
+
+.right-sidebar {
+    width: 200px;
+    background-image: url('pictures/StockCake-Futuristic\ Virtual\ Reality_1728060885.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire sidebar */
+    background-position: center; /* Center the background image */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    position: absolute;
+    right: 0;
+    top: 240px; /* Position below the banner */
+    height: calc(100% - 240px - 50px); /* Adjust height to fill the remaining space */
+}
+
+.right-sidebar img {
+    width: 100%;
+    border-radius: 15px; /* Optional: Add rounded corners to the image */
 }
