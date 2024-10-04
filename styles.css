@@ -328,7 +328,7 @@ iframe {
     }
 
     .banner {
-        height: calc(40px + 7vh + 5vw + 6vw + 3vw);
+        height: 30vh;
         width: 100%;
     }
 
