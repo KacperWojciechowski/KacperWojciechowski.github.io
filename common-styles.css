@@ -73,10 +73,8 @@ p {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
     font-size: 1em;
     font-family: Arial, sans-serif;
-    min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -87,19 +85,15 @@ table thead tr {
 }
 
 table th {
-    padding: 12px 15px;
+    padding: 12px 10px;
     text-align: center;
     border: 1px solid black;
 }
 
 table td {
-    padding: 12px 15px;
+    padding: 5px 5px;
     text-align: left; /* Center align text and images */
     border: 1px solid black;
-}
-
-table th img {
-    vertical-align: middle; /* Vertically center the images */
 }
 
 table tbody tr {
@@ -143,6 +137,10 @@ table tbody tr:last-of-type {
     .skills-desktop {
         display: block;
     }
+
+    .custom-h1 {
+        padding: 1.7vw 3.6vw; /* Add padding inside the rounded rectangle */
+    }
 }
 
 @media (max-width: 768px) {
@@ -166,5 +164,9 @@ table tbody tr:last-of-type {
 
     .skills-desktop {
         display: none;
+    }
+
+    .custom-h1 {
+        padding: 1.7vh 3.6vh; /* Add padding inside the rounded rectangle */
     }
 }
