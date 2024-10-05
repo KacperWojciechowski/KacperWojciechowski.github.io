@@ -112,8 +112,38 @@ table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
 
+.projects-container {
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    margin: 1.11vw 0;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Space between projects */
+}
+
+.project-logo {
+    margin-right: 20px; /* Space between logo and description */
+}
+
+.project-description {
+    flex-grow: 1;
+}
+
 @media (max-width: 768px) {
     .custom-h1 {
         padding: 1.39vw 1.94vw;
+    }
+
+    .project-item {
+        flex-direction: column; /* Stack logo and description vertically on small screens */
+        align-items: flex-start;
+    }
+
+    .project-logo {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between logo and description on small screens */
     }
 }
