@@ -131,6 +131,12 @@ table tbody tr:last-of-type {
     width: 100%;
 }
 
+.contact-label-centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 769px) {
     .skills-mobile {
         display: none;
