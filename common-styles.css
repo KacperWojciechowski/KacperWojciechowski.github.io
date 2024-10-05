@@ -46,8 +46,10 @@ p {
 }
 
 .custom-h1 {
+    font-size: 1.5em; /* Larger font size */
     width: 12vw;
-    height: 2vh;
+    height: 40px;
+    padding-left: 3vw;
     text-align: left;
     margin-top: 0;
     background-image: url('pictures/arrow-1988452_1280.png'); /* Set the background image */
@@ -137,17 +139,9 @@ table tbody tr:last-of-type {
     .skills-desktop {
         display: block;
     }
-
-    .custom-h1 {
-        padding: 1.7vw 3.6vw; /* Add padding inside the rounded rectangle */
-    }
 }
 
 @media (max-width: 768px) {
-    .custom-h1 {
-        padding: 1.39vw 1.94vw;
-    }
-
     .project-item {
         flex-direction: column; /* Stack logo and description vertically on small screens */
         align-items: flex-start;
@@ -164,9 +158,5 @@ table tbody tr:last-of-type {
 
     .skills-desktop {
         display: none;
-    }
-
-    .custom-h1 {
-        padding: 1.7vh 3.6vh; /* Add padding inside the rounded rectangle */
     }
 }
