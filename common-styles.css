@@ -61,6 +61,57 @@ p {
     white-space: nowrap;
 }
 
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* Adjust height as needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+table td {
+    padding: 12px 15px;
+    text-align: left; /* Center align text and images */
+    border: 1px solid black;
+}
+
+table th img {
+    vertical-align: middle; /* Vertically center the images */
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
 @media (max-width: 768px) {
     .custom-h1 {
         padding: 1.39vw 1.94vw;
