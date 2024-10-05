@@ -132,6 +132,7 @@ table tbody tr:last-of-type {
 
 .project-description {
     flex-grow: 1;
+    width: 100%;
 }
 
 @media (min-width: 769px) {
