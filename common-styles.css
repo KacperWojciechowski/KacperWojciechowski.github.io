@@ -46,21 +46,21 @@ p {
 }
 
 .custom-h1 {
+    width: 12vw;
+    height: 2vh;
     text-align: left;
     margin-top: 0;
-    padding: 1.7vw 3.6vw; /* Add padding inside the rounded rectangle */
     background-image: url('pictures/arrow-1988452_1280.png'); /* Set the background image */
-    background-size: contain;
+    background-size: cover;
     background-position: center; /* Center the background image */
     background-clip: border-box;
     background-origin: border-box;
     border-radius: 0.69vw; /* Rounded corners */
-    color: white; /* Text color */
-    display: inline-block;
     align-items: center; /* Center text vertically */
     justify-content: flex-start; /* Center text horizontally */
-    width: auto;
     white-space: nowrap;
+    color: white;
+    display: flex;
 }
 
 .centered-container {
