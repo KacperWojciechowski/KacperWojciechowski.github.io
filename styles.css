@@ -314,7 +314,7 @@ body {
 
     .profile-photo {
         position: absolute;
-        top: 40%;
+        top: 35%;
         left: 5%;
         z-index: 2;
     }
