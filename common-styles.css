@@ -132,6 +132,16 @@ table tbody tr:last-of-type {
     flex-grow: 1;
 }
 
+@media (min-width: 769px) {
+    .skills-mobile {
+        display: none;
+    }
+
+    .skills-desktop {
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     .custom-h1 {
         padding: 1.39vw 1.94vw;
@@ -145,5 +155,13 @@ table tbody tr:last-of-type {
     .project-logo {
         margin-right: 0;
         margin-bottom: 10px; /* Space between logo and description on small screens */
+    }
+
+    .skills-mobile {
+        display: block;
+    }
+
+    .skills-desktop {
+        display: none;
     }
 }
