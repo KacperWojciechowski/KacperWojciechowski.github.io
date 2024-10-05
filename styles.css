@@ -286,7 +286,7 @@ body {
 
     .profile-photo {
         position: absolute;
-        top: 20px;
+        top: calc(20px+3vh);
         left: 40px;
         z-index: 2;
     }
