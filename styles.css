@@ -143,6 +143,7 @@ body {
 }
 
 .sidebar h2 {
+    font-size: 3vh;
     text-align: center;
     width: 12vw;
     height: 6vh;
@@ -176,18 +177,45 @@ body {
 }
 
 .contact-label {
+    font-size: 2.5vh;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .contact-value {
+    font-size: 1.8vh;
     color: white;
 }
 
+.contact-value-contact {
+    color: black;
+}
+
 .social-media-container {
+    list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.social-media-contact-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.social-media-contact-container ul li {
+    margin-bottom: 5px;
+}
+
+.social-media-contact-container ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
 }
 
 .github-icon {
