@@ -85,7 +85,7 @@ body {
     position: relative;
     z-index: 1;
     border-radius: 1.5vw;
-    margin-top: calc(20px + 5vh + 1.5vw);
+    margin-top: calc(20px + 3vh);
 }
 
 .menu-bar-mobile ul {
