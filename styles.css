@@ -183,14 +183,16 @@ body {
 }
 
 .contact-label {
-    font-size: 2.5vh;
+    margin-top: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .contact-value {
-    font-size: 1.8vh;
+    font-size: 1.5rem;
     color: white;
+    margin-bottom: 2rem;
 }
 
 .contact-value-contact {
@@ -207,15 +209,14 @@ body {
 
 .social-media-contact-container ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    margin-top: 0.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
 }
 
 .social-media-contact-container ul li {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .social-media-contact-container ul li a {
@@ -227,25 +228,28 @@ body {
 .github-icon {
     width: 80px;
     height: 25px;
-    margin-bottom: 10px;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .linkedin-icon {
     width: 90px;
     height: 25px;
-    margin-bottom: 10px;
-}
-
-.facebook-icon {
-    width: 100px;
-    height: 25px;
-    margin-bottom: 10px;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .researchgate-icon {
     width: 130px;
     height: 25px;
-    margin-bottom: 10px;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .sidebar ul {
@@ -363,6 +367,8 @@ body {
 
     
     .profile-photo img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         border-radius: 50%;
         width: 5rem;
         height: 5rem;
