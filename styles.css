@@ -21,8 +21,9 @@ body {
 }
 
 .profile-photo {
-    position: absolute;
-    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .profile-photo img {
@@ -30,14 +31,13 @@ body {
 }
 
 .menu-bar {
-    width: 95vw;
+    width: 95%;
     background-color: #0A1F44;
-    padding: 1.5vw 0;
+    padding: 1.5rem 0;
     text-align: center;
     position: relative;
     z-index: 1;
-    border-radius: 1.5vw;
-    margin-top: 13vh;
+    border-radius: 1.5rem;
 }
 
 .menu-bar ul {
@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 7rem;
 }
 
 .menu-bar ul li {
@@ -128,10 +128,18 @@ body {
 .container {
     display: flex;
     flex-grow: 1;
+    max-width: 1600px;
+}
+
+.main-page{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: #dddddd8a;
 }
 
 .sidebar {
-    width: 12vw;
+    min-width: 10rem;
     padding-left: 1.5vw;
     padding-right: 2.5vw;    
     background-color: rgb(15, 54, 90);
@@ -143,10 +151,9 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 3vh;
+    font-size: 1.5rem;
     text-align: center;
-    width: 12vw;
-    height: 6vh;
+    height: 3.2rem;
     background-image: url('pictures/arrow-1988452_1280.png');
     background-size: cover;
     background-position: center;
@@ -154,9 +161,8 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 12%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0 1rem 1.5rem 1rem;
+    margin: 0.2rem -1.5rem;
 }
 
 .contact-info {
@@ -173,7 +179,7 @@ body {
 }
 
 .contact-item:last-child {
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
 }
 
 .contact-label {
@@ -278,9 +284,11 @@ body {
     color: white;
     text-align: center;
     padding: 0px 0;
-    height: 6%;
     position: fixed;
     bottom: 0;
+    p {
+        margin: 0.5rem 0;
+    }
 }
 
 .main-content section {
@@ -291,7 +299,7 @@ body {
     border: none;
     display: block;
     width: 100%;
-    height: 94%;
+    height: 95%;
 }
 
 @media (max-width: 768px) {
@@ -312,20 +320,22 @@ body {
         display: block;
     }
 
-    .profile-photo {
-        position: absolute;
-        top: 35%;
-        left: 5%;
-        z-index: 2;
-    }
     
     .profile-photo img {
-        border-radius: 50%;
-        width: 14vw;
-        height: 6.5vh;
-        border: 3px solid rgb(119, 151, 194);
-        box-shadow: 0 0 0 5px rgba(122, 193, 252, 0.5), 
-                    0 0 5px rgba(89, 140, 235, 0.5) inset;
+        display: none;
+    }
+    
+    .contact-photo  {
+        img {
+            display: block !important;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: 0.3rem solid rgb(119, 151, 194);
+            box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
+                        0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
+        }
+        margin-bottom: 1rem;
     }
 
     .footer {
@@ -351,25 +361,18 @@ body {
         display: block; /* Show sidebar on desktop */
     }
 
-    .profile-photo {
-        position: absolute;
-        top: 10%;
-        left: 2%;
-        z-index: 2;
-    }
     
     .profile-photo img {
         border-radius: 50%;
-        width: 10vw;
-        height: 20vh;
-        border: 0.4vw solid rgb(119, 151, 194);
-        box-shadow: 0 0 0 0.7vw rgba(122, 193, 252, 0.5), 
-                    0 0 0.7vw rgba(89, 140, 235, 0.5) inset;
+        width: 5rem;
+        height: 5rem;
+        border: 0.3rem solid rgb(119, 151, 194);
+        box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
+                    0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
     }
 
     .footer {
         width: 100%;
-        height: 5.5%;
     }
 
     .menu-bar-mobile {
@@ -378,10 +381,13 @@ body {
 
     .menu-bar {
         display: block;
+        margin-bottom: 1rem;
     }
 
     .banner {
-        height: 27vh;
+        height: 7rem;
         width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
 }
