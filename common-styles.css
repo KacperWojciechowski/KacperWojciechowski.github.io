@@ -124,6 +124,7 @@ table tbody tr:last-of-type {
 
 .project-logo {
     margin-right: 20px; /* Space between logo and description */
+    border-radius: 50%;
 }
 
 .project-description {
