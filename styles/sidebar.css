@@ -39,7 +39,6 @@
     font-size: 1.3rem;
     width: 220px;
     height: 50px;
-    padding-bottom: 1.5rem;
     text-align: center;
     background-image: url('../pictures/arrow-1988452_1280.png');
     background-size: cover;
@@ -48,9 +47,9 @@
     background-origin: border-box;
     color: white;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: .5rem;
 }
 
 .contact-item {

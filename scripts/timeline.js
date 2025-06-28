@@ -3,7 +3,7 @@ function resizeTimelineItems() {
     const extraSpace = 100;
 
     timelineItems.forEach(item => {
-        const container = item.querySelector('.content-container');
+        const container = item.querySelector('.content');
         if (container) {
             container.style.height = 'auto';
             container.style.marginTop = (extraSpace / 2) + 'px';
