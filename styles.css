@@ -17,6 +17,15 @@ body {
     background-position: center;
 }
 
+.site {
+    max-width: 2550px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
 .banner {
     width: 100%;
     color: white;
@@ -177,7 +186,7 @@ body {
 .sidebar {
     min-width: 260px;
     max-width: 320px;
-    width: 18vw;
+    width: 20vh;
     height: 100vh;
     background-color: rgb(15, 54, 90);
     color: white;

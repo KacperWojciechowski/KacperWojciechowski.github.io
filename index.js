@@ -18,3 +18,11 @@ function adjustIframeHeight() {
 
     iframe.style.overflow = 'hidden'; // Make iframe not scrollable
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('.footer p');
+    if (footer) {
+        const year = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${year} Wojciechowski Kacper`;
+    }
+});
