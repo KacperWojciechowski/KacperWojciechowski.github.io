@@ -44,7 +44,7 @@ p {
     padding-left: 70px;
     text-align: left;
     margin-top: 0;
-    background-image: url('pictures/arrow-1988452_1280.png'); /* Set the background image */
+    background-image: url('../pictures/arrow-1988452_1280.png'); /* Set the background image */
     background-size: cover;
     background-position: center; /* Center the background image */
     background-clip: border-box;
@@ -329,9 +329,10 @@ table tbody tr:last-of-type {
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     min-width: 250px;
     flex: 1;
-    margin-left: 0;
 }
 
 @media (min-width: 769px) {

@@ -1,0 +1,6 @@
+hr {
+    border: 1px white solid; /* White border */
+    height: .5vh; /* Increase the height */
+    background: rgba(0, 0, 0, 0.8); /* Ensure good contrast */
+    margin: 0 0; /* Add margin above and below */
+}

@@ -7,8 +7,11 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Kacper Wojciechowski</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles/website.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/banner.css">
+    <script src="scripts/index.js"></script>
 </head>
 <body>
     <div class="site">
@@ -18,11 +21,9 @@
                     <img src="pictures/personal_photo.jpg" alt="Profile Photo">
                 </div>
                 <h2>Contact</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-label">Email:</span>
-                        <span class="contact-value">k.woj.coding@gmail.com</span>
-                    </div>
+                <div class="contact-item">
+                    <span class="contact">Email:</span>
+                    <span class="contact">k.woj.coding@gmail.com</span>
                 </div>
                 <h2>Social Media</h2>
                 <div class="social-media-container">
@@ -49,19 +50,19 @@
                 <header class="banner">
                     <nav class="menu-bar">
                         <ul>
-                            <li><a href="about-me.html" target="content-frame">About Me</a></li>
-                            <li><a href="education.html" target="content-frame">Education</a></li>
-                            <li><a href="experience.html" target="content-frame">Experience</a></li>
+                            <li><a href="html/about-me.html" target="content-frame">About Me</a></li>
+                            <li><a href="html/education.html" target="content-frame">Education</a></li>
+                            <li><a href="html/experience.html" target="content-frame">Experience</a></li>
                         </ul><br><br>
-                        <ul><li><a href="skills.html" target="content-frame">Skills</a></li>
-                            <li><a href="projects.html" target="content-frame">Projects</a></li>
-                            <li><a href="research.html" target="content-frame">Research</a></li>
+                        <ul><li><a href="html/skills.html" target="content-frame">Skills</a></li>
+                            <li><a href="html/projects.html" target="content-frame">Projects</a></li>
+                            <li><a href="html/research.html" target="content-frame">Research</a></li>
                         </ul>
                     </nav>
                 </header>
-                <hr class="custom-hr-header">
+                <hr>
                 <main class="main-content">
-                    <iframe class="main-window" name="content-frame" src="about-me.html" frameborder="0" onload="adjustIframeHeight()"></iframe>
+                    <iframe class="main-window" name="content-frame" src="html/about-me.html" frameborder="0" onload="adjustIframeHeight()"></iframe>
                 </main>
             </div>
         </div>

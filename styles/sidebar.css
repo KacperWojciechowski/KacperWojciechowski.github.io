@@ -1,0 +1,132 @@
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.profile-photo img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    width: 10.2rem;
+    height: 12rem;
+    border: 0.3rem solid rgb(119, 151, 194);
+    box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
+                0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
+}
+
+.sidebar {
+    min-width: 260px;
+    max-width: 320px;
+    width: 20vh;
+    height: 100vh;
+    background-color: rgb(15, 54, 90, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-right: 0.3rem solid rgb(119, 151, 194);
+    box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
+                0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
+}
+
+.sidebar h2 {
+    font-size: 1.3rem;
+    width: 220px;
+    height: 50px;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    background-image: url('../pictures/arrow-1988452_1280.png');
+    background-size: cover;
+    background-position: center;
+    background-clip: border-box;
+    background-origin: border-box;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0;
+}
+
+.contact-item {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.contact-item:last-child {
+    margin-bottom: 1rem;
+}
+
+.contact {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.social-media-container {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-media-contact-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.social-media-contact-container ul li {
+    margin-bottom: 0.5rem;
+}
+
+.social-media-contact-container ul li a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 1981px) {
+    .sidebar {
+        margin-left: 0.5rem;
+        border-left: 0.3rem solid rgb(119, 151, 194);
+        box-shadow: 
+            -0.5rem 0 0 0.5rem rgba(122, 193, 252, 0.5),
+            0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5),
+            inset -0.5rem 0 0.5rem rgba(89, 140, 235, 0.5) inset;
+    }
+}
