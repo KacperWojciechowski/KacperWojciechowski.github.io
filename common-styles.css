@@ -2,7 +2,7 @@
 
 /* Background color */
 body {
-    background-color: #add8e6; /* Pastel light blue */
+    background: rgba(255, 255, 255, 0.0);
     color: black; /* Default text color */
     font-family: Arial, sans-serif; /* Default font */
     margin: 0;
@@ -25,8 +25,8 @@ a {
 
 /* Custom horizontal rule */
 .custom-hr {
-    border: 0;
-    height: 0.11vw; /* Increase the height */
+    border: 1px white solid; /* White border */
+    height: .5vh; /* Increase the height */
     background: rgba(0, 0, 0, 0.8); /* Ensure good contrast */
     margin: 0 0; /* Add margin above and below */
 }
@@ -125,6 +125,7 @@ table tbody tr:last-of-type {
 .project-logo {
     margin-right: 20px; /* Space between logo and description */
     border-radius: 50%;
+    border: 2px solid #0096C7; /* Border around the logo */
 }
 
 .note-icon {

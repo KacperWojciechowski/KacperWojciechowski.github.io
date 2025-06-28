@@ -5,19 +5,29 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url('pictures/StockCake-Advanced circuit technology_1728060876.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('pictures/StockCake-Advanced\ circuit\ technology_1728060876.jpg');
-    background-size: cover;
-    background-position: center;
+    width: 100%;
     color: white;
-    padding: 0px;
-    position: relative;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    min-height: 7rem;
+    height: 7rem;
+    box-sizing: border-box;
+}
+
+.custom-hr {
+    border: 1px white solid; /* White border */
+    height: .5vh; /* Increase the height */
+    background: rgba(0, 0, 0, 0.8); /* Ensure good contrast */
+    margin: 0 0; /* Add margin above and below */
 }
 
 .profile-photo {
@@ -31,13 +41,17 @@ body {
 }
 
 .menu-bar {
-    width: 95%;
-    background-color: #0A1F44;
+    width: 90%;
+    margin: 18px auto;
+    background-color: rgb(13,100,166,0.5);
     padding: 1.5rem 0;
     text-align: center;
     position: relative;
     z-index: 1;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
+    border: 0.3rem solid rgb(119, 151, 194);
+        box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
+                    0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
 
 .menu-bar ul {
@@ -45,7 +59,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0 0 0 7rem;
+    padding: 0;
 }
 
 .menu-bar ul li {
@@ -62,6 +76,13 @@ body {
     width: 1px;
     height: 50%;
     background-color: white;
+}
+
+.layout-row {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    min-height: 0;
 }
 
 .menu-bar ul li a {
@@ -138,16 +159,31 @@ body {
     background-color: #dddddd8a;
 }
 
+.main-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.0);
+}
+
 .sidebar {
-    min-width: 10rem;
-    padding-left: 1.5vw;
-    padding-right: 2.5vw;    
+    min-width: 260px;
+    max-width: 320px;
+    width: 18vw;
+    height: 100vh;
     background-color: rgb(15, 54, 90);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .sidebar h2 {
@@ -272,15 +308,17 @@ body {
 }
 
 .main-content {
-    flex-grow: 1;
+    flex: 1 1 0;
     padding: 0;
     margin: 0;
     border: none;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
+    min-height: 0;
+    background: rgba(255, 255, 255, 0.0);
 }
 
 .footer {
@@ -290,9 +328,7 @@ body {
     padding: 0px 0;
     position: fixed;
     bottom: 0;
-    p {
-        margin: 0.5rem 0;
-    }
+    width: 100%;
 }
 
 .main-content section {
@@ -303,21 +339,31 @@ body {
     border: none;
     display: block;
     width: 100%;
-    height: 95%;
+    height: 100%;
+    min-height: 0;
+    flex: 1 1 0;
 }
 
 @media (max-width: 768px) {
 
+    .layout-row {
+        flex-direction: column;
+        height: auto;
+    }
     .contact-menu-item {
-        display: block; /* Show Contact menu item on mobile */
+        display: block;
     }
-
+    .main-area {
+        height: auto;
+    }
     .sidebar {
-        display: none; /* Hide sidebar on mobile */
+        display: none;
     }
-
+    .main-content {
+        min-height: 0;
+    }
     .main-window {
-        width: 100vw;
+        width: 60vw;
     }
 
     .menu-bar-mobile {
@@ -347,8 +393,8 @@ body {
     }
 
     .banner {
-        height: 30vh;
-        width: 100%;
+        min-height: 4rem;
+        height: auto;
     }
 
     .menu-bar {
