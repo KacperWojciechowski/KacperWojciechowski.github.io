@@ -171,6 +171,168 @@ table tbody tr:last-of-type {
     align-items: center;
 }
 
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    transform: translateY(-100%) translateX(-50%);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 24px solid #0096C7; /* Arrow color and size */
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+.timeline .content-container {
+    min-width: 250px; /* Space for the timeline marker */
+    flex: 1 1;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    min-height: 180px;
+}
+
+.timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+    position: relative;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px;
+    height: 0;
+    border-top: 3px solid #0096C7; /* Line color */
+    z-index: 2;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: #0096C7;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #0096C7;
+    margin: auto 0;
+    z-index: 2;
+    position: relative;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 30px; /* Move to the right of the line */
+    min-width: 70px;
+    background: #fff;
+    border: 2px solid #0096C7;
+    border-radius: 8px;
+    padding: 4px 10px;
+    color: #0096C7;
+    font-weight: bold;
+    font-size: 1em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.timeline-date::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 2px;
+    background: #0096C7;
+    z-index: 2;
+}
+
+.timeline-date:first-child {
+    top: calc(100% - 10px); /* 30px above the center */
+    transform: translateY(-100%);
+    left: 45px;
+}
+.timeline-date:first-child::after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #0096C7 transparent transparent;
+}
+
+/* Date below marker */
+.timeline-date:last-child {
+    top: 10px; /* 30px below the center */
+    transform: translateY(0%);
+    left: 45px;
+}
+.timeline-date:last-child::after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #0096C7 transparent transparent;
+}
+
+.timeline-marker::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #0096C7;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-marker::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4px;
+    height: 50%;
+    background: #0096C7;
+    transform: translateX(-50%);
+}
+
+.content-container {
+    background: #fffacd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 20px;
+    min-width: 250px;
+    flex: 1;
+    margin-left: 0;
+}
+
 @media (min-width: 769px) {
     .skills-mobile {
         display: none;
@@ -186,17 +348,23 @@ table tbody tr:last-of-type {
         flex-direction: column; /* Stack logo and description vertically on small screens */
         align-items: flex-start;
     }
-
     .project-logo {
         margin-right: 0;
         margin-bottom: 10px; /* Space between logo and description on small screens */
     }
-
     .skills-mobile {
         display: block;
     }
-
     .skills-desktop {
+        display: none;
+    }
+    .timeline {
+        margin-left: 0;
+    }
+    .timeline-item {
+        flex-direction: row;
+    }
+    .timeline-arrow {
         display: none;
     }
 }
