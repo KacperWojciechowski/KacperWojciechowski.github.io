@@ -37,14 +37,6 @@ p {
     text-align: justify; /* Justify the text */
 }
 
-.content-container {
-    background-color: #fffacd; /* Pastel yellow background */
-    border: 0.11vw solid white; /* White border */
-    border-radius: 0.83vw; /* Rounded edges */
-    padding: 1.11vw; /* Padding inside the div */
-    margin: 1.11vw 0; /* Margin around the div */
-}
-
 .custom-h1 {
     font-size: 1.5em; /* Larger font size */
     width: 180px;
@@ -126,6 +118,8 @@ table tbody tr:last-of-type {
     margin-right: 20px; /* Space between logo and description */
     border-radius: 50%;
     border: 2px solid #0096C7; /* Border around the logo */
+    box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
+                0 0 0.5rem rgba(89, 140, 235, 0.5) inset; /* Shadow effect */
 }
 
 .note-icon {
@@ -191,11 +185,6 @@ table tbody tr:last-of-type {
     width: 0;
     height: 0;
     z-index: 10;
-}
-
-.timeline .content-container {
-    min-width: 250px; /* Space for the timeline marker */
-    flex: 1 1;
 }
 
 .timeline-item {
@@ -324,12 +313,22 @@ table tbody tr:last-of-type {
     transform: translateX(-50%);
 }
 
+.justified {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .content-container {
+    margin-top: 20px;
     background: #fffacd;
     border-radius: 10px;
-    box-shadow: 0 0 0 0.3rem rgba(240, 234, 187, 0.5), 
+    border: 2px solid #e8e2b0;
+    box-shadow: 0 0 0.3rem 0.3rem rgba(240, 234, 187, 0.5), 
                 0 0 0.3rem rgba(143, 136, 83, 0.5) inset;
-    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     min-width: 250px;
     flex: 1;
     margin-left: 0;

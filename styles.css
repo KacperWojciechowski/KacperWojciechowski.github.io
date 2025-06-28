@@ -112,6 +112,7 @@ body {
 .menu-bar ul li a {
     color: white;
     text-decoration: none;
+    width: 20rem;
     padding: .5rem 2rem;
     border-radius: 15px;
     background-color: #0c2757;
