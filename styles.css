@@ -46,6 +46,14 @@ body {
     margin: 0 0; /* Add margin above and below */
 }
 
+.custom-hr-header {
+    width: calc(100% - 2rem);
+    border: 1px white solid; /* White border */
+    height: .5vh; /* Increase the height */
+    background: rgba(0, 0, 0, 0.8); /* Ensure good contrast */
+    margin: 0 1rem; /* Add margin above and below */
+}
+
 .profile-photo {
     display: flex;
     justify-content: center;
@@ -66,8 +74,8 @@ body {
     z-index: 1;
     border-radius: 2rem;
     border: 0.3rem solid rgb(119, 151, 194);
-        box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
-                    0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
+    box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
+                0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
 
 .menu-bar ul {
@@ -188,7 +196,7 @@ body {
     max-width: 320px;
     width: 20vh;
     height: 100vh;
-    background-color: rgb(15, 54, 90);
+    background-color: rgb(15, 54, 90, 0.8);
     color: white;
     display: flex;
     flex-direction: column;
@@ -196,13 +204,15 @@ body {
     justify-content: flex-start;
     position: relative;
     z-index: 1;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
     padding-top: 1rem;
     padding-bottom: 1rem;
+    border-right: 0.3rem solid rgb(119, 151, 194);
+    box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
+                0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
 
 .sidebar h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     height: 3.2rem;
     background-image: url('pictures/arrow-1988452_1280.png');
@@ -212,8 +222,8 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 0 1rem 1.5rem 1rem;
-    margin: 0.2rem -1.5rem;
+    padding: 0 0 1.5rem 0;
+    margin: 0;
 }
 
 .contact-info {
@@ -235,23 +245,20 @@ body {
 
 .contact-label {
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .contact-value {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     margin-bottom: 2rem;
 }
 
-.contact-value-contact {
-    color: black;
-}
-
 .social-media-container {
     list-style: none;
+    margin-top: 1rem;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -260,7 +267,6 @@ body {
 
 .social-media-contact-container ul {
     list-style: none;
-    margin-top: 0.5rem;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -273,7 +279,6 @@ body {
 .social-media-contact-container ul li a {
     display: inline-block;
     text-decoration: none;
-    color: white;
 }
 
 .github-icon {

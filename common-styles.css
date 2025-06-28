@@ -327,7 +327,8 @@ table tbody tr:last-of-type {
 .content-container {
     background: #fffacd;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 0 0 0.3rem rgba(240, 234, 187, 0.5), 
+                0 0 0.3rem rgba(143, 136, 83, 0.5) inset;
     padding: 20px;
     min-width: 250px;
     flex: 1;
