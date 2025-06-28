@@ -113,19 +113,52 @@ table tbody tr:last-of-type {
 .projects-container {
     display: flex;
     flex-direction: column; /* Stack projects vertically */
-    margin: 1.11vw 0;
 }
 
 .project-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px; /* Space between projects */
+    margin-top: 1vw; /* Space between projects */
+    margin-bottom: 1vw; /* Space between projects */
 }
 
 .project-logo {
     margin-right: 20px; /* Space between logo and description */
     border-radius: 50%;
 }
+
+.note-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.noteBoxes { 
+    border: 1px solid; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin: 10px 0;  
+}
+.type1 { 
+    border-color: #E76F51; 
+    background-color: rgba(231, 111, 81, 0.1); 
+    color: #820a0a;
+}
+.type2 { 
+    border-color: #2A9D8F; 
+    background-color: rgba(42, 157, 143, 0.1);
+    color: #0f6948;
+} 
+.type3 { 
+    border-color: #0096C7; 
+    background-color: rgba(0, 150, 199, 0.1);
+    color: #144c8c;
+} 
+.type4 { 
+    border-color: #00B353; 
+    background-color: rgba(0, 179, 83, 0.1); 
+    color: #09450c;
+} 
 
 .project-description {
     flex-grow: 1;
