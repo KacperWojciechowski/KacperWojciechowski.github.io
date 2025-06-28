@@ -18,7 +18,7 @@ body {
 }
 
 .site {
-    max-width: 2550px;
+    max-width: 1980px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -47,11 +47,11 @@ body {
 }
 
 .custom-hr-header {
-    width: calc(100% - 2rem);
+    width: calc(100% - 2.4rem);
     border: 1px white solid; /* White border */
     height: .5vh; /* Increase the height */
     background: rgba(0, 0, 0, 0.8); /* Ensure good contrast */
-    margin: 0 1rem; /* Add margin above and below */
+    margin: 0 1.2rem; /* Add margin above and below */
 }
 
 .profile-photo {
@@ -74,7 +74,7 @@ body {
     z-index: 1;
     border-radius: 2rem;
     border: 0.3rem solid rgb(119, 151, 194);
-    box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
+    box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
                 0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
 
@@ -87,7 +87,7 @@ body {
 }
 
 .menu-bar ul li {
-    margin: 0 1vw;
+    margin: 0 1.6vh;
     position: relative;
 }
 
@@ -112,9 +112,11 @@ body {
 .menu-bar ul li a {
     color: white;
     text-decoration: none;
-    padding: 1vh 3vw;
+    padding: .5rem 2rem;
     border-radius: 15px;
     background-color: #0c2757;
+    border: 2px rgba(14, 52, 117, 0.7) solid;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(14, 52, 117, 0.5);
     transition: background-color 0.3s;
 }
 
@@ -122,7 +124,7 @@ body {
     background-color: #0056b3;
 }
 
-.menu-bar-mobile {
+/*.menu-bar-mobile {
     width: 95vw;
     background-color: #0A1F44;
     padding: 5vw 0;
@@ -168,7 +170,7 @@ body {
 
 .menu-bar-mobile ul li a:hover {
     background-color: #0056b3;
-}
+}*/
 
 .container {
     display: flex;
@@ -207,7 +209,7 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-right: 0.3rem solid rgb(119, 151, 194);
-    box-shadow: 0 0 0 0.5rem rgba(122, 193, 252, 0.5), 
+    box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
                 0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
 
@@ -332,7 +334,7 @@ body {
     padding: 0;
     margin: 0;
     border: none;
-    overflow-y: auto;
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -374,6 +376,7 @@ body {
     .contact-menu-item {
         display: block;
     }
+
     .sidebar {
         display: none;
     }
@@ -447,5 +450,16 @@ body {
     .menu-bar {
         display: block;
         margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1981px) {
+    .sidebar {
+        margin-left: 0.5rem;
+        border-left: 0.3rem solid rgb(119, 151, 194);
+        box-shadow: 
+            -0.5rem 0 0 0.5rem rgba(122, 193, 252, 0.5),
+            0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5),
+            inset -0.5rem 0 0.5rem rgba(89, 140, 235, 0.5) inset;
     }
 }
