@@ -187,7 +187,7 @@ table tbody tr:last-of-type {
     transform: translateY(-100%) translateX(-50%);
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 24px solid #0096C7; /* Arrow color and size */
+    border-bottom: 24px solid #fffacd; /* Arrow color and size */
     width: 0;
     height: 0;
     z-index: 10;
@@ -224,14 +224,14 @@ table tbody tr:last-of-type {
     transform: translateY(-50%);
     width: 21px;
     height: 0;
-    border-top: 3px solid #0096C7; /* Line color */
+    border-top: 3px solid #fffacd; /* Line color */
     z-index: 2;
 }
 
 .timeline-dot {
     width: 16px;
     height: 16px;
-    background: #0096C7;
+    background: black;
     border-radius: 50%;
     border: 3px solid #fff;
     box-shadow: 0 0 0 3px #0096C7;
@@ -264,7 +264,7 @@ table tbody tr:last-of-type {
     transform: translateY(-50%);
     width: 32px;
     height: 2px;
-    background: #0096C7;
+    background: white;
     z-index: 2;
 }
 
@@ -308,7 +308,7 @@ table tbody tr:last-of-type {
     top: 0;
     width: 4px;
     height: 100%;
-    background: #0096C7;
+    background: #fffacd;
     transform: translateX(-50%);
     z-index: 1;
 }
