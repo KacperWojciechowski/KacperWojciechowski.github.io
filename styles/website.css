@@ -40,11 +40,11 @@ body {
 }
 
 hr {
-    width: calc(100% - 2.4rem);
+    width: 100%;
     border: 1px white solid;
     height: .5vh;
     background: rgba(0, 0, 0, 0.8);
-    margin: 0 1.2rem;
+    margin: 0 0;
 }
 
 .layout-row {
@@ -52,6 +52,8 @@ hr {
     flex-direction: row;
     height: 100vh;
     min-height: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .footer {
@@ -65,12 +67,19 @@ hr {
     z-index: 2;
 }
 
+.footer p {
+    text-align: center;
+    justify-content: center;
+}
+
 .main-area {
     display: flex;
     flex-direction: column;
     min-width: 0;
     flex: 1 1 0;
     background: rgba(255, 255, 255, 0.0);
+    padding: 0;
+    margin: 0;
 }
 
 .main-content {

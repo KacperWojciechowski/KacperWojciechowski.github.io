@@ -1,47 +1,29 @@
 const programmingLanguagesCompiled = {
-    "Compiled": {
-        "C++": [
-            "Standards: 11, 14, 17, 20",
-            "STL containers and algorithms",
-            "Concurrency - synchronization, multithreading",
-            "Memory algignment",
-            "Memory management - RAII, memory ownership, smart pointers side effects",
-            "Templates - metaprogramming, template specialization, Curriously Recurring Template Pattern, compile-time conditionals",
-            "Lambda functions and function pointers",
-            "Functors",
-            "G++ compiler attributes",
-            "GTest - regular, parametrized and typed tests",
-            "Structured bindings",
-            "C++ Guidelines and good practices"
-        ],
-        "TTCN3": [
-            "Designing and implementing flow-container-based test frameworks",
-            "Operating on components",
-            "Creating and expanding templates",
-            "Organizing modules and managing dependencies",
-            "Message-based communication between components",
-            "Parallel message reception"
-        ],
-        "Rust": [
-            "Currently learning",
-        ],
-        "Java": [
-            "Java 8 basics",
-            "Network communication using network sockets",
-            "Concurrency - threads and synchronization",
-            "Writing unit tests using JUnit"
-        ]
-    },
-    "Functional": {
-        "Erlang": [
-            "Using fold expressions for recursively traversing containers",
-            "Using list comprehension for filtering and transforming data",
-            "Understanding of actor model"
-        ],
-    }
-};
-
-const programmingLanguagesScript = {
+    "C++": [
+        "Standards: 11, 14, 17, 20",
+        "STL containers and algorithms",
+        "Concurrency - synchronization, multithreading",
+        "Memory algignment",
+        "Memory management - RAII, memory ownership, smart pointers side effects",
+        "Templates - metaprogramming, template specialization, Curriously Recurring Template Pattern, compile-time conditionals",
+        "Lambda functions and function pointers",
+        "Functors",
+        "G++ compiler attributes",
+        "GTest - regular, parametrized and typed tests",
+        "Structured bindings",
+        "C++ Guidelines and good practices"
+    ],
+    "TTCN3": [
+        "Designing and implementing flow-container-based test frameworks",
+        "Operating on components",
+        "Creating and expanding templates",
+        "Organizing modules and managing dependencies",
+        "Message-based communication between components",
+        "Parallel message reception"
+    ],
+    "Rust": [
+        "Currently learning",
+    ],
     "Python": [
         "Working with fundamental data structures - lists, tuples, sets and dictionaries",
         "Creating and using classes and objects",
@@ -53,8 +35,8 @@ const programmingLanguagesScript = {
         "Creating scripts operating on files and directories",
         "Creating script-invoking commands using aliases",
         "Using environment variables"
-    ],
-}
+    ]
+};
 
 const tools = {
     "Build systems": [
