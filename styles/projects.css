@@ -7,13 +7,11 @@
 .project-item {
     display: flex;
     align-items: flex-start;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     width: 100%;
 }
 
 .project-logo {
-    margin: 0 20px;
+    margin: .5rem .6rem;
     border-radius: 50%;
     border: 2px solid #0096C7;
     box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 

@@ -1,28 +1,20 @@
 .github-icon {
     width: 5rem;
     height: 1.7rem;
-    margin-top: 0.25rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
+    margin-left: .2rem;
+    translate: 0 6px;
 }
 
 .linkedin-icon {
     width: 4.5rem;
     height: 1.5rem;
-    margin-top: 0.25rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
 }
 
 .researchgate-icon {
     width: 7.5rem;
     height: 25px;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    translate: 0 6px;
+    margin-left: .2rem;
 }
 
 p {
@@ -43,6 +35,7 @@ p {
     padding: 10px; 
     margin: 10px 0;  
 }
+
 .red { 
     border-color: #E76F51; 
     background-color: rgba(231, 111, 81, 0.1); 

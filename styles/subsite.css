@@ -15,24 +15,27 @@ hr {
     padding: 0;
 }
 
-h1 {
-    font-size: 1.3em;
-    width: 220px;
-    height: 50px;
-    text-align: center;
-    margin: 1rem 0;
-    margin-left: 10px;
-    background-image: url('../pictures/arrow-1988452_1280.png');
-    background-size: cover;
-    background-position: center;
-    background-clip: border-box;
-    background-origin: border-box;
+.label {
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+}
+
+.label p {
+    margin: .7rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
     color: white;
-    display: flex;
-    position: relative;
-    z-index: 1;
+    border: 5px solid black;
+    border-radius: 1rem;
+    background-color: rgba(32, 26, 66, 0.5);
+}
+
+.label img {
+    margin: -2rem 0;
+    width: 5rem;
+    height: 5rem;
 }
 
 .content {
@@ -44,6 +47,7 @@ h1 {
     padding: 20px;
     padding-top: 5px;
     margin: 10px;
+    margin-bottom: 20px;
     min-width: 250px;
     flex: 1;
 }
@@ -52,8 +56,7 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: rgba(89, 140, 235, 0.5);
-    box-shadow: 0 0.2rem 0.5rem 0.5rem rgba(122, 193, 252, 0.5),
-                0 0 0 rgba(89, 140, 235, 0.5) inset;
+    margin: 0;
 }
 
 .subsite-body {
