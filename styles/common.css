@@ -56,3 +56,26 @@ p {
     background-color: rgba(0, 179, 83, 0.1); 
     color: #09450c;
 }
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.label p {
+    margin: .7rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    color: white;
+    border: 5px solid black;
+    border-radius: 1rem;
+    background-color: rgba(32, 26, 66, 0.5);
+}
+
+.label img {
+    margin: -2rem 0;
+    width: 5rem;
+    height: 5rem;
+}

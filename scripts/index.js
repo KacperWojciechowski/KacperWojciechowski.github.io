@@ -25,4 +25,5 @@ window.addEventListener('DOMContentLoaded', function() {
         const year = new Date().getFullYear();
         footer.innerHTML = `&copy; ${year} Wojciechowski Kacper`;
     }
+    executeInclude();
 });
