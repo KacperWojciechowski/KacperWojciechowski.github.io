@@ -1,3 +1,18 @@
-.skills-mobile {
+.mobile {
     display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+@media(max-width: 1080px)
+{
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
 }
