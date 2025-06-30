@@ -1,8 +1,6 @@
 .github-icon {
     width: 5rem;
     height: 1.7rem;
-    margin-left: .2rem;
-    translate: 0 6px;
 }
 
 .linkedin-icon {
@@ -13,8 +11,6 @@
 .researchgate-icon {
     width: 7.5rem;
     height: 25px;
-    translate: 0 6px;
-    margin-left: .2rem;
 }
 
 p {
@@ -65,9 +61,7 @@ p {
 }
 
 .label p {
-    margin: .7rem 0;
     padding: 0.5rem 1rem;
-    font-size: 2rem;
     color: white;
     border: 5px solid black;
     border-radius: 1rem;
@@ -76,6 +70,23 @@ p {
 
 .label img {
     margin: -2rem 0;
-    width: 5rem;
-    height: 5rem;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+@media(max-width: 1080px)
+{
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
 }

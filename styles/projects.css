@@ -10,6 +10,11 @@
     width: 100%;
 }
 
+.github-icon {
+    margin-left: .2rem;
+    translate: 0 6px;
+}
+
 .project-logo {
     margin: .5rem .6rem;
     border-radius: 50%;

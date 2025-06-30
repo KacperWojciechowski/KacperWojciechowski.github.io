@@ -10,14 +10,14 @@ function renderHorizontalTable(table) {
         const [superlabel, ] = Object.entries(superlabels).at(0);
         if (superlabel != 0)
         {
-            thead += '<tr>';
+            thead += '<tr class="superlabel">';
             Object.entries(superlabels).forEach(([label, sublabels]) => {
                 thead += `<th colspan="${Object.entries(sublabels).length}">${label}</th>`;
             });
             thead += '</tr>'
         }
 
-        thead += '<tr>';
+        thead += '<tr class="sublabel">';
         tbody += '<tr>';
 
         Object.entries(superlabels).forEach(([, sublabels]) => {

@@ -5,9 +5,16 @@ table {
 }
 
 table thead tr {
-    background-color: #009879;
     color: #ffffff;
     text-align: center;
+}
+
+.sublabel {
+    background-color: #009879;
+}
+
+.superlabel {
+    background-color: #0d633d;
 }
 
 table th {

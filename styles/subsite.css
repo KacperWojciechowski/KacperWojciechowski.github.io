@@ -39,3 +39,13 @@ hr {
 .subsite-body {
     padding: 10px;
 }
+
+.label p {
+    margin: .7rem 0;   
+    font-size: 2rem;
+}
+
+.label img {
+    width: 5rem;
+    height: 5rem;
+}
