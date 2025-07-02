@@ -1,0 +1,42 @@
+.contact {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.contact-item {
+    margin: .2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item:last-child {
+    margin-bottom: 1rem;
+}
+
+.social-media-container {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-media-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.social-media-container ul li {
+    margin: .5rem 0;
+}
+
+.social-media-container ul li a {
+    display: inline-block;
+    text-decoration: none;
+}
