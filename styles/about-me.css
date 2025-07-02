@@ -14,5 +14,32 @@
 
 .about-me-item {
     width: calc(50% - 20px);
+    height: calc(50%);
     margin: 0 .5rem;
+}
+
+.interrests-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.interrest {
+    width: 25%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.interrest img {
+    width: 6.4rem;
+    height: 6.4rem;
+}
+
+.interrest p {
+    font-size: 1.2rem;
+    text-align: center;
 }

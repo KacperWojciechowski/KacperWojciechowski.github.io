@@ -103,6 +103,7 @@ p {
     background-color: #202030;
     padding: .5rem;
     font-family: Consolas, "Courier New", monospace;
+    font-size: .9rem;
     color: white;
 }
 
@@ -110,7 +111,7 @@ p {
     color: #cc7832;
 }
 
-.brace {
+.code-brace {
     color: white;
 }
 
