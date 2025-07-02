@@ -1,0 +1,18 @@
+.about-me-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2rem 0;
+}
+
+.about-me-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.about-me-item {
+    width: calc(50% - 20px);
+    margin: 0 .5rem;
+}

@@ -60,7 +60,7 @@ function renderVerticalTable(table)
             <thead>
                 <tr class="sublabel">
                     <th>Subject</th><th>Skills</th>
-                </tr>
+                </tr>   
             </thead>
             <tbody>
                 ${rows}

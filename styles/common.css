@@ -99,6 +99,72 @@ p {
     box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
                 0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
+.codeblock {
+    background-color: #202030;
+    padding: .5rem;
+    font-family: Consolas, "Courier New", monospace;
+    color: white;
+}
+
+.keyword {
+    color: #cc7832;
+}
+
+.brace {
+    color: white;
+}
+
+.variable {
+    color: #9373A5;
+}
+
+.type {
+    color: #B5B6E3;
+}
+
+.function {
+    color: #FFC66D;
+}
+
+.number {
+    color: #6897BB;
+}
+
+.code-tab {
+    padding-left: 2rem;
+}
+
+.variable {
+    color: #9373A5;
+}
+
+.code-double-tab {
+    padding-left: 4rem;
+}
+
+.code-tripple-tab {
+    padding-left: 6rem;
+}
+
+.string {
+    color: #6A8759;
+}
+
+.comment {
+    color: #55555c;
+}
+
+.terminal-prompt {
+    color: #227338;
+}
+
+.command {
+    color: #f5db87;
+}
+
+.terminal-output {
+    color: #92d4c2;
+}
 
 @media(max-width: 1080px)
 {
