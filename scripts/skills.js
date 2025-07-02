@@ -50,7 +50,7 @@ function renderVerticalTable(table)
         const [, superlabels] = layer;
         Object.entries(superlabels).forEach(([, sublabels]) => {
             Object.entries(sublabels).forEach(([label, values]) => {
-                rows += `<tr><td>${label}</td>`;
+                rows += `<tr class="sublabel"><td>${label}</td>`;
                 rows += `<td><ul>${values.map(value => `<li>${value}</li>`).join('')}</ul></td></tr>`;
             });
         });
