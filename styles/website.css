@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 10rem;
+    min-height: 10rem;
     box-sizing: border-box;
 }
 
