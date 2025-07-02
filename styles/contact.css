@@ -1,0 +1,8 @@
+.contact-item {
+    font-size: 1.2rem;
+    color: black;
+    margin: .2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
