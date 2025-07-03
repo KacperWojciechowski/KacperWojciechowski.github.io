@@ -17,18 +17,25 @@ const aboutMeCode = [
     { "brace" : "}", "keyword" : ";" },
 ]
 
-const terminalSeparator = [
-    { "comment" : "------------------------------------------------------"}
+const terminalSeparator = { "comment" : "------------------------------------------------------"}
+
+const terminalFrame = [
+    { 
+        "terminal-prompt" : "Ubuntu(~/repos/cv/build)$ ", 
+        "cursor" : "<span id=\"terminal-cursor\">|</span>", 
+        "command" : "<span id=\"id-terminal-command\" style=\"command\"></span>",
+        "terminal-output" : "<span id=\"id-terminal-output\" style=\"terminal-output\"></span>"
+    },
+    { 
+        "terminal-prompt" : "Ubuntu(~/repos/cv/build)$ ", 
+        "cursor" : "<span id=\"terminal-cursor-2\">|</span>", 
+        "command" : "<span id=\"id-terminal-command-2\" style=\"command\"></span>", 
+        "terminal-output" : "<span id=\"id-terminal-output-2\" style=\"terminal-output\"></span>" 
+    }
 ]
 
-const terminalPrompt = [{ "terminal-prompt" : "Ubuntu(~/repos/cv/build)$" }]
-
-const terminalCursor = [{ "cursor" : "<span id=\"terminal-cursor\">|</span>" }]
-
-const terminalContent = [
-    { "command" : "g++ -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out" },
-    { "terminal-output" : "Hello, my name is Kacper. Interrested in hiring me, aren't you ?" }
-]
+const terminalCommand = "g++ -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out";
+const terminalContent = "[!] Hello, my name is Kacper. Interrested in hiring me, aren't you ?";
 
 function calculateDateDiffTillNow(startDate, endDate = new Date()) {
     let age = endDate.getFullYear() - startDate.getFullYear();
@@ -105,7 +112,7 @@ function placeInterrestsBlock() {
             </span>
             <span class="flowing-container">
                 <img src="../pictures/physics-icon.svg">
-                <p>Physics</p>
+                <p class="one-liner">Physics</p>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/astrophysics-icon.svg">
@@ -113,7 +120,7 @@ function placeInterrestsBlock() {
             </span>
             <span class="flowing-container">
                 <img src="../pictures/video-game-icon.svg">
-                <p>Video Games</p>
+                <p>Video<br>Games</p>
             </span>
         </div>                    
     </div>
@@ -175,20 +182,20 @@ function cursorBlink()
 
 async function engageTerminal()
 {
-    this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalPrompt.concat(' ').concat(terminalCursor));
+    this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalFrame[0]);
     let blinkingInterval = this.setInterval(cursorBlink, 500);
     const delay = ms => new Promise(res => this.setTimeout(res, ms));
     await delay(3000);
     this.clearInterval(blinkingInterval);
-
     this.document.getElementById("terminal-cursor").innerHTML = '';
-    iterativelyRenderTerminal(document, "about-me-terminal", terminalContent);
-    this.document.getElementById("about-me-terminal").innerHTML += renderTerminal();
+    await iterativelyRenderTerminal("id-terminal-command", terminalCommand);
+    await iterativelyRenderTerminal("id-terminal-content", terminalContent);
+    this.document.getElementById("about-me-terminal").innerHTML += renderTerminal(terminalFrame[1]);
 
-    this.setInterval(cursorBlink, 500);
+    //this.setInterval(cursorBlink, 500);
 }
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', async function() {
     this.document.getElementById("id-introduction").innerHTML = placeIntroductionBlock();
     this.document.getElementById("id-interrests").innerHTML = placeInterrestsBlock();
     this.document.getElementById("id-speciality").innerHTML = placeSpecialtityBlock();
@@ -197,6 +204,6 @@ window.addEventListener('DOMContentLoaded', function() {
     this.document.getElementById("id-age").innerHTML = Math.trunc(calculateDateDiffWithMonths(new Date(1999, 7, 27))[0]);
     this.document.getElementById("id-experience").innerHTML = calculateExperience();
     this.document.getElementById("terminal-separator").innerHTML = renderTerminal(terminalSeparator);
-    engageTerminal();
+    await engageTerminal();
 });
 

@@ -35,45 +35,32 @@ function renderCode(code, noSpaceKeywords) {
     return out;
 }
 
-async function renderTerminal(terminal) {
-    out = '';
-    const lineCount = terminal.length;
-    for (let i = 0; i < lineCount; i++) {
-        line = terminal[i];
-        for (let j = 0; j < Object.entries(line).length; j++) {
-            const [key, value] = Object.entries(line)[j];
-            out += `<span class="${key}">${value}</span>`;
-            if (j < Object.entries(line).length - 1) {
-                out += ' ';
-            }
-        }
-        if (i < lineCount - 1) {
-            out += '<br>';
-        }
+function renderTerminal(terminal) {
+    let out = '';
+    for (const line of Object.entries(terminal)) {
+        const [style, content] = line;
+        out += `<span class="${style}">${content}</span>`;
     }
     return out;
 }
 
-function iterativelyRenderTerminal(document, elementId, terminalContent) {
-    const element = document.getElementById(elementId);
+async function iterativelyRenderTerminal(elementId, content) {
+    const element = this.document.getElementById(elementId);
     if (!element) {
         console.error(`Element with ID ${elementId} not found.`);
         return;
     }
 
-    Object.entries(terminalContent).forEach(async ([style, content]) => {
-        element.innerHTML += `<span class="${style}">`;
-        let index = 0;
-        const delay = ms => new Promise(res => this.setTimeout(res, ms));
-        let handle = this.setInterval(() => {
-            if (content.length > index)
-            {
-                element.innerHTML += content[index];
-                index++;
-            }
-        }, 100);
-        await delay(content.length * 100 + 100);
-        this.clearInterval(handle);
-        element.innerHTML += `</span>`
-    })
+    let index = 0;
+    const delay = ms => new Promise(res => this.setTimeout(res, ms));
+    let handle = this.setInterval((text) => {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index++);
+                //let lastIndex = element.innerHTML.lastIndexOf('</span>');
+                //element.innerHTML = element.innerHTML.substring(0, lastIndex) + string.charAt(index++) + '</span>';
+        }
+        }, 35, content);
+    await delay(content.length * 35 + 100);
+    this.clearInterval(handle);
+    element.innerHTML += '<br>';
 }

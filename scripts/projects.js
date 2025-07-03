@@ -57,7 +57,7 @@ function renderProject(project) {
         <img class="project-logo desktop" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
         <div class="content">
             <img class="project-logo mobile" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
-            <a class="project-name" href="${project["link"]}" target="_blank">
+            <a style="text-decoration-color: white;" class="project-name" href="${project["link"]}" target="_blank">
                 <span class="label">
                     <img src="../pictures/circuit-left.png" alt="Circuit Icon"></img>
                     <p>${project["name"]}</p>
