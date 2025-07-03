@@ -183,7 +183,7 @@ const knowhow = {
                 "Hands-on experience with refactoring legacy code",
                 "Hands-on experience with Test Driven Development"
             ],
-            "Digital circuits:": [
+            "Digital circuits": [
                 "Designing circuits using logic gates and latches",
                 "Understanding of basics of software-hardware functional decomposition",
             ],

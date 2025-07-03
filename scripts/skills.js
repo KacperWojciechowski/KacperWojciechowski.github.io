@@ -68,11 +68,57 @@ function renderVerticalTable(table)
         </table>`;
 }
 
+function renderProgramming()
+{
+    return `
+    <div class="label">
+        <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+        <p>Programming Languages:</p>
+        <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+    </div>
+    `;
+}
+
+function renderTools()
+{
+    return `
+    <div class="label">
+        <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+        <p>Tools:</p>
+        <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+    </div>
+    `;
+}
+
+function renderEmbedded()
+{
+    return `
+    <div class="label">
+        <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+        <p>Embedded Systems:</p>
+        <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+    </div>
+    `;
+}
+
+function renderKnowhow()
+{
+    return `
+    <div class="label">
+        <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+        <p>Know-How:</p>
+        <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+    </div>
+    `;
+}
+
+
+
 window.addEventListener('DOMContentLoaded', function() {
-    this.document.getElementById("prog-lang-table-desktop").innerHTML = '<h2>Programming languages:</h2>' + renderHorizontalTable(programmingLanguages);
-    this.document.getElementById("embedded-table-desktop").innerHTML = '<h2>Embedded systems:</h2>' + renderHorizontalTable(embedded);
-    this.document.getElementById("tools-table-desktop").innerHTML = '<h2>Tools:</h2>' + renderHorizontalTable(tools);
-    this.document.getElementById("knowhow-table-desktop").innerHTML = '<h2>Know-how:</h2>' + renderHorizontalTable(knowhow);
+    this.document.getElementById("prog-lang-table-desktop").innerHTML = renderProgramming() + renderHorizontalTable(programmingLanguages);
+    this.document.getElementById("embedded-table-desktop").innerHTML = renderEmbedded() + renderHorizontalTable(embedded);
+    this.document.getElementById("tools-table-desktop").innerHTML = renderTools() + renderHorizontalTable(tools);
+    this.document.getElementById("knowhow-table-desktop").innerHTML = renderKnowhow() + renderHorizontalTable(knowhow);
 
 
     this.document.getElementById("prog-lang-table-mobile").innerHTML = '<h2>Programming languages:</h2>' + renderVerticalTable(programmingLanguages);

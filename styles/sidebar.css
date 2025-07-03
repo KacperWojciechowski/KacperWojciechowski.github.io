@@ -2,7 +2,7 @@
     min-width: 260px;
     max-width: 320px;
     width: 20vh;
-    height: 100vh;
+    height: 100%;
     background-color: rgb(15, 54, 90, 0.8);
     color: white;
     display: flex;
@@ -13,11 +13,46 @@
     z-index: 1;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-right: 0.3rem solid rgb(119, 151, 194);
-    box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
-                0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
+    margin-left: 0;
+    box-shadow: 
+        -1.5rem 0 2.5rem -1rem rgba(122, 193, 252, 0.5),
+        0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5),
+        0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
 
+.sidebar::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 0;
+    width: 16px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(
+        to left, 
+        rgba(15, 54, 90, 0.8) 0%,
+        rgba(122, 193, 252, 0.3) 60%,
+        rgba(122, 193, 252, 0.0) 100%
+    );
+}
+
+.sidebar::after {
+    content: '';
+    position: absolute;
+    right: -16px;
+    top: 0;
+    width: 16px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(
+        to right, 
+        rgba(15, 54, 90, 0.8) 0%,
+        rgba(122, 193, 252, 0.3) 60%,
+        rgba(122, 193, 252, 0.0) 100%
+    );
+}
 .sidebar h2 {
     font-size: 1.3rem;
     width: 220px;
@@ -43,11 +78,6 @@
 
 @media (min-width: 1981px) {
     .sidebar {
-        margin-left: 0.5rem;
-        border-left: 0.3rem solid rgb(119, 151, 194);
-        box-shadow: 
-            -0.5rem 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5),
-            0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5),
-            inset -0.5rem 0 0.5rem rgba(89, 140, 235, 0.5) inset;
+        margin-left: 16px;
     }
 }

@@ -67,6 +67,7 @@ p {
     border-radius: 1rem;
     background-color: rgba(32, 26, 66, 0.5);
     font-size: 1.2rem;
+    font-style: italic;
 }
 
 .label img {
