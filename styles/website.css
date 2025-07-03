@@ -97,8 +97,10 @@ hr {
 }
 
 .main-window {
-    scrollbar-width: thin;
-    -ms-overflow-style: #bbb #f5f5f5;
+    /*scrollbar-width: thin;
+    -ms-overflow-style: #bbb #f5f5f5;*/
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     border: none;
     display: block;
     width: 100%;
@@ -108,11 +110,12 @@ hr {
 }
 
 .main-window::-webkit-scrollbar {
-    width: 8px;
+    display: none;
+/*    width: 8px;
     background: #f5f5f5;
-    border-radius: 8px;
+    border-radius: 8px;*/
 }
-
+/*
 .main-window::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #89b4fa 0%, #b4e0fa 100%);
     border-radius: 8px;
@@ -126,4 +129,4 @@ hr {
 
 .main-window::-webkit-scrollbar-corner {
     background: #f5f5f5;
-}
+}*/
