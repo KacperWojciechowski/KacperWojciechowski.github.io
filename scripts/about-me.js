@@ -1,15 +1,28 @@
 const aboutMeCode = [
+    { "keyword" : "#include", "brace" : "<", "type" : "chrono", "brace _1" : ">" },
+    { "keyword" : "#include", "brace" : "<", "type" : "memory", "brace _1" : ">"},
+    { "keyword" : "#include", "brace" : "<", "type" : "cstdint", "brace _1" : ">"},
+    { "keyword" : "#include", "brace" : "<", "type" : "string", "brace _1" : ">"},
+    {},
+    { "keyword" : "using namespace", "type" : "std::literals", "keyword _1" : ";" },
+    {},
     { "keyword" : "template", "brace" : "<", "keyword _1" : "typename", "type" : "Company", "brace _1" : ">" },
     { "keyword" : "class", "type" : "KacperWojciechowski", "brace" : "{" },
+    {},
     { "keyword" : "public:" },
     { "type code-tab" : "void", "function" : "introduce", "brace" : "()", "keyword _1" : ";" },
     { "type code-tab" : "void", "function" : "hire", "brace" : "()", "keyword _1" : ";" },
     { "keyword" : "private:" },
-    { "keyword code-tab" : "uint8_t", "variable" : "age", "keyword _1" : "=", "" : "<span id=\"id-age\" class=\"number\"></div>", "keyword _2" : ";" },
-    { "keyword code-tab" : "auto", "variable" : "occupation", "keyword" : "=", "string" : "\"Software Engineer\"", "keyword _1" : ";" },
-    { "keyword code-tab" : "auto", "variable" : "specialization", "keyword" : "=", "string" : "\"Cpp, SW Architecture\"", "keyword _1" : ";" },
-    { "keyword code-tab" : "auto", "variable" : "degree", "keyword" : "=", "string" : "\"Master's in Computer Science\"", "keyword _1" : ";" },
-    { "comment code-tab" : "// Rounding all months to ~30 days"},
+    { "type code-tab" : "std::uint8_t", "variable" : "age", "keyword _1" : "=", "" : "<span id=\"id-age\" class=\"number\"></div>", "keyword _2" : ";" },
+    { "type code-tab" : "std::string", "variable" : "occupation", "keyword" : "=", "string" : "\"Software Engineer\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "specialization", "keyword" : "=", "string" : "\"Cpp, SW Architecture\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "degree_type", "keyword" : "=", "string" : "\"Master's\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "degree_field", "keyword" : "=", "string" : "\"Computer Science\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "cityOfResidence", "keyword" : "=", "string" : "\"Wschowa\"", "keyword _1" : ";" },
+    { "keyword code-tab" : "struct", "type" : "WorkExperience", "brace" : "{"},
+    { "keyword code-double-tab" : "std::chrono::year", "variable" : "years", "keyword" : "=", "" : "<span id=\"id-years\" class=\"number\"></span>", "keyword _1" : ";" },
+    { "keyword code-double-tab" : "std::chrono::month", "variable" : "months", "keyword" : "=", "" : "<span id=\"id-months\" class=\"number\"></span>", "keyword _1" : ";" },
+    { "brace code-tab" : "}", "keyword" : ";" },
     { "keyword code-tab" : "auto", "variable" : "experience", "keyword" : "="},
     { "function code-double-tab" : "std::chrono::duration_cast", "brace" : "(" },
     { "type code-tripple-tab" : "std::chrono::years", "brace _1" : ">", "brace _2" : "(", "" : "<span id=\"id-experience\" class=\"number\"></span>", "brace _3" : ")", "keyword _1" : ".", "function" : "count", "brace" : "()", "keyword" : ";" },
@@ -21,21 +34,31 @@ const terminalSeparator = { "comment" : "---------------------------------------
 
 const terminalFrame = [
     { 
-        "terminal-prompt" : "Ubuntu(~/repos/cv/build)$ ", 
+        "terminal-prompt" : "Ubuntu@home:</span><span class=\"directory\">~/repos/cv/build</span><span class=\"terminal-prompt\">$ ", 
         "cursor" : "<span id=\"terminal-cursor\">|</span>", 
         "command" : "<span id=\"id-terminal-command\" style=\"command\"></span>",
-        "terminal-output" : "<span id=\"id-terminal-output\" style=\"terminal-output\"></span>"
+        "terminal-output" : "<p id=\"id-terminal-output\" style=\"terminal-output\"></p>"
     },
     { 
-        "terminal-prompt" : "Ubuntu(~/repos/cv/build)$ ", 
+        "terminal-prompt" : "Ubuntu@home:</span><span class=\"directory\">~/repos/cv/build</span><span class=\"terminal-prompt\">$ ", 
         "cursor" : "<span id=\"terminal-cursor-2\">|</span>", 
         "command" : "<span id=\"id-terminal-command-2\" style=\"command\"></span>", 
         "terminal-output" : "<span id=\"id-terminal-output-2\" style=\"terminal-output\"></span>" 
     }
 ]
 
-const terminalCommand = "g++ -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out";
-const terminalContent = "[!] Hello, my name is Kacper. Interrested in hiring me, aren't you ?";
+const terminalCommand = "g++ -std=c++20 -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out";
+const terminalContent = ["[!] Oh, I see you made it! Glad to have you here!",
+    "- Welcome to my humble abode.",
+    "- My name is Kacper.",
+    "- I work professionally as a Software Engineer, specializing in C++ and Software Architecture.",
+    "- Since you're here, I presume you want to know a bit more about me.",
+    "- As such, feel free to explore the content of this page. I hope you will find it interesting.",
+    `- My professional experience includes both high-level and low-level software solutions.
+    This makes me think I'll catch your attention regardless of the project you have at hand.`,
+    "- If you have any questions, feel free to reach out to me via e-mail.",
+    "- If any of my projects strikes you fancy, I encourage you to take a look at it's repository on GitHub!",
+    "- Hope you have a great day!"];
 
 function calculateDateDiffTillNow(startDate, endDate = new Date()) {
     let age = endDate.getFullYear() - startDate.getFullYear();
@@ -172,9 +195,9 @@ function placeSpecialtityBlock()
     `;
 }
 
-function cursorBlink()
+function cursorBlink(cursorClass)
 {
-    const cursor = this.document.getElementById("terminal-cursor");
+    const cursor = this.document.getElementById(cursorClass);
     if (cursor) {
         cursor.style.visibility = (cursor.style.visibility === 'hidden' ? '' : 'hidden');
     }
@@ -183,16 +206,20 @@ function cursorBlink()
 async function engageTerminal()
 {
     this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalFrame[0]);
-    let blinkingInterval = this.setInterval(cursorBlink, 500);
+    let blinkingInterval = this.setInterval(cursorBlink, 500, "terminal-cursor");
     const delay = ms => new Promise(res => this.setTimeout(res, ms));
     await delay(3000);
     this.clearInterval(blinkingInterval);
     this.document.getElementById("terminal-cursor").innerHTML = '';
     await iterativelyRenderTerminal("id-terminal-command", terminalCommand);
-    await iterativelyRenderTerminal("id-terminal-content", terminalContent);
+    await delay(500);
+    for (const line of terminalContent) {
+        await iterativelyRenderTerminal("id-terminal-output", line);
+    }
+    await delay(500);
     this.document.getElementById("about-me-terminal").innerHTML += renderTerminal(terminalFrame[1]);
 
-    //this.setInterval(cursorBlink, 500);
+    this.setInterval(cursorBlink, 500, "terminal-cursor-2");
 }
 
 window.addEventListener('DOMContentLoaded', async function() {

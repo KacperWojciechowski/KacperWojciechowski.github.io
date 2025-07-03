@@ -172,6 +172,10 @@ p {
     color: #92d4c2;
 }
 
+.directory {
+    color: #3c84d6;
+}
+
 @media(max-width: 1080px)
 {
     .mobile {
