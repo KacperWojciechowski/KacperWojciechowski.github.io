@@ -1,9 +1,9 @@
-body {
+html, body {
     background: rgba(255, 255, 255, 0.0);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
 }
 
@@ -38,4 +38,14 @@ hr {
 
 .subsite-body {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subsite-body,
+.subsite-body > table,
+.subsite-body > table > tbody,
+.subsite-body > table > tbody > tr
+{
+    height: 100%;
 }

@@ -85,30 +85,30 @@ function placeIntroductionBlock() {
 
 function placeInterrestsBlock() {
     return `
-    <div class="content">
+    <div class="content" id="side-tile">
         <div class="label">
             <img src="../pictures/circuit-left.png" alt="Circuit Icon">
             <p>Primary Interrests:</p>
             <img src="../pictures/circuit-right.png" alt="Circuit Icon">
         </div>
-        <div class="interrests-container">
-            <span class="interrest">
+        <div class="flowing-container-wrapper">
+            <span class="flowing-container">
                 <img src="../pictures/programming-icon.svg">
                 <p>Software Engineering</p>
             </span>
-            <span class="interrest">
+            <span class="flowing-container">
                 <img src="../pictures/space-engineering-icon.svg">
                 <p>Space Engineering</p>
             </span>
-            <span class="interrest">
+            <span class="flowing-container">
                 <img src="../pictures/physics-icon.svg">
                 <p>Physics</p>
             </span>
-            <span class="interrest">
+            <span class="flowing-container">
                 <img src="../pictures/astrophysics-icon.svg">
                 <p>Astrophysics</p>
             </span>
-            <span class="interrest">
+            <span class="flowing-container">
                 <img src="../pictures/video-game-icon.svg">
                 <p>Video Games</p>
             </span>
@@ -126,20 +126,38 @@ function placeGitHubBlock() {
             <img src="../pictures/circuit-right.png" alt="Circuit Icon">
         </div>
         <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-            <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KacperWojciechowski&size_weight=1&count_weight=0&theme=vision-friendly-dark&layout=donut&bg_color=201A4240&title_color=000000&text_color=000000&border_radius=10" alt="GitHub Languages">
-            <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=KacperWojciechowski&theme=gruvbox&hide_border=true&border_radius=6&mode=weekly&stroke=000000&ring=AC8B5C&fire=EB5454&currStreakNum=80B162&sideNums=80B162&dates=5C7E28&sideLabels=000000&currStreakLabel=53A5EB&background=FFFACD" alt="GitHub Streak" /></a>    
+            <img width="350" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KacperWojciechowski&size_weight=1&count_weight=0&theme=vision-friendly-dark&layout=donut&bg_color=201A4240&title_color=000000&text_color=000000&border_radius=10" alt="GitHub Languages">
         </div>
     </div>`;
 }
 
-function placeResearchBlock() {
+function placeSpecialtityBlock()
+{
     return `
     <div class="content">
         <div class="label">
             <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-            <p>Research Stats:</p>
+            <p>Specialization:</p>
             <img src="../pictures/circuit-right.png" alt="Circuit Icon">
-        </div>                    
+        </div>
+        <div class="flowing-container-wrapper">
+            <span class="flowing-container">
+                <img src="../pictures/sw-engineering.svg">
+                <p>Software Engineering</p>
+            </span>
+            <span class="flowing-container">
+                <img src="../pictures/cpp.svg">
+                <p>C++</p>
+            </span>
+            <span class="flowing-container">
+                <img src="../pictures/sw-architecture.svg">
+                <p>Software Architecture</p>
+            </span>
+            <span class="flowing-container">
+                <img src="../pictures/embedded-systems.svg">
+                <p>Embedded Systems</p>
+            </span>
+        </div>
     </div>
     `;
 }
@@ -147,8 +165,8 @@ function placeResearchBlock() {
 window.addEventListener('DOMContentLoaded', async function() {
     this.document.getElementById("id-introduction").innerHTML = placeIntroductionBlock();
     this.document.getElementById("id-interrests").innerHTML = placeInterrestsBlock();
+    this.document.getElementById("id-speciality").innerHTML = placeSpecialtityBlock();
     this.document.getElementById("id-github").innerHTML = placeGitHubBlock();
-    this.document.getElementById("id-research").innerHTML = placeResearchBlock();
     this.document.getElementById("about-me-code").innerHTML = renderCode(aboutMeCode, noSpaceCppKeywords);
     this.document.getElementById("terminal-separator").innerHTML = renderTerminal(terminalSeparator);
     this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalContent);
