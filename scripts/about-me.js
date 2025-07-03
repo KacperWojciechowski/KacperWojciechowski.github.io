@@ -21,10 +21,13 @@ const terminalSeparator = [
     { "comment" : "------------------------------------------------------"}
 ]
 
+const terminalPrompt = [{ "terminal-prompt" : "Ubuntu(~/repos/cv/build)$" }]
+
+const terminalCursor = [{ "cursor" : "<span id=\"terminal-cursor\">|</span>" }]
+
 const terminalContent = [
-    { "terminal-prompt" : "Ubuntu(~/repos/cv/build)$", "command" : "g++ -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out" },
-    { "terminal-output" : "Hello, my name is Kacper. Interrested in hiring me, aren't you ?" },
-    { "terminal-prompt" : "Ubuntu(~/repos/cv/build)$", "cursor" : "<span id=\"terminal-cursor\">|</span>" }
+    { "command" : "g++ -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out" },
+    { "terminal-output" : "Hello, my name is Kacper. Interrested in hiring me, aren't you ?" }
 ]
 
 function calculateDateDiffTillNow(startDate, endDate = new Date()) {
@@ -162,22 +165,38 @@ function placeSpecialtityBlock()
     `;
 }
 
-window.addEventListener('DOMContentLoaded', async function() {
+function cursorBlink()
+{
+    const cursor = this.document.getElementById("terminal-cursor");
+    if (cursor) {
+        cursor.style.visibility = (cursor.style.visibility === 'hidden' ? '' : 'hidden');
+    }
+}
+
+async function engageTerminal()
+{
+    this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalPrompt.concat(' ').concat(terminalCursor));
+    let blinkingInterval = this.setInterval(cursorBlink, 500);
+    const delay = ms => new Promise(res => this.setTimeout(res, ms));
+    await delay(3000);
+    this.clearInterval(blinkingInterval);
+
+    this.document.getElementById("terminal-cursor").innerHTML = '';
+    iterativelyRenderTerminal(document, "about-me-terminal", terminalContent);
+    this.document.getElementById("about-me-terminal").innerHTML += renderTerminal();
+
+    this.setInterval(cursorBlink, 500);
+}
+
+window.addEventListener('DOMContentLoaded', function() {
     this.document.getElementById("id-introduction").innerHTML = placeIntroductionBlock();
     this.document.getElementById("id-interrests").innerHTML = placeInterrestsBlock();
     this.document.getElementById("id-speciality").innerHTML = placeSpecialtityBlock();
     this.document.getElementById("id-github").innerHTML = placeGitHubBlock();
     this.document.getElementById("about-me-code").innerHTML = renderCode(aboutMeCode, noSpaceCppKeywords);
-    this.document.getElementById("terminal-separator").innerHTML = renderTerminal(terminalSeparator);
-    this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalContent);
     this.document.getElementById("id-age").innerHTML = Math.trunc(calculateDateDiffWithMonths(new Date(1999, 7, 27))[0]);
     this.document.getElementById("id-experience").innerHTML = calculateExperience();
-
-    this.setInterval(function() {
-        const cursor = this.document.getElementById("terminal-cursor");
-        if (cursor) {
-            cursor.style.visibility = (cursor.style.visibility === 'hidden' ? '' : 'hidden');
-        }
-    }, 500);
+    this.document.getElementById("terminal-separator").innerHTML = renderTerminal(terminalSeparator);
+    engageTerminal();
 });
 

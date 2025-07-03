@@ -1,0 +1,104 @@
+const projects = [
+    {
+        name: "GraphCake",
+        logo: "../pictures/graph_cake.svg",
+        link: "https://github.com/KacperWojciechowski/GraphCake",
+        technicalStack: ["C++20", "GTest", "CMake"],
+        support: true,
+        features: [
+            "Set of universal, exchangeable graph representations;",
+            `Support for <a href="" target="_blank">House of Graphs</a> formats (<b>.mat</b>, <b>.lst</b>) and <b>.graphML</b> formats;`,
+            "Coloring algorithms (Greedy, LF, SF);",
+            "(WIP) DFS algorithm support;",
+            "(WIP) BFS algorithm support;",
+            "(WIP) Topological sort algorithm support;",
+            "(WIP) Shortest path algorithm support;",
+            "(WIP) Minimum spanning tree algorithm support;",
+            "(WIP) Strongly connected components algorithm support;",
+            "(WIP) Critical path method algorithm support;"
+        ]
+    },
+    {
+        name: "Road to the Center",
+        logo: "../pictures/road_to_the_centre.svg",
+        link: "https://github.com/KacperWojciechowski/RoadToTheCenter",
+        technicalStack: ["C++20", "GTest", "CMake"],
+        support: false,
+        features: [
+            "Made during an amateur game jam between friends;",
+            "A text-based economy game, where the goal is to travel to the center of the galaxy;",
+            "Havily inspired by the video game Spore;",
+            "Utilizes a custom galaxy generation mechanism based on graph topological sorting algorithm"
+        ]
+    },
+    {
+        name: "Dungeon Crawler",
+        logo: "../pictures/dungeon_crawler.svg",
+        link: "https://github.com/KacperWojciechowski/DungeonCrawler",
+        technicalStack: ["Java 8, Maven"],
+        support: false,
+        features: [
+            "Text-based dungeon crawler game in a client-server model;",
+            "The game state is controlled and validated by the server, while the client acts exclusively as a front-end;",
+            "Custom graph-based map generation at each playthrough;",
+            "Exploration state retention;",
+            "Combat systems with randomly generated enemies;",
+            "Several enemies classes with different parameter scaling;",
+            "Character progression based on randomized loot;",
+            "Consumable items mechanic;",
+            "JSON-based client-server communication;"
+        ]
+    }
+]
+
+function renderProject(project) {
+    let out = `
+    <div class="project-item">
+        <img class="project-logo desktop" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
+        <div class="content">
+            <img class="project-logo mobile" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
+            <a class="project-name" href="${project["link"]}" target="_blank">
+                <span class="label">
+                    <img src="../pictures/circuit-left.png" alt="Circuit Icon"></img>
+                    <p>${project["name"]}</p>
+                    <img src="../pictures/circuit-right.png" alt="Circuit Icon"></img>
+                </span>
+            </a>
+            <hr>
+            <p class="note green">
+                Available at <img class="github-icon" src="https://img.shields.io/badge/-GitHub-gray?style=flat&logo=GitHub&logoColor=white" alt="GitHub">
+            </p>`
+    if (!project["support"])
+    {
+        out += `<p class="note red">
+                    <img class="note-icon" src="../pictures/exclamation.svg"></img>
+                    Support for the project has been discontinued
+                </p>`
+    }
+    out += `<p class="note blue">
+                <img class="note-icon" src="../pictures/blue-pin.svg">
+                <b>Technical stack:</b> ${project["technicalStack"].map(stack => `<i>${stack}</i>`).join(', ')}
+            </p>
+            <p>
+                <ul>
+                    ${project["features"].map(feature => `<li><p>${feature}</p></li>`).join('')}
+                </ul>
+            </p>
+        </div>
+    </div>
+    `;
+    return out;
+}
+
+
+                    
+                    
+
+window.addEventListener('DOMContentLoaded', function() {
+    let element = this.document.getElementById("id-projects-container");
+    for (const project of projects)
+    {
+        element.innerHTML += renderProject(project);
+        element.innerHTML += `<hr>`
+    }
+});

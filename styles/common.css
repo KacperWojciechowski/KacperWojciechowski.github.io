@@ -60,6 +60,10 @@ p {
     flex-direction: row;
 }
 
+.left {
+    align-items: flex-start;
+}
+
 .label p {
     padding: 0.5rem 1rem;
     color: white;

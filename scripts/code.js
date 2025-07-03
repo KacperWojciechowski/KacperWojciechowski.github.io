@@ -35,7 +35,7 @@ function renderCode(code, noSpaceKeywords) {
     return out;
 }
 
-function renderTerminal(terminal) {
+async function renderTerminal(terminal) {
     out = '';
     const lineCount = terminal.length;
     for (let i = 0; i < lineCount; i++) {
@@ -52,4 +52,28 @@ function renderTerminal(terminal) {
         }
     }
     return out;
+}
+
+function iterativelyRenderTerminal(document, elementId, terminalContent) {
+    const element = document.getElementById(elementId);
+    if (!element) {
+        console.error(`Element with ID ${elementId} not found.`);
+        return;
+    }
+
+    Object.entries(terminalContent).forEach(async ([style, content]) => {
+        element.innerHTML += `<span class="${style}">`;
+        let index = 0;
+        const delay = ms => new Promise(res => this.setTimeout(res, ms));
+        let handle = this.setInterval(() => {
+            if (content.length > index)
+            {
+                element.innerHTML += content[index];
+                index++;
+            }
+        }, 100);
+        await delay(content.length * 100 + 100);
+        this.clearInterval(handle);
+        element.innerHTML += `</span>`
+    })
 }
