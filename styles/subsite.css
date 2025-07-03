@@ -28,6 +28,13 @@ hr {
     min-width: 250px;
 }
 
+.content ul li {
+    text-justify: auto;
+    text-align: left;
+}
+
+
+
 .subsite-header {
     display: flex;
     flex-direction: column;
