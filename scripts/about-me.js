@@ -1,9 +1,4 @@
 const aboutMeCode = [
-    { "keyword" : "#include", "brace" : "<", "type" : "chrono", "brace _1" : ">" },
-    { "keyword" : "#include", "brace" : "<", "type" : "memory", "brace _1" : ">"},
-    { "keyword" : "#include", "brace" : "<", "type" : "cstdint", "brace _1" : ">"},
-    { "keyword" : "#include", "brace" : "<", "type" : "string", "brace _1" : ">"},
-    {},
     { "keyword" : "using namespace", "type" : "std::literals", "keyword _1" : ";" },
     {},
     { "keyword" : "template", "brace" : "<", "keyword _1" : "typename", "type" : "Company", "brace _1" : ">" },
@@ -19,13 +14,13 @@ const aboutMeCode = [
     { "type code-tab" : "std::string", "variable" : "degree_type", "keyword" : "=", "string" : "\"Master's\"", "keyword _1" : ";" },
     { "type code-tab" : "std::string", "variable" : "degree_field", "keyword" : "=", "string" : "\"Computer Science\"", "keyword _1" : ";" },
     { "type code-tab" : "std::string", "variable" : "cityOfResidence", "keyword" : "=", "string" : "\"Wschowa\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "countryOfResidence", "keyword" : "=", "string" : "\"Poland\"", "keyword _1" : ";" },
+    {},
     { "keyword code-tab" : "struct", "type" : "WorkExperience", "brace" : "{"},
     { "keyword code-double-tab" : "std::chrono::year", "variable" : "years", "keyword" : "=", "" : "<span id=\"id-years\" class=\"number\"></span>", "keyword _1" : ";" },
     { "keyword code-double-tab" : "std::chrono::month", "variable" : "months", "keyword" : "=", "" : "<span id=\"id-months\" class=\"number\"></span>", "keyword _1" : ";" },
     { "brace code-tab" : "}", "keyword" : ";" },
-    { "keyword code-tab" : "auto", "variable" : "experience", "keyword" : "="},
-    { "function code-double-tab" : "std::chrono::duration_cast", "brace" : "(" },
-    { "type code-tripple-tab" : "std::chrono::years", "brace _1" : ">", "brace _2" : "(", "" : "<span id=\"id-experience\" class=\"number\"></span>", "brace _3" : ")", "keyword _1" : ".", "function" : "count", "brace" : "()", "keyword" : ";" },
+    {},
     { "type code-tab" : "std::weak_ptr", "brace" : "<", "type" : "Company", "brace _1" : ">", "variable" : " employer", "keyword" : ";" },
     { "brace" : "}", "keyword" : ";" },
 ]
@@ -96,7 +91,8 @@ function calculateExperience() {
             totalExperience[1] = totalExperience[1] % 12;
         }
     }
-    return totalExperience[0] + "y + " + totalExperience[1] + "*30d";
+    this.document.getElementById("id-years").innerHTML = totalExperience[0];
+    this.document.getElementById("id-months").innerHTML = totalExperience[1];
 }
 
 function placeIntroductionBlock() {
@@ -229,8 +225,8 @@ window.addEventListener('DOMContentLoaded', async function() {
     this.document.getElementById("id-github").innerHTML = placeGitHubBlock();
     this.document.getElementById("about-me-code").innerHTML = renderCode(aboutMeCode, noSpaceCppKeywords);
     this.document.getElementById("id-age").innerHTML = Math.trunc(calculateDateDiffWithMonths(new Date(1999, 7, 27))[0]);
-    this.document.getElementById("id-experience").innerHTML = calculateExperience();
     this.document.getElementById("terminal-separator").innerHTML = renderTerminal(terminalSeparator);
+    calculateExperience();
     await engageTerminal();
 });
 

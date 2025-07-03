@@ -6,7 +6,7 @@
 
 .flowing-container {
     width: 15%;
-    margin: 0 .7rem;
+    margin: 0 .65rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,8 +16,8 @@
 }
 
 .flowing-container img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 .flowing-container p {
@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    min-height: 1025px;
+    min-height: 1100px;
     align-items: stretch;
 }
 
@@ -46,17 +46,26 @@
     min-height: 0;
 }
 
+.about-me-tile > * {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+}
+
 .side-tile-row {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
 }
 
-.about-me-terminal {
+.terminal-span,
+.about-me-terminal,
+.about-me-terminal > * {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: 100%;
     min-height: 0;
 }

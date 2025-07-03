@@ -39,7 +39,7 @@ function renderTerminal(terminal) {
     let out = '';
     for (const line of Object.entries(terminal)) {
         const [style, content] = line;
-        out += `<span class="${style}">${content}</span>`;
+        out += `<span style="terminal-span" class="${style}">${content}</span>`;
     }
     return out;
 }
