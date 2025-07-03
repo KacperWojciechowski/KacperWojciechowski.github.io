@@ -65,19 +65,27 @@ function calculateDateDiffTillNow(startDate, endDate = new Date()) {
 }
 
 function calculateDateDiffWithMonths(startDate, endDate = new Date()) {
-    let age = (endDate.getFullYear() - startDate.getFullYear()) * 12;
-    age += endDate.getMonth() - startDate.getMonth();
-    if (endDate.getDate() < startDate.getDate()) {
-        age--;
+    let years = (endDate.getFullYear() - startDate.getFullYear());
+    let months = endDate.getMonth() - startDate.getMonth();
+    let days = endDate.getDate() - startDate.getDate();
+    if (days > 0)
+    {
+        months += 1;
     }
-    return [age/12, age % 12];
+    
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+    return [years, months];
 }
 
 const experience = [
-    [new Date(2021, 6, 1), new Date(2021, 7, 1)],
-    [new Date(2021, 9, 1), new Date(2022, 1, 28)],
-    [new Date(2022, 11, 1), new Date()]
+    [new Date(2021, 6, 1), new Date(2021, 7, 31)], // 2
+    [new Date(2021, 9, 1), new Date(2022, 1, 28)], // 5
+    [new Date(2022, 11, 1), new Date()] // 32
 ]
+// 39 months = 3 years and 3 months
 
 function calculateExperience() {
     let totalExperience = [0, 0];

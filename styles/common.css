@@ -179,6 +179,8 @@ p {
 
 .terminal-output {
     color: #92d4c2;
+    text-align: left;
+    text-justify: auto;
 }
 
 .directory {

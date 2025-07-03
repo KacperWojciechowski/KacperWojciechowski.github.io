@@ -4,11 +4,23 @@
     width: 100%;
 }
 
+.projects-container > hr {
+    flex: none;
+    display: block;
+}
+
 .project-item {
-    margin-top: .5rem;
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
     width: 100%;
+    margin-top: .5rem;
+}
+
+.project-item > .content {
+    flex: 1 1 0;
+    width: 100%
+    display: flex;
+    flex-direction: column;
 }
 
 .github-icon {
@@ -28,4 +40,10 @@
 .project-name {
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 1080px) {
+    .projects-container > * {
+        flex-direction: column;
+    }
 }

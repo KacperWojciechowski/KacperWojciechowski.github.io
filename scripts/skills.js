@@ -74,7 +74,6 @@ window.addEventListener('DOMContentLoaded', function() {
     this.document.getElementById("tools-table-desktop").innerHTML = renderLabel("Tools:") + renderHorizontalTable(tools);
     this.document.getElementById("knowhow-table-desktop").innerHTML = renderLabel("Know-How:") + renderHorizontalTable(knowhow);
 
-
     this.document.getElementById("prog-lang-table-mobile").innerHTML = renderLabel("Programming:") + renderVerticalTable(programmingLanguages);
     this.document.getElementById("embedded-table-mobile").innerHTML = renderLabel("Embedded Systems:") + renderVerticalTable(embedded);
     this.document.getElementById("tools-table-mobile").innerHTML = renderLabel("Tools:") + renderVerticalTable(tools);

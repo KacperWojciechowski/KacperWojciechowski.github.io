@@ -90,15 +90,14 @@ function renderProject(project) {
     return out;
 }
 
-
-                    
-                    
-
 window.addEventListener('DOMContentLoaded', function() {
     let element = this.document.getElementById("id-projects-container");
-    for (const project of projects)
+    for (let i = 0; i < projects.length; i++) {
     {
-        element.innerHTML += renderProject(project);
-        element.innerHTML += `<hr>`
+        element.innerHTML += renderProject(projects[i]);
+        if (i < projects.length - 1) {
+            element.innerHTML += `<hr>`
+        }
+    }
     }
 });
