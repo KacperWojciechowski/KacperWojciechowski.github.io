@@ -66,7 +66,89 @@ function calculateExperience() {
     return totalExperience[0] + "y + " + totalExperience[1] + "*30d";
 }
 
-window.addEventListener('DOMContentLoaded', function() {
+function placeIntroductionBlock() {
+    return `
+        <div class="content">
+            <div class="label">
+                <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+                <p>Hello, my name is Kacper!</p>
+                <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+            </div>
+            <div class="codeblock">
+                <div id="about-me-code"></div>
+                <div id="terminal-separator"></div>
+                <div id="about-me-terminal"></div>
+            </div>                    
+        </div>
+    `;
+}
+
+function placeInterrestsBlock() {
+    return `
+    <div class="content">
+        <div class="label">
+            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+            <p>Primary Interrests:</p>
+            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+        </div>
+        <div class="interrests-container">
+            <span class="interrest">
+                <img src="../pictures/programming-icon.svg">
+                <p>Software Engineering</p>
+            </span>
+            <span class="interrest">
+                <img src="../pictures/space-engineering-icon.svg">
+                <p>Space Engineering</p>
+            </span>
+            <span class="interrest">
+                <img src="../pictures/physics-icon.svg">
+                <p>Physics</p>
+            </span>
+            <span class="interrest">
+                <img src="../pictures/astrophysics-icon.svg">
+                <p>Astrophysics</p>
+            </span>
+            <span class="interrest">
+                <img src="../pictures/video-game-icon.svg">
+                <p>Video Games</p>
+            </span>
+        </div>                    
+    </div>
+    `;
+}
+
+function placeGitHubBlock() {
+    return `
+    <div class="content">
+        <div class="label">
+            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+            <p>GitHub Stats:</p>
+            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+        </div>
+        <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+            <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KacperWojciechowski&size_weight=1&count_weight=0&theme=vision-friendly-dark&layout=donut&bg_color=201A4240&title_color=000000&text_color=000000&border_radius=10" alt="GitHub Languages">
+            <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=KacperWojciechowski&theme=gruvbox&hide_border=true&border_radius=6&mode=weekly&stroke=000000&ring=AC8B5C&fire=EB5454&currStreakNum=80B162&sideNums=80B162&dates=5C7E28&sideLabels=000000&currStreakLabel=53A5EB&background=FFFACD" alt="GitHub Streak" /></a>    
+        </div>
+    </div>`;
+}
+
+function placeResearchBlock() {
+    return `
+    <div class="content">
+        <div class="label">
+            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+            <p>Research Stats:</p>
+            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+        </div>                    
+    </div>
+    `;
+}
+
+window.addEventListener('DOMContentLoaded', async function() {
+    this.document.getElementById("id-introduction").innerHTML = placeIntroductionBlock();
+    this.document.getElementById("id-interrests").innerHTML = placeInterrestsBlock();
+    this.document.getElementById("id-github").innerHTML = placeGitHubBlock();
+    this.document.getElementById("id-research").innerHTML = placeResearchBlock();
     this.document.getElementById("about-me-code").innerHTML = renderCode(aboutMeCode, noSpaceCppKeywords);
     this.document.getElementById("terminal-separator").innerHTML = renderTerminal(terminalSeparator);
     this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalContent);

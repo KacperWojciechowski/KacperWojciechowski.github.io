@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../styles/about-me.css">
     <script src="../scripts/code.js"></script>
     <script src="../scripts/about-me.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 <body>
     <div class="subsite-header">
@@ -23,104 +25,18 @@
         <hr>
     </div>
     <div class="subsite-body">
-        <div class="about-me-column">
-            <div class="about-me-row">
-                <div class="about-me-item">
-                    <div class="content">
-                        <div class="label">
-                            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-                            <p>Hello, my name is Kacper!</p>
-                            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
-                        </div>
-                        <div class="codeblock">
-                            <div id="about-me-code"></div>
-                            <div id="terminal-separator"></div>
-                            <div id="about-me-terminal"></div>
-                        </div>                    
-                    </div>
-                </div>
-                <div class="about-me-item">
-                    <div class="content">
-                        <div class="label">
-                            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-                            <p>Primary Interrests:</p>
-                            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
-                        </div>
-                        <div class="interrests-container">
-                            <span class="interrest">
-                                <img src="../pictures/programming-icon.svg">
-                                <p>Software Engineering</p>
-                            </span>
-                            <span class="interrest">
-                                <img src="../pictures/space-engineering-icon.svg">
-                                <p>Space Engineering</p>
-                            </span>
-                            <span class="interrest">
-                                <img src="../pictures/physics-icon.svg">
-                                <p>Physics</p>
-                            </span>
-                            <span class="interrest">
-                                <img src="../pictures/astrophysics-icon.svg">
-                                <p>Astrophysics</p>
-                            </span>
-                            <span class="interrest">
-                                <img src="../pictures/video-game-icon.svg">
-                                <p>Video Games</p>
-                            </span>
-                        </div>                    
-                    </div>
-                </div>
-            </div>
-            <div class="about-me-row">
-                <div class="about-me-item">
-                    <div class="content">
-                        <div class="label">
-                            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-                            <p>My GitHub Info:</p>
-                            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
-                        </div>                    
-                    </div>
-                </div>
-                <div class="about-me-item">
-                    <div class="content">
-                        <div class="label">
-                            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-                            <p>Personal Roadmap:</p>
-                            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
-                        </div>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="content">
-            <p>
-                Hello, my name is Kacper!<br><br>
-                I'm a C++ software enginner, with a Master's degree in Computer Science, graduated from the 
-                <a href="https://uz.zgora.pl/" target="_blank">
-                    University of Zielona Góra,
-                </a>
-                Poland, at the 
-                <a href="https://wiea.uz.zgora.pl/" target="_blank">
-                    Faculty of Computer, Electrical and Control Engineering.</a>
-                <br><br>
-                My main interrests include programming both in high and low abstraction levels, IoT, 
-                general STEM (such as physics, maths, astronomy and so on) and video games.
-                For a couple of years I was an active member of 
-                <a href="https://knik.spaceregion.eu/" target="_blank">
-                    Space Engineering Science Club
-                </a>
-                at my university, where I was the team
-                leader of the software and electronics teams. The primary project I took part in and overseen the progress of
-                was a marsian rover prototype, based on STM microcontrollers. I was responsible for the software architecture, 
-                communication design between components, and electrical design of the rover.
-                My additional activities within the science club included training new members and organizing programming and
-                electronics workshops for middle school students during classes in colaboration with 
-                 
-                (CBK PAN).
-            </p>
-        </div>  
+        <table>
+            <tbody>
+                <tr>
+                    <td class="about-me-tile" id="id-introduction"></td>
+                    <td class="about-me-tile" id="id-interrests"></td>
+                </tr>
+                <tr>
+                    <td class="about-me-tile" id="id-github"></td>
+                    <td class="about-me-tile" id="id-research"></td>
+                </tr>
+            </tbody>
+        </table>  
     </div>    
 </body>
 </html>
