@@ -75,8 +75,8 @@ window.addEventListener('DOMContentLoaded', function() {
     this.document.getElementById("knowhow-table-desktop").innerHTML = renderLabel("Know-How:") + renderHorizontalTable(knowhow);
 
 
-    this.document.getElementById("prog-lang-table-mobile").innerHTML = '<h2>Programming languages:</h2>' + renderVerticalTable(programmingLanguages);
-    this.document.getElementById("embedded-table-mobile").innerHTML = '<h2>Embedded systems:</h2>' + renderVerticalTable(embedded);
-    this.document.getElementById("tools-table-mobile").innerHTML = '<h2>Tools:</h2>' + renderVerticalTable(tools);
-    this.document.getElementById("knowhow-table-mobile").innerHTML = '<h2>Know-how:</h2>' + renderVerticalTable(knowhow);
+    this.document.getElementById("prog-lang-table-mobile").innerHTML = renderLabel("Programming:") + renderVerticalTable(programmingLanguages);
+    this.document.getElementById("embedded-table-mobile").innerHTML = renderLabel("Embedded Systems:") + renderVerticalTable(embedded);
+    this.document.getElementById("tools-table-mobile").innerHTML = renderLabel("Tools:") + renderVerticalTable(tools);
+    this.document.getElementById("knowhow-table-mobile").innerHTML = renderLabel("Know-How:") + renderVerticalTable(knowhow);
 })

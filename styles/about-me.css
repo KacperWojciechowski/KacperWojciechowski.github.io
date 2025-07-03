@@ -33,7 +33,6 @@
 .about-me-flex-wrapper {
     display: flex;
     flex-direction: row;
-    height: 100%;
     min-height: 1100px;
     align-items: stretch;
 }
@@ -42,7 +41,6 @@
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
     min-height: 0;
 }
 
@@ -70,9 +68,39 @@
     min-height: 0;
 }
 
+.content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+}
+
 @media (max-width: 1080px) {
     .about-me-flex-wrapper {
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    .side-tile-row {
+        flex: none;
+        min-height: unset;
+        height: auto;
+    }
+
+    .about-me-tile,
+    .about-me-tile > *
+    {
+        flex: none;
+        min-height: unset;
+        height: auto;
+    }
+
+    .codeblock,
+    .about-me-terminal,
+    .about-me-terminal > * {
+        flex: none;
+        min-height: unset;
         height: auto;
     }
 }
