@@ -24,7 +24,8 @@ table th {
 }
 
 table tbody td {
-    padding: 1rem .5rem;
+    padding: 1rem 0;
+    padding-left: .5rem;
     text-align: left;
     border: 1px solid black;
 }

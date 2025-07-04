@@ -23,7 +23,7 @@ function renderHorizontalTable(table) {
         Object.entries(superlabels).forEach(([, sublabels]) => {
             Object.entries(sublabels).forEach(([label, values]) => {
                 thead += `<th>${label}</th>`;
-                tbody += `<td><ul>${values.map(value => `<li>${value}</li>`).join('')}</ul></td>`;
+                tbody += `<td><ul>${values.map(value => `<li style="margin: .6rem 0;">${value}</li>`).join('')}</ul></td>`;
             });
         });
 

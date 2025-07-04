@@ -55,45 +55,26 @@ function renderSingleEducationEntry(entry) {
                 <span class="timeline-date">${entry["endDate"]}</span>
             </div>
             <div class="content">
-                <h2><i>${entry["degree"]}</i></h2> - <a href="${entry["institutionLink"]}" target="_blank">${entry["institution"]}</a>, ${entry.city}, ${entry.country}</h2>
+                <h2><i>${entry["degree"]}</i> - <a href="${entry["institutionLink"]}" target="_blank">${entry["institution"]}</a>, ${entry["city"]}, ${entry["country"]}</h2>
                 <hr>
                 <p><strong>Faculty: </strong>
                     <a href="${entry["facultyLink"]}" target="_blank">${entry["faculty"]}</a></p>
                 <p><strong>Specialization: </strong><i>${entry["specialization"]}</i></p>
                 <p style="translate: 0 -5px;"><strong>Thesis: 
                     </strong><a href="${entry["thesisLink"]} target="_blank"><i>''${entry["thesisTitle"]}''</i>
-                    <img class="researchgate-icon" src="https://img.shields.io/badge/-ResearchGate-darkgreen?style=flat&logo=ResearchGate&logoColor=white" alt="ResearchGate"></a>"
+                    <img class="researchgate-icon" src="https://img.shields.io/badge/-ResearchGate-darkgreen?style=flat&logo=ResearchGate&logoColor=white" alt="ResearchGate"></a>
                 </p>
                 <p><strong>Additional activities:</strong></p>
                 <ul>
-                    ${Object.entries(entry["activities"]).map(([activity, description]) => `<li><p><i><b>${activity}</b></i>: ${description};</p></li>`).join('')}
+                    ${entry["activities"].map(activityEntry => Object.entries(activityEntry).map(([activity, description]) => `<li><p><i><b>${activity}</b></i> - ${description};</p></li>`).join('')).join('')}
                 </ul>
                 <p><strong>Additional achievements:</strong></p>
                 <ul>
-                    ${entry.achievements.map(achievement => `<li><p>${achievement}</p></li>`).join('')}
+                    ${entry["achievements"].map(achievement => `<li><p>${achievement};</p></li>`).join('')}
                 </ul>
             </div>
         </div>`;
 }
-
-                        <a href="https://www.researchgate.net/publication/382162127_Comparative_Analysis_of_Machine_Learning_Libraries_in_C_for_Applications_in_Biostatistics" target="_blank">
-                            <i>''Comparative Analysis of Machine Learning Libraries in C++ for Applications in Biostatistics''</i>
-                        <img class="researchgate-icon" src="https://img.shields.io/badge/-ResearchGate-darkgreen?style=flat&logo=ResearchGate&logoColor=white" alt="ResearchGate">
-                        </a>
-                    </p>
-                    <p><strong>Additional activities:</strong></p>
-                    <ul>
-                        <li><p><i><b>Space Engineering Science Club</b></i> - software and electronics engineer, team leader;</p></li>
-                    </ul>
-                    <p><strong>Additional achievements:</strong></p>
-                    <ul>
-                        <li><p>Designed the target electronic system of a marsian rover at <a href="https://knik.spaceregion.eu/" target="_blank">The Space Engineering Science Club</a>;</p></li>
-                        <li><p>Lead several lectures about microelectronics for high school students in cooperation with <a href="https://cbkpan.pl/" target="_blank">
-                            The Space Research Centre of the Polish Academy of Sciences (CBK PAN);
-                            </a></p></li>
-                    </ul>
-                </div>
-            </div>
 
 function renderEducationEntries() {
     return `${educationEntries.map(renderSingleEducationEntry).join('')}`;

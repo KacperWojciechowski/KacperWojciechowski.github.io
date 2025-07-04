@@ -7,7 +7,7 @@ const programmingLanguages = {
                 "Concurrency - synchronization, multithreading",
                 "Memory algignment",
                 "Memory management - RAII, memory ownership, smart pointers side effects",
-                "Templates - metaprogramming, template specialization, Curriously Recurring Template Pattern, compile-time conditionals",
+                "Templates - hands-on experience with metaprogramming, template specialization, Curriously Recurring Template Pattern, compile-time conditionals",
                 "Lambda functions and function pointers",
                 "Functors",
                 "G++ compiler attributes",
@@ -108,7 +108,7 @@ const tools = {
             ],
             "Windows": [
                 "Hands-on experience with Windows systems starting from Windows XP up to Windows 11",
-                "Hands-on experience with WSL2 with Ubuntu instance"    
+                "Hands-on experience setting up, configuring and operating WSL2 with Ubuntu instance"    
             ]
         },
         "Code analysis and quality": {
@@ -122,7 +122,7 @@ const tools = {
         },
         "Documentation": {
             "Generated": [
-                "Generating documentation using Doxygen",
+                "Generating documentation using Doxygen based on in-code comments",
             ],
             "Hand-made": [
                 "Creating descriptive documentation using Markdown",
