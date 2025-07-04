@@ -163,7 +163,7 @@ function placeGitHubBlock() {
             <img src="../pictures/circuit-right.png" alt="Circuit Icon">
         </div>
         <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-            <img width="350" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KacperWojciechowski&size_weight=1&count_weight=0&theme=vision-friendly-dark&layout=donut&bg_color=201A4240&title_color=000000&text_color=000000&border_radius=10" alt="GitHub Languages">
+            <img class="gh-stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KacperWojciechowski&size_weight=1&count_weight=0&theme=vision-friendly-dark&layout=donut&bg_color=201A4240&title_color=000000&text_color=000000&border_radius=10" alt="GitHub Languages">
         </div>
     </div>`;
 }

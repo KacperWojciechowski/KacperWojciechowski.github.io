@@ -43,12 +43,13 @@ hr {
 }
 
 .subsite-body {
-    padding: 10px;
+    display: flex;
+    flex: 1 1 auto;
+    padding: .5rem .5rem;
     display: flex;
     flex-direction: column;
 }
 
-.subsite-body,
 .subsite-body > table,
 .subsite-body > table > tbody,
 .subsite-body > table > tbody > tr
