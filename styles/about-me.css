@@ -107,4 +107,9 @@
         min-height: unset;
         height: auto;
     }
+
+    .gh-stats {
+        width: 90%;
+        max-width: 350px;
+    }
 }

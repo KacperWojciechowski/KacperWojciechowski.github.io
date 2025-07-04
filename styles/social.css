@@ -18,7 +18,6 @@
     list-style: none;
     margin-top: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     width: 100%;
 }
@@ -30,10 +29,11 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .social-media-container ul li {
-    margin: .5rem 0;
+    margin: .4rem 0;
 }
 
 .social-media-container ul li a {

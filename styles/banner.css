@@ -16,9 +16,10 @@
 }
 
 .menu-bar a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
+    min-width: 6.5rem;
     padding: .5rem 2rem;
     margin: .2rem .3rem;
     border-radius: 1rem;
@@ -43,9 +44,5 @@
     .menu-bar a img {
         width: 1.2rem;
         height: 1.2rem;
-    }
-
-    .menu-bar a {
-       font-size: 1rem;
     }
 }
