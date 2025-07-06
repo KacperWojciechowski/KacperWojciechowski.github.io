@@ -97,8 +97,6 @@ hr {
 }
 
 .main-window {
-    /*scrollbar-width: thin;
-    -ms-overflow-style: #bbb #f5f5f5;*/
     scrollbar-width: none;
     -ms-overflow-style: none;
     border: none;
@@ -111,22 +109,4 @@ hr {
 
 .main-window::-webkit-scrollbar {
     display: none;
-/*    width: 8px;
-    background: #f5f5f5;
-    border-radius: 8px;*/
 }
-/*
-.main-window::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #89b4fa 0%, #b4e0fa 100%);
-    border-radius: 8px;
-    min-height: 40px;
-    border: 2px solid #f5f5f5;
-}
-
-.main-window::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #6ea0e6 0%, #a3d1f7 100%);
-}
-
-.main-window::-webkit-scrollbar-corner {
-    background: #f5f5f5;
-}*/
