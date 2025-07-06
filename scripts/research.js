@@ -34,20 +34,26 @@ function renderSingleResearchEntry(entry) {
     return `<div class="content">
                 <h2><i>${entry["title"]}</i></h2>
                 <hr>
-                <p class="note green">
+                <div class="note green">
                     <img class="note-icon" src="../pictures/study.svg">
                     Available at
                     ${entry["link"].length != 0 ? 
                         `<a href="${entry["link"]}" target="_blank">
                         <img class="researchgate-icon" style="margin: 0 .5vh" src="https://img.shields.io/badge/-ResearchGate-darkgreen?style=flat&logo=ResearchGate&logoColor=white" alt="ResearchGate"></a>` 
                         : `N/A`}
-                </p>
-                <p><strong>Co-authors:</strong></p>
-                <p style="margin-left: 20px">${entry["coAuthors"].length > 0 ? entry["coAuthors"].join(', ') : '-'}</p>
-                <p><strong>Abstract: </strong></p>
-                <p style="margin-left: 20px">${entry["abstract"]}</p>
-                <img class="note-icon" src="../pictures/blue-pin.svg">
-                <b>Keywords:</b> <i>${entry["keywords"].join(', ')}</i>
+                </div>
+                <p style="padding-left: .2rem;"><strong>Co-authors:</strong></p>
+                <p>${entry["coAuthors"].length > 0 ? entry["coAuthors"].join(', ') : '-'}</p>
+                <p style="padding-left: .2rem;"><strong>Abstract: </strong></p>
+                <p>${entry["abstract"]}</p>
+                <div class="note blue desktop">
+                    <img class="note-icon" src="../pictures/blue-pin.svg">
+                    <b>Keywords:</b> <i>${entry["keywords"].join(', ')}</i>
+                </div>
+                <div class="note blue mobile">
+                    <img class="note-icon" src="../pictures/blue-pin.svg">
+                    <b>Keywords:</b><br> ${entry["keywords"].map(keyword => `<i style="margin-left: .5rem">- ${keyword};</i><br>`).join('')}
+                </div>
             </div>`;
 }
 

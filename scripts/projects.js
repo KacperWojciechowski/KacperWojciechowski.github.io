@@ -56,6 +56,7 @@ function renderProject(project) {
     <div class="project-item">
         <img class="project-logo desktop" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
         <div class="content">
+            <div class="project-name-wrapper">
             <img class="project-logo mobile" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
             <a style="text-decoration-color: white;" class="project-name" href="${project["link"]}" target="_blank">
                 <span class="label">
@@ -64,6 +65,7 @@ function renderProject(project) {
                     <img src="../pictures/circuit-right.png" alt="Circuit Icon"></img>
                 </span>
             </a>
+            </div>
             <hr>
             <p class="note green">
                 Available at <img class="github-icon" src="https://img.shields.io/badge/-GitHub-gray?style=flat&logo=GitHub&logoColor=white" alt="GitHub">
@@ -79,11 +81,9 @@ function renderProject(project) {
                 <img class="note-icon" src="../pictures/blue-pin.svg">
                 <b>Technical stack:</b> ${project["technicalStack"].map(stack => `<i>${stack}</i>`).join(', ')}
             </p>
-            <p>
-                <ul>
-                    ${project["features"].map(feature => `<li><p>${feature}</p></li>`).join('')}
-                </ul>
-            </p>
+            <ul>
+                ${project["features"].map(feature => `<li><p>${feature}</p></li>`).join('')}
+            </ul>
         </div>
     </div>
     `;

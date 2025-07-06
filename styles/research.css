@@ -2,3 +2,20 @@
     translate: 0 6px;
     margin-left: .2rem;
 }
+
+.content p {
+    padding: 0 .5rem;
+    padding-left: 1rem;
+    text-align: justify;
+}
+
+@media (max-width: 800px)
+{
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}

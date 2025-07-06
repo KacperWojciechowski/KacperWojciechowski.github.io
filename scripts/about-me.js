@@ -131,23 +131,33 @@ function placeInterrestsBlock() {
         <div class="flowing-container-wrapper">
             <span class="flowing-container">
                 <img src="../pictures/programming-icon.svg">
-                <p>Software Engineering</p>
+                <div class="flowing-container-text">
+                    <p>Software Engineering</p>
+                </div>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/space-engineering-icon.svg">
-                <p>Space Engineering</p>
+                <div class="flowing-container-text">
+                    <p>Space Engineering</p>
+                </div>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/physics-icon.svg">
-                <p class="one-liner">Physics</p>
+                <div class="flowing-container-text">
+                    <p>Physics</p>
+                </div>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/astrophysics-icon.svg">
-                <p>Astrophysics</p>
+                <div class="flowing-container-text">
+                    <p>Astrophysics</p>
+                </div>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/video-game-icon.svg">
-                <p>Video<br>Games</p>
+                <div class="flowing-container-text">
+                    <p>Video Games</p>
+                </div>
             </span>
         </div>                    
     </div>
@@ -180,19 +190,27 @@ function placeSpecialtityBlock()
         <div class="flowing-container-wrapper">
             <span class="flowing-container">
                 <img src="../pictures/sw-engineering.svg">
-                <p>Software Engineering</p>
+                <div class="flowing-container-text">
+                    <p>Software Engineering</p>
+                </div>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/cpp.svg">
-                <p>C++</p>
+                <div class="flowing-container-text">
+                    <p>C++</p>
+                </div>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/sw-architecture.svg">
-                <p>Software Architecture</p>
+                <div class="flowing-container-text">
+                    <p>Software Architecture</p>
+                </div>
             </span>
             <span class="flowing-container">
                 <img src="../pictures/embedded-systems.svg">
-                <p>Embedded Systems</p>
+                <div class="flowing-container-text">
+                    <p>Embedded Systems</p>
+                </div>
             </span>
         </div>
     </div>

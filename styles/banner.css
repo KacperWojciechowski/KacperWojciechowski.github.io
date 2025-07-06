@@ -47,5 +47,7 @@
     }
     .menu-bar a {
         font-size: 0.8rem;
+        min-width: 0;
+        padding: .2rem .5rem;
     }
 }

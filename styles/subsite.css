@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     height: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 hr {
@@ -33,8 +34,6 @@ hr {
     text-align: left;
 }
 
-
-
 .subsite-header {
     display: flex;
     flex-direction: column;
@@ -44,7 +43,7 @@ hr {
 
 .subsite-body {
     display: flex;
-    flex: 1 1 auto;
+    flex: 1 1 0;
     padding: .5rem .5rem;
     display: flex;
     flex-direction: column;
@@ -55,4 +54,16 @@ hr {
 .subsite-body > table > tbody > tr
 {
     height: 100%;
+}
+
+@media (max-width: 800px) {
+    .content p {
+        font-size: 0.9rem;
+        text-align: left;
+        min-width: 0;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
 }

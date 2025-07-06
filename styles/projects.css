@@ -18,7 +18,6 @@
 
 .project-item > .content {
     flex: 1 1 0;
-    width: 100%
     display: flex;
     flex-direction: column;
 }
@@ -42,8 +41,38 @@
     flex-direction: row;
 }
 
+.project-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;   
+}
+
 @media (max-width: 1080px) {
     .projects-container > * {
         flex-direction: column;
+    }
+
+    .project-name-wrapper {
+        align-items: center;
+    }
+
+    .project-logo {
+        margin-top: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .project-item > .content ul {
+        margin: 0;
+        padding: 0 0 0 1.5rem;
+        padding-bottom: 0;
+        padding-left: 1.5rem;
+    }
+
+    .project-item > .content ul li {
+        margin: 0;
+        padding: 0;
     }
 }

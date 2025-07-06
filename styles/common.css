@@ -76,6 +76,7 @@ p {
     background-color: rgba(32, 26, 66, 0.5);
     font-size: 1.2rem;
     font-style: italic;
+    text-align: center;
 }
 
 .label img {
@@ -195,5 +196,41 @@ p {
 
     .desktop {
         display: none;
+    }
+
+    .label p {
+        font-size: .9rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .code-tab {
+        padding-left: .8rem;
+    }
+
+    .note {
+        width: auto;
+        padding-left: 10px;
+        margin: 0;   
+    }
+
+    .content {
+        min-width: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        width: calc(100% - 1rem);
+        max-width: 100%;
+    }
+    .note {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        margin: .3rem 0;
+    }
+    .note img,
+    .note .note-icon {
+        max-width: 100%;
+        height: auto;
     }
 }

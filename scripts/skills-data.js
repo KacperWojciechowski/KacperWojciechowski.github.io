@@ -200,7 +200,7 @@ const knowhow = {
                 "Hands-on experience with implementing graph library in C++",
                 "Experience with solving problems such as finding shortest path, coloring, topological sort and traversing graphs with C++"
             ],
-            "Telecommunication": [
+            "<span class=\"desktop\">Telecommunication</span><span class=\"mobile\">Telecom- munication</span>": [
                 "Understanding of Carrier Aggregation functionality",
                 "Understanding of Dual Connectivity functionality",
                 "Understanding of 5G RAN architecture, including CU-DU split and CP-UP split",
