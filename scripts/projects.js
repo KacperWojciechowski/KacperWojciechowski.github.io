@@ -77,13 +77,13 @@ function renderProject(project) {
                     Support for the project has been discontinued
                 </p>`
     }
-    out += `<p class="note blue">
+    out += `<ul>
+                ${project["features"].map(feature => `<li><p>${feature}</p></li>`).join('')}
+            </ul>
+            <p class="note blue">
                 <img class="note-icon" src="../pictures/blue-pin.svg">
                 <b>Technical stack:</b> ${project["technicalStack"].map(stack => `<i>${stack}</i>`).join(', ')}
             </p>
-            <ul>
-                ${project["features"].map(feature => `<li><p>${feature}</p></li>`).join('')}
-            </ul>
         </div>
     </div>
     `;
