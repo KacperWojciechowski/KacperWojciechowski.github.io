@@ -230,7 +230,7 @@ async function engageTerminal()
     this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalFrame[0]);
     let blinkingInterval = this.setInterval(cursorBlink, 500, "terminal-cursor");
     const delay = ms => new Promise(res => this.setTimeout(res, ms));
-    await delay(3000);
+    await delay(750);
     this.clearInterval(blinkingInterval);
     this.document.getElementById("terminal-cursor").innerHTML = '';
     await iterativelyRenderTerminal("id-terminal-command", terminalCommand);
