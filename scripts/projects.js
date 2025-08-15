@@ -4,18 +4,14 @@ const projects = [
         logo: "../pictures/graph_cake.svg",
         link: "https://github.com/KacperWojciechowski/GraphCake",
         technicalStack: ["C++20", "GTest", "CMake"],
-        support: true,
+        support: false,
         features: [
-            "Set of universal, exchangeable graph representations;",
+            "Set of universal, interchangeable graph representations;",
             `Support for <a href="" target="_blank">House of Graphs</a> formats (<b>.mat</b>, <b>.lst</b>) and <b>.graphML</b> formats;`,
-            "Coloring algorithms (Greedy, LF, SF);",
-            "(WIP) DFS algorithm support;",
-            "(WIP) BFS algorithm support;",
-            "(WIP) Topological sort algorithm support;",
-            "(WIP) Shortest path algorithm support;",
-            "(WIP) Minimum spanning tree algorithm support;",
-            "(WIP) Strongly connected components algorithm support;",
-            "(WIP) Critical path method algorithm support;"
+            "Support for directed and undirected graphs;",
+            "Greedy Coloring algorithm;",
+            "LF Coloring algorithm;",
+            "SF Coloring algorithm;"
         ]
     },
     {
