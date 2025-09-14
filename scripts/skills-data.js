@@ -5,7 +5,7 @@ const programmingLanguages = {
                 "Standards: 11, 14, 17, 20",
                 "STL containers and algorithms",
                 "Concurrency - synchronization, multithreading",
-                "Memory algignment",
+                "Memory alignment",
                 "Memory management - RAII, memory ownership, smart pointers side effects",
                 "Templates - hands-on experience with metaprogramming, template specialization, Curriously Recurring Template Pattern, compile-time conditionals",
                 "Lambda functions and function pointers",
