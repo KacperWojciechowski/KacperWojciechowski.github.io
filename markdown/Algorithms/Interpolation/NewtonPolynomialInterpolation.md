@@ -2,13 +2,25 @@
 
 ## General form
 
-\[ N(x) = \sum_{j=0}^n a_jw_j(x)\]
+\[
+\begin{equation}
+    N(x) = \sum_{j=0}^n a_jw_j(x)
+\end{equation}
+\]
 
 where:
 
-\[ w_j(x) = \prod_{i=0}^{j-1}\left( x - x_j \right)\]
+\[
+\begin{equation}
+    w_j(x) = \prod_{i=0}^{j-1}\left( x - x_j \right)
+\end{equation}
+\]
 
-\[ a_{n+1} = \frac{f(x_{n+1} - p_n(x_{n+1}))}{w_n(x_{n+1})}\]
+\[
+\begin{equation}
+    a_{n+1} = \frac{f(x_{n+1} - p_n(x_{n+1}))}{w_n(x_{n+1})}
+\end{equation}
+\]
 
 The $w_n(x)$ term is called a ***Newton basis***, and it is defined for $j > 0$ and $w_0(x) \equiv 0$.
 
@@ -17,6 +29,7 @@ The $w_n(x)$ term is called a ***Newton basis***, and it is defined for $j > 0$ 
 In order to determine the values of the $a$ coefficients using the matrix method, we need to solve the ***lower triangular matrix*** of the matrix representation of a polynomial equation.
 
 \[ 
+\begin{equation}
     \begin{bmatrix} 
         1 & \dots & \dots & \dots & 0 \\
         1 & x_1 - x_0 & \dots & \dots & \dots \\
@@ -39,11 +52,16 @@ In order to determine the values of the $a$ coefficients using the matrix method
         \dots \\
         y_n
     \end{bmatrix}
+\end{equation}
 \]
 
 the &a_j& coefficients for the above equation are calculated as follows:
 
-\[ a_j = \left[ y_0, ..., y_j\right] \]
+\[
+\begin{equation}
+    a_j = \left[ y_0, ..., y_j\right]
+\end{equation}
+\]
 
 where $\left[ y_0, ..., y_j\right]$ stands for ***divided differences*** of coordinates of interpolated points $P_k = (x_k, y_k)$, calculated as:
 
@@ -58,8 +76,12 @@ where $\left[ y_0, ..., y_j\right]$ stands for ***divided differences*** of coor
     \end{equation}
 \]
 
-where for $(1)$ the $k \in \{0, ..., n\}$ and for $(2)$ the $k \in \{0, ..., n-1\}$ and $j \in \{1, ..., n\}$
+where for $(6)$ the $k \in \{0, ..., n\}$ and for $(7)$ the $k \in \{0, ..., n-1\}$ and $j \in \{1, ..., n\}$
 
 An alternative representation of the difference division is as follows:
 
-\[ [y_0, ..., y_n] = \sum_{j=0}^n \frac{y_j}{\prod_{k\in\{0, ..., n\}/\{j\}}(x_j - x_k)}\]
+\[
+\begin{equation}
+    [y_0, ..., y_n] = \sum_{j=0}^n \frac{y_j}{\prod_{k\in\{0, ..., n\}/\{j\}}(x_j - x_k)}
+\end{equation}
+\]
