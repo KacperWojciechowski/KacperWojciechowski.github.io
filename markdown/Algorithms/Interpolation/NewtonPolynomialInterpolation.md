@@ -67,16 +67,14 @@ where $\left[ y_0, ..., y_j\right]$ stands for ***divided differences*** of coor
 
 \[
     \begin{equation}
-    [y_k] = y_k
+    [y_k] = y_k; \quad k \in \{0, \dots, n\}
     \end{equation}
 \]
 \[ 
     \begin{equation}
-        [y_k, ..., y_{k+j}] = \frac{[y_{k+1}, ..., y_{k+j}] - [y_k, ..., y_{k+j-1}]}{x_{k+j} - x_k}
+        [y_k, ..., y_{k+j}] = \frac{[y_{k+1}, ..., y_{k+j}] - [y_k, ..., y_{k+j-1}]}{x_{k+j} - x_k}; \quad k \in \{0, \dots, n-1\}
     \end{equation}
 \]
-
-where for $(6)$ the $k \in \{0, ..., n\}$ and for $(7)$ the $k \in \{0, ..., n-1\}$ and $j \in \{1, ..., n\}$
 
 An alternative representation of the difference division is as follows:
 
