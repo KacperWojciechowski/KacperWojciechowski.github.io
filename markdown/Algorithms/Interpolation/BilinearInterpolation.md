@@ -1,2 +1,2 @@
-# Bilinear Interpolation
+# Bilinear interpolation
 TODO

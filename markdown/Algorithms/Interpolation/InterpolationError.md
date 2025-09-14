@@ -1,3 +1,3 @@
-# Interpolation Error
+# Interpolation error
 
 TODO

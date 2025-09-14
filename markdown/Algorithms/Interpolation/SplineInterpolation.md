@@ -1,3 +1,3 @@
-# Spline Interpolation
+# Spline interpolation
 
 TODO

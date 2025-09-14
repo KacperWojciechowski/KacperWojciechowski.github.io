@@ -1,4 +1,4 @@
-# Trigonometric Interpolation
+# Trigonometric interpolation
 
 ## General formula
 

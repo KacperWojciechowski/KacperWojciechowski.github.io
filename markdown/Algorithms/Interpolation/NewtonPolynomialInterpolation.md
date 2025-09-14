@@ -1,4 +1,4 @@
-# Newton's Polynomial Interpolation
+# Newton's polynomial interpolation
 
 ## General form
 
