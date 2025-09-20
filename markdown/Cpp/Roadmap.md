@@ -11,9 +11,9 @@ state "2.3.1. Escape characters (*)" as Lesson_2_3_1
 state "2.4. Strings" as Lesson_2_4
 state "2.4.1. String searching (*)" as Lesson_2_4_1
 state "2.4.2. String modification (*)" as Lesson_2_4_2
+state "3. Basic math" as Lesson_3
 state "2.5. Advanced output (*)" as Lesson_2_5
 
-state "3. Basic math" as Lesson_3
 
 state "4. Conditionals" as Lesson_4
 state "3.1. Advanced floating-point (*)" as Lesson_3_1
@@ -42,9 +42,9 @@ state "10. Structures" as Lesson_10
 state "10.1. Default values (*)" as Lesson_10_1
 state "10.2. Structure data access (*)" as Lesson_10_2
 state "10.3. Structure memory concerns (*)" as Lesson_10_3
+state "11. Namespaces" as Lesson_11
 state "10.4. In-depth look into structures (*)" as Lesson_10_4
 
-state "11. Namespaces" as Lesson_11
 state "11.1. Anonymous namespaces" as Lesson_11_1
 
 [*] -down-> Lesson_1
@@ -52,11 +52,11 @@ Lesson_1 -down-> Lesson_2
 
 Lesson_2 -down-> Lesson_3
 Lesson_2 -up-> Lesson_2_1
-Lesson_2 -right-> Lesson_2_2
-Lesson_2 -up-> Lesson_2_3
-Lesson_2 -left-> Lesson_2_4
-Lesson_2 -down-> Lesson_2_5
-Lesson_2_3 -up-> Lesson_2_3_1
+Lesson_2 -up-> Lesson_2_2
+Lesson_2 -left-> Lesson_2_3
+Lesson_2 -right-> Lesson_2_4
+Lesson_2 -up-> Lesson_2_5
+Lesson_2_3 -down-> Lesson_2_3_1
 Lesson_2_4 -up-> Lesson_2_4_1
 Lesson_2_4 -down-> Lesson_2_4_2
 
@@ -82,12 +82,12 @@ Lesson_8 -right->Lesson_8_2
 Lesson_8_1 -up-> Lesson_8_1_1
 
 Lesson_9 -down-> Lesson_10
-Lesson_9 -right-> Lesson_9_1
+Lesson_9 -left-> Lesson_9_1
 
 Lesson_10 -down-> Lesson_11
 Lesson_10 -left-> Lesson_10_1
 Lesson_10 -right-> Lesson_10_2
-Lesson_10 -up-> Lesson_10_3
+Lesson_10 -down-> Lesson_10_3
 Lesson_10 -down-> Lesson_10_4
 
 Lesson_11 -down-> Lesson_12
