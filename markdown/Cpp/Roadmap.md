@@ -61,6 +61,9 @@ state "13.2. Iterators (*)" as Lesson_13_2
 state "13.3. Advanced memory management (*)" as Lesson_13_3
 state "8.1.3. Managing compiler\noptimizations (*)" as Lesson_8_1_3
 state "8.1.4. Integration\nwith C code (*)" as Lesson_8_1_4
+state "8.3. Modules (*)" as Lesson_8_3
+state "10.5. Unions (*)" as Lesson_10_5
+state "13.4. Optional values (*)" as Lesson_13_4
 
 [*] -down-> Lesson_1
 Lesson_1 -down-> Lesson_2
@@ -97,6 +100,7 @@ Lesson_7 -up[dashed]-> Lesson_7_3
 Lesson_8 -down-> Lesson_9
 Lesson_8 -left[dashed]-> Lesson_8_1
 Lesson_8 -right[dashed]->Lesson_8_2
+Lesson_8 -down[dashed]->Lesson_8_3
 Lesson_8_1 -down[dashed]-> Lesson_8_1_1
 Lesson_8_1 -up[dashed]-> Lesson_8_1_2
 Lesson_8_1 -down[dashed]-> Lesson_8_1_3
@@ -110,6 +114,7 @@ Lesson_10 -down[dashed]-> Lesson_10_1
 Lesson_10 -down[dashed]-> Lesson_10_2
 Lesson_10 -left[dashed]-> Lesson_10_3
 Lesson_10 -right[dashed]-> Lesson_10_4
+Lesson_10 -right[dashed]-> Lesson_10_5
 
 Lesson_11 -down-> Lesson_12
 Lesson_11 -left[dashed]-> Lesson_11_1
@@ -121,6 +126,7 @@ Lesson_12 -down->Lesson_13
 Lesson_13 -down[dashed]-> Lesson_13_1
 Lesson_13 -left[dashed]-> Lesson_13_2
 Lesson_13 -right[dashed]-> Lesson_13_3
+Lesson_13 -down[dashed]-> Lesson_13_4
 
 
 Lesson_1 : - program structure
@@ -270,6 +276,10 @@ Lesson_8_2 : - defines
 Lesson_8_2 : - conditional compilation
 Lesson_8_2 : - include guards vs #pragma once
 
+Lesson_8_3 : - modules
+Lesson_8_3 : - exporting symbols
+Lesson_8_3 : - importing modules
+
 Lesson_9 : - enum
 Lesson_9 : - scoped enum
 
@@ -299,6 +309,10 @@ Lesson_10_4 : - struct default access
 Lesson_10_4 : - struct methods
 Lesson_10_4 : - dot operator
 
+Lesson_10_5 : - union
+Lesson_10_5 : - std::variant<>
+Lesson_10_5 : - undefined behavior\n   of unions
+
 Lesson_11 : - namespaces
 Lesson_11 : - name collisions
 
@@ -327,6 +341,7 @@ Lesson_13 : - std::unique_ptr<>
 Lesson_13 : - std::shared_ptr<>
 Lesson_13 : - std::weak_ptr<>
 Lesson_13 : - std::vector<>
+Lesson_13 : - std::list<>
 Lesson_13 : - new operator
 Lesson_13 : - delete operator
 Lesson_13 : - delete[] operator
@@ -342,8 +357,13 @@ Lesson_13_2 : - begin() method
 Lesson_13_2 : - end() method
 Lesson_13_2 : - iterators
 Lesson_13_2 : - using iterators in for loop
+Lesson_13_2 : - iterating over non-contiguous memory
 
 Lesson_13_3 : - buffers
 Lesson_13_3 : - placement new
 Lesson_13_3 : - cache-friendly programming
+
+Lesson_13_4 : - std::optional<>
+Lesson_13_4 : - accessing optional value
+Lesson_13_4 : - value_or()
 ```
