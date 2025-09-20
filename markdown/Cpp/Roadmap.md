@@ -12,6 +12,7 @@ state "2.4. Strings" as Lesson_2_4
 state "2.4.1. String searching (*)" as Lesson_2_4_1
 state "2.4.2. String modification (*)" as Lesson_2_4_2
 state "3. Basic math" as Lesson_3
+state "2.5. Compile-time evaluation (*)" as Lesson_2_6
 state "2.5. Advanced output (*)" as Lesson_2_5
 
 
@@ -19,6 +20,7 @@ state "4. Conditionals" as Lesson_4
 state "3.1. Advanced floating-point (*)" as Lesson_3_1
 state "5. Iterations" as Lesson_5
 state "4.1. Implicit bool conversions (*)" as Lesson_4_1
+state "4.2. Compile-time conditionals (*)" as Lesson_4_2
 
 
 state "6. Static arrays" as Lesson_6
@@ -64,7 +66,8 @@ Lesson_3 -down-> Lesson_4
 Lesson_3 -down-> Lesson_3_1
 
 Lesson_4 -down-> Lesson_5
-Lesson_4 -down-> Lesson_4_1
+Lesson_4 -left-> Lesson_4_1
+Lesson_4 -down-> Lesson_4_2
 
 Lesson_5 -down-> Lesson_6
 
@@ -80,9 +83,10 @@ Lesson_8 -down-> Lesson_9
 Lesson_8 -left-> Lesson_8_1
 Lesson_8 -right->Lesson_8_2
 Lesson_8_1 -up-> Lesson_8_1_1
+Lesson_8_1 -down-> Lesson_8_1_2
 
 Lesson_9 -down-> Lesson_10
-Lesson_9 -left-> Lesson_9_1
+Lesson_9 -right-> Lesson_9_1
 
 Lesson_10 -down-> Lesson_11
 Lesson_10 -left-> Lesson_10_1
@@ -103,36 +107,15 @@ Lesson_2 : - variables
 Lesson_2 : - input operation
 Lesson_2 : - declaration
 Lesson_2 : - initialization
-Lesson_2_3_1 : - new line character
-Lesson_2_3_1 : - backspace character
-Lesson_2_3_1 : - tabulation character
-Lesson_2_3_1 : - carriage return character
-Lesson_2_4 : - std::string
-Lesson_2_4 : - std::cin for std::string
-Lesson_2_4 : - std::getline() for std::string
-Lesson_2_4_1 : - std::string::find()
-Lesson_2_4_1 : - std::string::npos
-Lesson_2_4_2 : - string concatenation
-Lesson_2_4_2 : - std::string::substr()
-Lesson_2_5 : - #include <format>
-Lesson_2_5 : - std::format()
-Lesson_2_5 : - std::print()
-Lesson_2_5 : - std::println()
-Lesson_2_5 : - format string
-Lesson_2_5 : - format specifiers
+Lesson_2 : - const
 
 Lesson_2_1 : - signedness
-Lesson_2_1 : - const
 Lesson_2_1 : - integer types of different size
 Lesson_2_1 : - ASCII
 Lesson_2_1 : - char arithmetic
 Lesson_2_1 : - capitalizing char using math
 Lesson_2_1 : - std::toupper()
 Lesson_2_1 : - std::tolower()
-
-Lesson_3_1 : - IEEE754
-Lesson_3_1 : - rounding precision
-Lesson_3_1 : - numeric stability
 
 Lesson_2_2 : - concept of casting
 Lesson_2_2 : - C-style cast
@@ -147,11 +130,38 @@ Lesson_2_3 : - double literals
 Lesson_2_3 : - unsigned literals
 Lesson_2_3 : - various size int literals
 
+Lesson_2_3_1 : - new line character
+Lesson_2_3_1 : - backspace character
+Lesson_2_3_1 : - tabulation character
+Lesson_2_3_1 : - carriage return character
+
+Lesson_2_4 : - std::string
+Lesson_2_4 : - std::cin for std::string
+Lesson_2_4 : - std::getline() for std::string
+
+Lesson_2_4_1 : - std::string::find()
+Lesson_2_4_1 : - std::string::npos
+
+Lesson_2_4_2 : - string concatenation
+Lesson_2_4_2 : - std::string::substr()
+
+Lesson_2_5 : - #include <format>
+Lesson_2_5 : - std::format()
+Lesson_2_5 : - std::print()
+Lesson_2_5 : - std::println()
+Lesson_2_5 : - format string
+Lesson_2_5 : - format specifiers
+
+
 Lesson_3 : - int vs float
 Lesson_3 : - basic int math
 Lesson_3 : - basic float math
 Lesson_3 : - mixing int and float in math
 Lesson_3 : - modulo division
+
+Lesson_3_1 : - IEEE754
+Lesson_3_1 : - rounding precision
+Lesson_3_1 : - numeric stability
 
 Lesson_4 : - if statement
 Lesson_4 : - boolean type
@@ -161,6 +171,8 @@ Lesson_4 : - postincrementation
 
 Lesson_4_1 : - evaluating numbers as bool
 Lesson_4_1 : - evaluating characters as bool
+
+Lesson_4_2 : - if constexpr
 
 Lesson_5 : - for loop
 Lesson_5 : - while loop
@@ -208,6 +220,10 @@ Lesson_8_1 : - forward declarations
 
 Lesson_8_1_1 : - static libraries
 Lesson_8_1_1 : - dynamic libraries
+
+Lesson_8_1_2 : - symbol missing in translation unit
+Lesson_8_1_2 : - missing library
+Lesson_8_1_2 : - duplicated symbols
 
 Lesson_8_2 : - preprocessor directives
 Lesson_8_2 : - defines
