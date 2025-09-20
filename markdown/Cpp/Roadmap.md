@@ -12,8 +12,8 @@ state "2.4. Strings" as Lesson_2_4
 state "2.4.1. String searching (*)" as Lesson_2_4_1
 state "2.4.2. String modification (*)" as Lesson_2_4_2
 state "3. Basic math" as Lesson_3
-state "2.5. Compile-time evaluation (*)" as Lesson_2_6
 state "2.5. Advanced output (*)" as Lesson_2_5
+state "2.6. Compile-time evaluation (*)" as Lesson_2_6
 
 
 state "4. Conditionals" as Lesson_4
@@ -55,11 +55,12 @@ Lesson_1 -down-> Lesson_2
 Lesson_2 -down-> Lesson_3
 Lesson_2 -up-> Lesson_2_1
 Lesson_2 -up-> Lesson_2_2
-Lesson_2 -left-> Lesson_2_3
-Lesson_2 -right-> Lesson_2_4
+Lesson_2 -down-> Lesson_2_3
+Lesson_2 -left-> Lesson_2_4
 Lesson_2 -up-> Lesson_2_5
+Lesson_2 -right-> Lesson_2_6
 Lesson_2_3 -down-> Lesson_2_3_1
-Lesson_2_4 -up-> Lesson_2_4_1
+Lesson_2_4 -left-> Lesson_2_4_1
 Lesson_2_4 -down-> Lesson_2_4_2
 
 Lesson_3 -down-> Lesson_4
