@@ -6,59 +6,61 @@
 state "1. Basic program" as Lesson_1 #YellowGreen
 state "2. Variables" as Lesson_2 #YellowGreen
 state "2.1. In-depth primitive\ndata types (*)" as Lesson_2_1 #LightYellow
-state "2.2. Type conversion (*)" as Lesson_2_2
+state "2.2. Type\nconversion (*)" as Lesson_2_2
 state "2.3. Literals (*)" as Lesson_2_3
 state "2.3.1. Escape characters (*)" as Lesson_2_3_1
 state "2.3.2. Type deduction (*)" as Lesson_2_3_2
 state "2.4. Strings" as Lesson_2_4 #YellowGreen
-state "2.5. Advanced output (*)" as Lesson_2_5
-state "2.4.1. String searching (*)" as Lesson_2_4_1
-state "2.4.2. String modification (*)" as Lesson_2_4_2
+state "2.5. Advanced\noutput (*)" as Lesson_2_5
+state "2.4.1. String\nsearching (*)" as Lesson_2_4_1
+state "2.4.2. String\nmodification (*)" as Lesson_2_4_2
 state "3. Basic math" as Lesson_3 #YellowGreen
-state "2.6. Compile-time evaluation (*)" as Lesson_2_6
+state "2.6. Compile-time\nevaluation (*)" as Lesson_2_6
 
 
-state "3.1. Advanced floating-point (*)" as Lesson_3_1
+state "3.1. Advanced\nfloating-point (*)" as Lesson_3_1
 state "4. Conditionals" as Lesson_4 #YellowGreen
-state "4.1. Implicit bool conversions (*)" as Lesson_4_1
+state "4.1. Implicit bool\nconversions (*)" as Lesson_4_1
 state "5. Iterations" as Lesson_5 #YellowGreen
-state "4.2. Compile-time conditionals (*)" as Lesson_4_2
+state "4.2. Compile-time\nconditionals (*)" as Lesson_4_2
 
 
 state "7.2. Scopes" as Lesson_7_2 #YellowGreen
 state "6. Static arrays" as Lesson_6 #YellowGreen
-state "6.1. Advanced static arrays (*)" as Lesson_6_1
+state "6.1. Advanced\nstatic arrays (*)" as Lesson_6_1
 
 state "7. Functions" as Lesson_7 #YellowGreen
 state "7.1. Advanced functions (*)" as Lesson_7_1
 state "7.3. Side effects (*)" as Lesson_7_3
 
 state "8. Splitting code into files" as Lesson_8 #YellowGreen
-state "8.1. In-depth codebase structure (*)" as Lesson_8_1
-state "8.1.1. External libraries (*)" as Lesson_8_1_1
+state "8.1. In-depth codebase\nstructure (*)" as Lesson_8_1
+state "8.1.1. External\nlibraries (*)" as Lesson_8_1_1
 state "8.1.2. Linking errors (*)" as Lesson_8_1_2
 state "8.2. Macros (*)" as Lesson_8_2
 
-state "10.2. Structure data access (*)" as Lesson_10_2
+state "10.2. Structure data\naccess (*)" as Lesson_10_2
 state "10. Structures" as Lesson_10 #YellowGreen
 state "9. Enumeration types" as Lesson_9 #YellowGreen
 state "9.1. In-depth enums (*)" as Lesson_9_1
 
 state "11. Namespaces" as Lesson_11 #YellowGreen
-state "10.3. Structure memory concerns (*)" as Lesson_10_3
+state "10.3. Structure\nmemory concerns (*)" as Lesson_10_3
 state "10.1. Default values (*)" as Lesson_10_1
-state "10.4. In-depth look into structures (*)" as Lesson_10_4
-state "11.1. Anonymous namespaces (*)" as Lesson_11_1
+state "10.4. In-depth look\ninto structures (*)" as Lesson_10_4
+state "11.1. Anonymous\nnamespaces (*)" as Lesson_11_1
 state "12. Access to original data" as Lesson_12 #YellowGreen
 
 
-state "12.1. Conversions of pointers (*)" as Lesson_12_1
+state "12.1. Conversions\nof pointers (*)" as Lesson_12_1
 state "13. Dynamic allocation" as Lesson_13 #YellowGreen
 state "12.2. Advanced pointers (*)" as Lesson_12_2
 
 state "13.1. Memory model (*)" as Lesson_13_1
 state "13.2. Iterators (*)" as Lesson_13_2
 state "13.3. Advanced memory management (*)" as Lesson_13_3
+state "8.1.3. Managing compiler\noptimizations (*)" as Lesson_8_1_3
+state "8.1.4. Integration\nwith C code (*)" as Lesson_8_1_4
 
 [*] -down-> Lesson_1
 Lesson_1 -down-> Lesson_2
@@ -69,10 +71,10 @@ Lesson_2 -up[dashed]-> Lesson_2_2
 Lesson_2 -down[dashed]-> Lesson_2_3
 Lesson_2 -right[dashed]-> Lesson_2_4
 Lesson_2 -up[dashed]-> Lesson_2_5
-Lesson_2 -left[dashed]-> Lesson_2_6
+Lesson_2 -down[dashed]-> Lesson_2_6
 Lesson_2_3 -down[dashed]-> Lesson_2_3_1
-Lesson_2_3 -left[dashed]-> Lesson_2_3_2
-Lesson_2_4 -right[dashed]-> Lesson_2_4_1
+Lesson_2_3 -up[dashed]-> Lesson_2_3_2
+Lesson_2_4 -up[dashed]-> Lesson_2_4_1
 Lesson_2_4 -down[dashed]-> Lesson_2_4_2
 
 Lesson_3 -down-> Lesson_4
@@ -89,14 +91,16 @@ Lesson_6 -left[dashed]-> Lesson_6_1
 
 Lesson_7 -down-> Lesson_8
 Lesson_7 -right[dashed]-> Lesson_7_1
-Lesson_7 -left-> Lesson_7_2
+Lesson_7 -up-> Lesson_7_2
 Lesson_7 -up[dashed]-> Lesson_7_3
 
 Lesson_8 -down-> Lesson_9
 Lesson_8 -left[dashed]-> Lesson_8_1
 Lesson_8 -right[dashed]->Lesson_8_2
-Lesson_8_1 -up[dashed]-> Lesson_8_1_1
-Lesson_8_1 -down[dashed]-> Lesson_8_1_2
+Lesson_8_1 -down[dashed]-> Lesson_8_1_1
+Lesson_8_1 -up[dashed]-> Lesson_8_1_2
+Lesson_8_1 -down[dashed]-> Lesson_8_1_3
+Lesson_8_1 -left[dashed]-> Lesson_8_1_4
 
 Lesson_9 -down-> Lesson_10
 Lesson_9 -right[dashed]-> Lesson_9_1
@@ -256,6 +260,11 @@ Lesson_8_1_2 : - symbol missing in translation unit
 Lesson_8_1_2 : - missing library
 Lesson_8_1_2 : - duplicated symbols
 
+Lesson_8_1_3 : - volatile
+Lesson_8_1_3 : - compiler attributes
+
+Lesson_8_1_4 : - extern "C"
+
 Lesson_8_2 : - preprocessor directives
 Lesson_8_2 : - defines
 Lesson_8_2 : - conditional compilation
@@ -334,5 +343,7 @@ Lesson_13_2 : - end() method
 Lesson_13_2 : - iterators
 Lesson_13_2 : - using iterators in for loop
 
-Lesson_13_3 : - 
+Lesson_13_3 : - buffers
+Lesson_13_3 : - placement new
+Lesson_13_3 : - cache-friendly programming
 ```
