@@ -25,12 +25,12 @@ state "5. Iterations" as Lesson_5 #YellowGreen
 state "4.2. Compile-time conditionals (*)" as Lesson_4_2
 
 
+state "7.2. Scopes" as Lesson_7_2 #YellowGreen
 state "6. Static arrays" as Lesson_6 #YellowGreen
 state "6.1. Advanced static arrays (*)" as Lesson_6_1
 
 state "7. Functions" as Lesson_7 #YellowGreen
 state "7.1. Advanced functions (*)" as Lesson_7_1
-state "7.2. Scopes" as Lesson_7_2 #YellowGreen
 state "7.3. Side effects (*)" as Lesson_7_3
 
 state "8. Splitting code into files" as Lesson_8 #YellowGreen
@@ -39,21 +39,26 @@ state "8.1.1. External libraries (*)" as Lesson_8_1_1
 state "8.1.2. Linking errors (*)" as Lesson_8_1_2
 state "8.2. Macros (*)" as Lesson_8_2
 
+state "10.2. Structure data access (*)" as Lesson_10_2
+state "10. Structures" as Lesson_10 #YellowGreen
 state "9. Enumeration types" as Lesson_9 #YellowGreen
 state "9.1. In-depth enums (*)" as Lesson_9_1
 
-state "10. Structures" as Lesson_10 #YellowGreen
-state "10.1. Default values (*)" as Lesson_10_1
-state "10.2. Structure data access (*)" as Lesson_10_2
-state "10.3. Structure memory concerns (*)" as Lesson_10_3
 state "11. Namespaces" as Lesson_11 #YellowGreen
+state "10.3. Structure memory concerns (*)" as Lesson_10_3
+state "10.1. Default values (*)" as Lesson_10_1
 state "10.4. In-depth look into structures (*)" as Lesson_10_4
-
 state "11.1. Anonymous namespaces (*)" as Lesson_11_1
-
 state "12. Access to original data" as Lesson_12 #YellowGreen
+
+
 state "12.1. Conversions of pointers (*)" as Lesson_12_1
+state "13. Dynamic allocation" as Lesson_13 #YellowGreen
 state "12.2. Advanced pointers (*)" as Lesson_12_2
+
+state "13.1. Memory model (*)" as Lesson_13_1
+state "13.2. Iterators (*)" as Lesson_13_2
+state "13.3. Advanced memory management (*)" as Lesson_13_3
 
 [*] -down-> Lesson_1
 Lesson_1 -down-> Lesson_2
@@ -80,33 +85,38 @@ Lesson_4 -down[dashed]-> Lesson_4_2
 Lesson_5 -down-> Lesson_6
 
 Lesson_6 -down-> Lesson_7
-Lesson_6 -right[dashed]-> Lesson_6_1
+Lesson_6 -left[dashed]-> Lesson_6_1
 
 Lesson_7 -down-> Lesson_8
-Lesson_7 -up[dashed]-> Lesson_7_1
-Lesson_7 -right-> Lesson_7_2
-Lesson_7 -left[dashed]-> Lesson_7_3
+Lesson_7 -right[dashed]-> Lesson_7_1
+Lesson_7 -left-> Lesson_7_2
+Lesson_7 -up[dashed]-> Lesson_7_3
 
 Lesson_8 -down-> Lesson_9
-Lesson_8 -right[dashed]-> Lesson_8_1
-Lesson_8 -left[dashed]->Lesson_8_2
+Lesson_8 -left[dashed]-> Lesson_8_1
+Lesson_8 -right[dashed]->Lesson_8_2
 Lesson_8_1 -up[dashed]-> Lesson_8_1_1
 Lesson_8_1 -down[dashed]-> Lesson_8_1_2
 
 Lesson_9 -down-> Lesson_10
-Lesson_9 -left[dashed]-> Lesson_9_1
+Lesson_9 -right[dashed]-> Lesson_9_1
 
 Lesson_10 -down-> Lesson_11
-Lesson_10 -left[dashed]-> Lesson_10_1
-Lesson_10 -right[dashed]-> Lesson_10_2
-Lesson_10 -down[dashed]-> Lesson_10_3
-Lesson_10 -down[dashed]-> Lesson_10_4
+Lesson_10 -down[dashed]-> Lesson_10_1
+Lesson_10 -down[dashed]-> Lesson_10_2
+Lesson_10 -left[dashed]-> Lesson_10_3
+Lesson_10 -right[dashed]-> Lesson_10_4
 
 Lesson_11 -down-> Lesson_12
-Lesson_11 -down[dashed]-> Lesson_11_1
+Lesson_11 -left[dashed]-> Lesson_11_1
 
-Lesson_12 -down[dashed]->Lesson_12_1
-Lesson_12 -down[dashed]->Lesson_12_2
+Lesson_12 -left[dashed]->Lesson_12_1
+Lesson_12 -right[dashed]->Lesson_12_2
+Lesson_12 -down->Lesson_13
+
+Lesson_13 -down[dashed]-> Lesson_13_1
+Lesson_13 -left[dashed]-> Lesson_13_2
+Lesson_13 -right[dashed]-> Lesson_13_3
 
 
 Lesson_1 : - program structure
@@ -289,11 +299,40 @@ Lesson_11_1 : - file-restricted visibility
 Lesson_12 : - raw pointers
 Lesson_12 : - references
 Lesson_12 : - universal references
-Lesson_12 : - std::unique_ptr<>
-Lesson_12 : - std::shared_ptr<>
-Lesson_12 : - std::weak_ptr<>
 Lesson_12 : - name of a raw array as a pointer
 Lesson_12 : - pointer function parameters
 Lesson_12 : - reference function parameters
 Lesson_12 : - arrow operator
+
+Lesson_12_1 : - reinterpret_cast<>
+Lesson_12_1 : - dynamic_cast<>
+Lesson_12_1 : - C-style cast
+
+Lesson_12_2 : - universal pointer
+Lesson_12_2 : - pointer to function
+Lesson_12_2 : - pointer to object method
+Lesson_12_2 : - memory ownership
+Lesson_12_2 : - memory ownership transfer
+
+Lesson_13 : - std::unique_ptr<>
+Lesson_13 : - std::shared_ptr<>
+Lesson_13 : - std::weak_ptr<>
+Lesson_13 : - std::vector<>
+Lesson_13 : - new operator
+Lesson_13 : - delete operator
+Lesson_13 : - delete[] operator
+
+Lesson_13_1 : - stack
+Lesson_13_1 : - heap
+Lesson_13_1 : - contiguous memory
+Lesson_13_1 : - non-contiguous memory
+Lesson_13_1 : - memory fragmentation
+Lesson_13_1 : - random memory access
+
+Lesson_13_2 : - begin() method
+Lesson_13_2 : - end() method
+Lesson_13_2 : - iterators
+Lesson_13_2 : - using iterators in for loop
+
+Lesson_13_3 : - 
 ```
