@@ -1,102 +1,112 @@
 # C++ Roadmap
 
 ```plantuml
-state "1. Basic program" as Lesson_1
 
-state "2. Variables" as Lesson_2
-state "2.1. In-depth primitive\ndata types (*)" as Lesson_2_1
+
+state "1. Basic program" as Lesson_1 #YellowGreen
+state "2. Variables" as Lesson_2 #YellowGreen
+state "2.1. In-depth primitive\ndata types (*)" as Lesson_2_1 #LightYellow
 state "2.2. Type conversion (*)" as Lesson_2_2
 state "2.3. Literals (*)" as Lesson_2_3
 state "2.3.1. Escape characters (*)" as Lesson_2_3_1
-state "2.4. Strings" as Lesson_2_4
+state "2.3.2. Type deduction (*)" as Lesson_2_3_2
+state "2.4. Strings" as Lesson_2_4 #YellowGreen
+state "2.5. Advanced output (*)" as Lesson_2_5
 state "2.4.1. String searching (*)" as Lesson_2_4_1
 state "2.4.2. String modification (*)" as Lesson_2_4_2
-state "3. Basic math" as Lesson_3
-state "2.5. Advanced output (*)" as Lesson_2_5
+state "3. Basic math" as Lesson_3 #YellowGreen
 state "2.6. Compile-time evaluation (*)" as Lesson_2_6
 
 
-state "4. Conditionals" as Lesson_4
 state "3.1. Advanced floating-point (*)" as Lesson_3_1
-state "5. Iterations" as Lesson_5
+state "4. Conditionals" as Lesson_4 #YellowGreen
 state "4.1. Implicit bool conversions (*)" as Lesson_4_1
+state "5. Iterations" as Lesson_5 #YellowGreen
 state "4.2. Compile-time conditionals (*)" as Lesson_4_2
 
 
-state "6. Static arrays" as Lesson_6
+state "6. Static arrays" as Lesson_6 #YellowGreen
 state "6.1. Advanced static arrays (*)" as Lesson_6_1
 
-state "7. Functions" as Lesson_7
+state "7. Functions" as Lesson_7 #YellowGreen
 state "7.1. Advanced functions (*)" as Lesson_7_1
-state "7.2. Scopes" as Lesson_7_2
+state "7.2. Scopes" as Lesson_7_2 #YellowGreen
 state "7.3. Side effects (*)" as Lesson_7_3
 
-state "8. Splitting code into files" as Lesson_8
+state "8. Splitting code into files" as Lesson_8 #YellowGreen
 state "8.1. In-depth codebase structure (*)" as Lesson_8_1
 state "8.1.1. External libraries (*)" as Lesson_8_1_1
 state "8.1.2. Linking errors (*)" as Lesson_8_1_2
 state "8.2. Macros (*)" as Lesson_8_2
 
-state "9. Enumeration types" as Lesson_9
+state "9. Enumeration types" as Lesson_9 #YellowGreen
 state "9.1. In-depth enums (*)" as Lesson_9_1
 
-state "10. Structures" as Lesson_10
+state "10. Structures" as Lesson_10 #YellowGreen
 state "10.1. Default values (*)" as Lesson_10_1
 state "10.2. Structure data access (*)" as Lesson_10_2
 state "10.3. Structure memory concerns (*)" as Lesson_10_3
-state "11. Namespaces" as Lesson_11
+state "11. Namespaces" as Lesson_11 #YellowGreen
 state "10.4. In-depth look into structures (*)" as Lesson_10_4
 
-state "11.1. Anonymous namespaces" as Lesson_11_1
+state "11.1. Anonymous namespaces (*)" as Lesson_11_1
+
+state "12. Access to original data" as Lesson_12 #YellowGreen
+state "12.1. Conversions of pointers (*)" as Lesson_12_1
+state "12.2. Advanced pointers (*)" as Lesson_12_2
 
 [*] -down-> Lesson_1
 Lesson_1 -down-> Lesson_2
 
 Lesson_2 -down-> Lesson_3
-Lesson_2 -up-> Lesson_2_1
-Lesson_2 -up-> Lesson_2_2
-Lesson_2 -down-> Lesson_2_3
-Lesson_2 -left-> Lesson_2_4
-Lesson_2 -up-> Lesson_2_5
-Lesson_2 -right-> Lesson_2_6
-Lesson_2_3 -down-> Lesson_2_3_1
-Lesson_2_4 -left-> Lesson_2_4_1
-Lesson_2_4 -down-> Lesson_2_4_2
+Lesson_2 -up[dashed]-> Lesson_2_1
+Lesson_2 -up[dashed]-> Lesson_2_2
+Lesson_2 -down[dashed]-> Lesson_2_3
+Lesson_2 -right[dashed]-> Lesson_2_4
+Lesson_2 -up[dashed]-> Lesson_2_5
+Lesson_2 -left[dashed]-> Lesson_2_6
+Lesson_2_3 -down[dashed]-> Lesson_2_3_1
+Lesson_2_3 -left[dashed]-> Lesson_2_3_2
+Lesson_2_4 -right[dashed]-> Lesson_2_4_1
+Lesson_2_4 -down[dashed]-> Lesson_2_4_2
 
 Lesson_3 -down-> Lesson_4
-Lesson_3 -down-> Lesson_3_1
+Lesson_3 -down[dashed]-> Lesson_3_1
 
 Lesson_4 -down-> Lesson_5
-Lesson_4 -left-> Lesson_4_1
-Lesson_4 -down-> Lesson_4_2
+Lesson_4 -down[dashed]-> Lesson_4_1
+Lesson_4 -down[dashed]-> Lesson_4_2
 
 Lesson_5 -down-> Lesson_6
 
 Lesson_6 -down-> Lesson_7
-Lesson_6 -left-> Lesson_6_1
+Lesson_6 -right[dashed]-> Lesson_6_1
 
 Lesson_7 -down-> Lesson_8
-Lesson_7 -up-> Lesson_7_1
-Lesson_7 -left-> Lesson_7_2
-Lesson_7 -right-> Lesson_7_3
+Lesson_7 -up[dashed]-> Lesson_7_1
+Lesson_7 -right-> Lesson_7_2
+Lesson_7 -left[dashed]-> Lesson_7_3
 
 Lesson_8 -down-> Lesson_9
-Lesson_8 -left-> Lesson_8_1
-Lesson_8 -right->Lesson_8_2
-Lesson_8_1 -up-> Lesson_8_1_1
-Lesson_8_1 -down-> Lesson_8_1_2
+Lesson_8 -right[dashed]-> Lesson_8_1
+Lesson_8 -left[dashed]->Lesson_8_2
+Lesson_8_1 -up[dashed]-> Lesson_8_1_1
+Lesson_8_1 -down[dashed]-> Lesson_8_1_2
 
 Lesson_9 -down-> Lesson_10
-Lesson_9 -right-> Lesson_9_1
+Lesson_9 -left[dashed]-> Lesson_9_1
 
 Lesson_10 -down-> Lesson_11
-Lesson_10 -left-> Lesson_10_1
-Lesson_10 -right-> Lesson_10_2
-Lesson_10 -down-> Lesson_10_3
-Lesson_10 -down-> Lesson_10_4
+Lesson_10 -left[dashed]-> Lesson_10_1
+Lesson_10 -right[dashed]-> Lesson_10_2
+Lesson_10 -down[dashed]-> Lesson_10_3
+Lesson_10 -down[dashed]-> Lesson_10_4
 
 Lesson_11 -down-> Lesson_12
-Lesson_11 -down-> Lesson_11_1
+Lesson_11 -down[dashed]-> Lesson_11_1
+
+Lesson_12 -down[dashed]->Lesson_12_1
+Lesson_12 -down[dashed]->Lesson_12_2
 
 
 Lesson_1 : - program structure
@@ -136,6 +146,13 @@ Lesson_2_3_1 : - backspace character
 Lesson_2_3_1 : - tabulation character
 Lesson_2_3_1 : - carriage return character
 
+Lesson_2_3_2 : - auto
+Lesson_2_3_2 : - deduction based on literals
+Lesson_2_3_2 : - declaration by initialization
+Lesson_2_3_2 : - auto and string literals
+Lesson_2_3_2 : - std::initializer_list
+Lesson_2_3_2 : - trailing return type notation
+
 Lesson_2_4 : - std::string
 Lesson_2_4 : - std::cin for std::string
 Lesson_2_4 : - std::getline() for std::string
@@ -145,6 +162,7 @@ Lesson_2_4_1 : - std::string::npos
 
 Lesson_2_4_2 : - string concatenation
 Lesson_2_4_2 : - std::string::substr()
+Lesson_2_4_2 : - std::stringstream
 
 Lesson_2_5 : - #include <format>
 Lesson_2_5 : - std::format()
@@ -153,6 +171,8 @@ Lesson_2_5 : - std::println()
 Lesson_2_5 : - format string
 Lesson_2_5 : - format specifiers
 
+Lesson_2_6 : - constexpr
+Lesson_2_6 : - consteval
 
 Lesson_3 : - int vs float
 Lesson_3 : - basic int math
@@ -265,4 +285,15 @@ Lesson_11 : - name collisions
 
 Lesson_11_1 : - anonymous namespaces
 Lesson_11_1 : - file-restricted visibility
+
+Lesson_12 : - raw pointers
+Lesson_12 : - references
+Lesson_12 : - universal references
+Lesson_12 : - std::unique_ptr<>
+Lesson_12 : - std::shared_ptr<>
+Lesson_12 : - std::weak_ptr<>
+Lesson_12 : - name of a raw array as a pointer
+Lesson_12 : - pointer function parameters
+Lesson_12 : - reference function parameters
+Lesson_12 : - arrow operator
 ```
