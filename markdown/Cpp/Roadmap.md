@@ -1,8 +1,7 @@
 # C++ Roadmap
 
 ```plantuml
-
-
+@startuml
 state "1. Basic program" as Lesson_1 #YellowGreen
 state "2. Variables" as Lesson_2 #YellowGreen
 state "2.1. In-depth primitive\ndata types (*)" as Lesson_2_1 #LightYellow
@@ -366,4 +365,5 @@ Lesson_13_3 : - cache-friendly programming
 Lesson_13_4 : - std::optional<>
 Lesson_13_4 : - accessing optional value
 Lesson_13_4 : - value_or()
+@enduml
 ```
