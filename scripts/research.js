@@ -22,7 +22,7 @@ const researchEntries = [
         keywords: ["Library", "Framework", "C++", "JMP", "DLib", "Shogun", "Shark-ML", "Machine Learning", "Support Vector Machine", "SVM", "Linear Regression", "Loss Function", "ROC curve", "AUC"],
     },
     {
-        title: "Work in progress...",
+        title: "The Journeyman's Guide to Informed Software Design",
         link: "",
         coAuthors: [],
         abstract: "Work in progress...",

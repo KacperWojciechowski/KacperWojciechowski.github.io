@@ -1,12 +1,50 @@
 const experiences = [
     {
+        position: "Embedded Software Engineer",
+        company: "Hertz Systems Ltd.",
+        companyLink: "https://www.hertzsystems.com/en/",
+        city: "Zielona Góra",
+        country: "Poland",
+        startDate: "October 2025",
+        endDate: "Ongoing",
+        responsibilities: [
+            "Co-creation of concepts for overcomming obstacles encountered by navigation systems based on embedded systems technology, which operate in a radio range of the electromagnetic spectrum",
+            "Research about algorithms, standards and capabilities of the hardware platforms we base our solutions on",
+            "Research about integration of potential solution concepts",
+            "Creating proof-of-concept software for given solution",
+            "Unit tests, simulations and stress testing",
+            "Turning PoC solutions into production-grade version and integrating it with the existing products firmware",
+            "Analyzing capabilities and characteristics of new hardware platforms for future products",
+            "Creating custom software tools that are capable of performing tasks which already available tools cannot performed"
+        ],
+        additionalActivities: [
+            "Researching tools for streamlining software development process",
+            "Assisting with setting up Continuous Integration pipelines",
+            "Researching and proposing improvements to existing development processes and tools",
+            "Researching and proposing new approaches to software design and architecture, and code quality"
+        ],
+        technicalStack: [
+            "C (C11)",
+            "Ceedling",
+            "Git",
+            "CMake",
+            "Linux",
+            "STM32 Microcontrollers",
+            "ARM Cortex-M architecture",
+            "ST HAL library",
+            "Docker",
+            "FreeRTOS",
+            "GitLab"
+        ]
+    },
+    {
         position: "Software Engineer",
         company: "Nokia Solutions and Networks",
         companyLink: "https://nokiawroclaw.pl/",
         city: "Wroclaw",
         country: "Poland",
         startDate: "December 2022",
-        endDate: "Ongoing",
+        endDate: "September 2025",
         responsibilities: [
             "Developing new functionalities within the 5G RAN Control Plane layer",
             "Creating unit test regression using GTest framework",

@@ -51,6 +51,10 @@ table tbody td:nth-of-type(odd) {
     height: 100%;
 }
 
+.mobile-skills {
+    display: none;
+}
+
 @media (max-width: 1080px) {
     table thead > * {
         font-size: .8rem;
@@ -83,5 +87,9 @@ table tbody td:nth-of-type(odd) {
 @media (max-width: 1440px) {
     table tbody > * {
         font-size: .8rem;
+    }
+
+    .mobile-skills {
+        display: block;
     }
 }

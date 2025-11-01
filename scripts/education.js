@@ -6,12 +6,12 @@ const educationEntries = [
         city: "Zielona Góra",
         country: "Poland",
         faculty: "Faculty of Computer, Electrical and Control Engineering",
-        facultyLink: "",
+        facultyLink: "https://wnit.uz.zgora.pl/",
         startDate: "March 2022",
-        endDate: "July 2024",
+        endDate: "July 2023",
         specialization: "Integrated Computer Systems",
         thesisTitle: "Comparative Analysis of Machine Learning Libraries in C++ for Application in Biostatistics",
-        thesisLink: "",
+        thesisLink: "https://www.researchgate.net/publication/382162127_Comparative_Analysis_of_Machine_Learning_Libraries_in_C_for_Applications_in_Biostatistics",
         activities: [
             { "Space Engineering Science Club" : "software and electronics engineer, team leader" }
         ],
@@ -27,12 +27,12 @@ const educationEntries = [
         city: "Zielona Góra",
         country: "Poland",
         faculty: "Faculty of Computer, Electrical and Control Engineering",
-        facultyLink: "",
+        facultyLink: "https://wnit.uz.zgora.pl/",
         startDate: "October 2018",
         endDate: "February 2022",
         specialization: "Industrial Computer Systems",
         thesisTitle: "Methods of Implementing a Network Interface in IoT Modules",
-        thesisLink: "",
+        thesisLink: 'https://www.researchgate.net/publication/390465807_Methods_of_implementing_a_network_interface_in_IoT_modules',
         activities: [
             { "Game&Dev Science Club" : "club president, software engineer"},
             { "FantASIC Science Club" : "club president, software engineer"},
@@ -61,7 +61,7 @@ function renderSingleEducationEntry(entry) {
                     <a href="${entry["facultyLink"]}" target="_blank">${entry["faculty"]}</a></p>
                 <p><strong>Specialization: </strong><i>${entry["specialization"]}</i></p>
                 <p style="translate: 0 -5px;"><strong>Thesis: 
-                    </strong><a href="${entry["thesisLink"]} target="_blank"><i>''${entry["thesisTitle"]}''</i>
+                    </strong><a href="${entry["thesisLink"]}" target="_blank"><i>''${entry["thesisTitle"]}''</i>
                     <img class="researchgate-icon" src="https://img.shields.io/badge/-ResearchGate-darkgreen?style=flat&logo=ResearchGate&logoColor=white" alt="ResearchGate"></a>
                 </p>
                 <p><strong>Additional activities:</strong></p>

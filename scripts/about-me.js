@@ -186,7 +186,7 @@ function placeSpecialtityBlock()
                 </div>
             </span>
             <span class="flowing-container">
-                <a href="https://www.flaticon.com/free-icons/programming-language" title="programming language icons" alt="Programming language icons created by Soremba - Flaticon" target="_blank"><img src="../pictures/c-(1).png"/></a>
+                <a href="https://www.flaticon.com/free-icons/programming-language" title="programming language icons" alt="Programming language icons created by Soremba - Flaticon" target="_blank"><img src="../pictures/c-.png"/></a>
                 <div class="flowing-container-text">
                     <p>C</p>
                 </div>
