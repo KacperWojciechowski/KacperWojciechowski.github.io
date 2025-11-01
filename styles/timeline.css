@@ -15,7 +15,7 @@
     transform: translateY(-100%) translateX(-50%);
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 24px solid #fffacd;
+    border-bottom: 24px solid #94abd4d7;
     width: 0;
     height: 0;
     z-index: 10;
@@ -66,7 +66,7 @@
     top: 0;
     width: 4px;
     height: 100%;
-    background: #fffacd;
+    background: #bfd2e7b6;
     transform: translateX(-50%);
     z-index: 1;
 }
@@ -102,7 +102,7 @@
     transform: translateY(-50%);
     width: 2rem;
     height: 0;
-    border-top: 3px solid #fffacd;
+    border-top: 3px solid #468cb4;
     z-index: 2;
 }
 
@@ -110,11 +110,11 @@
     position: absolute;
     left: 30px;
     min-width: 70px;
-    background: #fff;
-    border: 2px solid #0096C7;
+    background: #0c2852b0;
+    border: 2px solid #45a0be;
     border-radius: 8px;
     padding: 4px 10px;
-    color: #0096C7;
+    color: #bbd2da;
     font-weight: bold;
     font-size: 1em;
     box-shadow: 0 2px 6px rgba(0,0,0,0.07);
@@ -130,7 +130,7 @@
     transform: translateY(-50%);
     width: 32px;
     height: 2px;
-    background: white;
+    background: rgb(142, 198, 230);
     z-index: 2;
 }
 

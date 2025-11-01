@@ -24,12 +24,12 @@ const researchEntries = [
         keywords: ["Library", "Framework", "C++", "JMP", "DLib", "Shogun", "Shark-ML", "Machine Learning", "Support Vector Machine", "SVM", "Linear Regression", "Loss Function", "ROC curve", "AUC"],
     },
     {
-        title: "The Journeyman's Guide to Informed Software Design",
+        title: "The Journeyman's Guide To Informed Software Design",
         subtitle: 'A stroll through paradigms, requirements, constraints and other software design concerns',
         link: "",
         coAuthors: [],
         abstract: "Work in progress...",
-        keywords: ["Software Architecture", "Programming Paradigms", "Good Practices", "System Design", "Software Design", "C++"],
+        keywords: ["Software Architecture", "Good Practices", "System Design", "Software Design", "System Constraints"],
     }
 ]
 
