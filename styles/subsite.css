@@ -18,11 +18,13 @@ hr {
 
 .content {
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-    background: #fffacd;
+    background: rgba(117, 162, 218, 0.85);
+    color: #041733;
     border-radius: 10px;
-    border: 2px solid #e8e2b0;
-    box-shadow: 0 0 0.3rem 0.3rem rgba(240, 234, 187, 0.5), 
-                0 0 0.3rem rgba(143, 136, 83, 0.5) inset;
+    border: 2px solid rgba(117, 162, 218, 0.85);
+    box-shadow: 0 0 0.3rem 0.3rem rgba(146, 155, 243, 0.5), 
+                0 0 0.3rem rgba(109, 127, 209, 0.5) inset;
+    backdrop-filter: blur(4px);
     padding: 20px;
     margin: 10px;
     height: fit-content;

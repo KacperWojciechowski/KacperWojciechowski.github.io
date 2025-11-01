@@ -47,14 +47,14 @@ p, span {
     color: #0f6948;
 } 
 .blue { 
-    border-color: #0096C7; 
-    background-color: rgba(0, 150, 199, 0.1);
-    color: #144c8c;
+    border-color: #043e52; 
+    background-color: rgba(8, 89, 116, 0.205);
+    color: #031a35;
 } 
 .green { 
-    border-color: #00B353; 
-    background-color: rgba(0, 179, 83, 0.1); 
-    color: #09450c;
+    border-color: #051d10; 
+    background-color: rgba(4, 124, 60, 0.336); 
+    color: #022503;
 }
 
 .label {

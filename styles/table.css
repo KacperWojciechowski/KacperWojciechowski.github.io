@@ -55,7 +55,7 @@ table tbody td:nth-of-type(odd) {
     display: none;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1440px) {
     table thead > * {
         font-size: .8rem;
     }
@@ -76,12 +76,7 @@ table tbody td:nth-of-type(odd) {
         box-sizing: border-box;
     }
 
-    table tbody tr:nth-of-type(odd) {
-    background-color: rgba(243, 243, 243, .25);
-}
-    table tbody td:nth-of-type(odd) {
-    background-color: rgba(128, 124, 115, 0.25);
-}
+    
 }
 
 @media (max-width: 1440px) {
@@ -89,7 +84,18 @@ table tbody td:nth-of-type(odd) {
         font-size: .8rem;
     }
 
+    .desktop-skills {
+        display: none;
+    }
+
     .mobile-skills {
         display: block;
+    }
+
+    table tbody tr:nth-of-type(odd) {
+        background-color: rgba(243, 243, 243, .25);
+    }
+    table tbody td:nth-of-type(odd) {
+        background-color: rgba(128, 124, 115, 0.25);
     }
 }

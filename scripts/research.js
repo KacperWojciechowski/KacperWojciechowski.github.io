@@ -1,6 +1,7 @@
 const researchEntries = [
     {
         title: "Methods of Implementing a Network Interface in IoT Modules",
+        subtitle: '',
         link: "https://www.researchgate.net/publication/390465807_Methods_of_implementing_a_network_interface_in_IoT_modules",
         coAuthors: [],
         abstract: `This paper aims to present the reader with known ways of implementing a network interface in IoT modules.
@@ -12,6 +13,7 @@ const researchEntries = [
     },
     {
         title: "Comparative Analysis of Machine Learning Libraries in C++ for Application in Biostatistics",
+        subtitle: '',
         link: "https://www.researchgate.net/publication/382162127_Comparative_Analysis_of_Machine_Learning_Libraries_in_C_for_Applications_in_Biostatistics",
         coAuthors: [],
         abstract: `This paper aims to discuss similarities and differences between libraries for machine learning available for the C++ language, and test their prowess
@@ -23,6 +25,7 @@ const researchEntries = [
     },
     {
         title: "The Journeyman's Guide to Informed Software Design",
+        subtitle: 'A stroll through paradigms, requirements, constraints and other software design concerns',
         link: "",
         coAuthors: [],
         abstract: "Work in progress...",
@@ -32,7 +35,9 @@ const researchEntries = [
 
 function renderSingleResearchEntry(entry) {
     return `<div class="content">
-                <h2><i>${entry["title"]}</i></h2>
+                <h2><i>${entry["title"]}\n</i>
+                ${entry["subtitle"].length != 0 ? `<br><i style="font-size: 1rem;">${entry["subtitle"]}</i>` : ''}
+                </h2>
                 <hr>
                 <div class="note green">
                     <img class="note-icon" src="../pictures/study.svg">
