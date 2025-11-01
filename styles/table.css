@@ -29,6 +29,7 @@ table tbody td {
     text-align: left;
     border: 1px solid black;
     background-color: rgba(128, 124, 115, 0.25);
+    vertical-align: top;
 }
 
 table tbody tr {
@@ -43,7 +44,14 @@ table tbody td:nth-of-type(odd) {
     background-color: rgba(243, 243, 243, .25);
 }
 
-@media (max-width: 800px) {
+.subsite-body > table,
+.subsite-body > table > tbody,
+.subsite-body > table > tbody > tr
+{
+    height: 100%;
+}
+
+@media (max-width: 1080px) {
     table thead > * {
         font-size: .8rem;
     }
@@ -55,10 +63,25 @@ table tbody td:nth-of-type(odd) {
         min-width: 4rem;
     }
 
+    table tbody th:first-child,
+    table tbody td:first-child,
+    table tbody tr > *:first-child {
+        vertical-align: middle;
+        text-align: center;
+        padding: 0.8rem 0.6rem;
+        box-sizing: border-box;
+    }
+
     table tbody tr:nth-of-type(odd) {
     background-color: rgba(243, 243, 243, .25);
 }
     table tbody td:nth-of-type(odd) {
     background-color: rgba(128, 124, 115, 0.25);
 }
+}
+
+@media (max-width: 1440px) {
+    table tbody > * {
+        font-size: .8rem;
+    }
 }

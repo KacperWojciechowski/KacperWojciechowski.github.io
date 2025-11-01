@@ -25,5 +25,23 @@ window.addEventListener('DOMContentLoaded', function() {
         const year = new Date().getFullYear();
         footer.innerHTML = `&copy; ${year} Wojciechowski Kacper`;
     }
-    executeInclude();
+    let banner = document.getElementById('menu-banner');
+    if (banner) {
+        banner.innerHTML = createBanner(menuContent);
+        const iframe = this.document.querySelector('.main-window');
+        banner.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const url = this.getAttribute('href');
+                if (!iframe || !link) return;
+                const current = iframe.getAttribute('src') || '';
+                if (current === url) return;
+                iframe.setAttribute('src', url);
+            })
+        });
+    }
+    let sidebar = document.getElementById('id-sidebar');
+    if (sidebar) {
+        sidebar.innerHTML = constructSidebar();
+    }
 });

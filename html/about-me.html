@@ -10,28 +10,26 @@
     <link rel="stylesheet" href="../styles/subsite.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/about-me.css">
+    <script src="../scripts/common.js"></script>
     <script src="../scripts/code.js"></script>
     <script src="../scripts/about-me.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
-<body>
     <div class="subsite-header">
         <div class="label">
-            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-            <p>About Me</p>
-            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+        <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+        <p>About Me</p>
+        <img src="../pictures/circuit-right.png" alt="Circuit Icon">
         </div>
         <hr>
     </div>
-    <div class="subsite-body">
-        <div class="about-me-flex-wrapper">
-            <div class="about-me-tile" id="id-introduction"></div>
-            <div class="about-me-tile">
-                <div class="side-tile-row" id="id-interrests"></div>
-                <div class="side-tile-row" id="id-speciality"></div>
-                <div class="side-tile-row" id="id-github"></div>
-            </div>
+    <div class="subsite-body flex-changing">
+        <div class="about-me-tile" id="id-introduction"></div>
+        <div class="about-me-tile">
+            <div id="id-interrests"></div>
+            <div id="id-speciality"></div>
+            <div id="id-github"></div>
         </div>
     </div>    
 </body>

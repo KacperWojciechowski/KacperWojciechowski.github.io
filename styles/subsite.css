@@ -17,16 +17,15 @@ hr {
 }
 
 .content {
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     background: #fffacd;
     border-radius: 10px;
     border: 2px solid #e8e2b0;
     box-shadow: 0 0 0.3rem 0.3rem rgba(240, 234, 187, 0.5), 
                 0 0 0.3rem rgba(143, 136, 83, 0.5) inset;
     padding: 20px;
-    padding-top: 5px;
     margin: 10px;
-    margin-bottom: 20px;
-    min-width: 250px;
+    height: fit-content;
 }
 
 .content ul li {
@@ -35,35 +34,14 @@ hr {
 }
 
 .subsite-header {
-    display: flex;
-    flex-direction: column;
+    display: block;
     background-color: rgba(89, 140, 235, 0.5);
-    margin: 0;
 }
 
 .subsite-body {
-    display: flex;
-    flex: 1 1 0;
+    display: block;
     padding: .5rem .5rem;
-    display: flex;
-    flex-direction: column;
 }
 
-.subsite-body > table,
-.subsite-body > table > tbody,
-.subsite-body > table > tbody > tr
-{
-    height: 100%;
-}
-
-@media (max-width: 800px) {
-    .content p {
-        font-size: 0.9rem;
-        text-align: left;
-        min-width: 0;
-    }
-
-    .content h2 {
-        font-size: 1.2rem;
-    }
+@media (max-width: 1080px) {
 }

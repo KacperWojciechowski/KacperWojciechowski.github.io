@@ -4,7 +4,6 @@ const projects = [
         logo: "../pictures/graph_cake.svg",
         link: "https://github.com/KacperWojciechowski/GraphCake",
         technicalStack: ["C++20", "GTest", "CMake"],
-        support: false,
         features: [
             "Set of universal, interchangeable graph representations;",
             `Support for <a href="" target="_blank">House of Graphs</a> formats (<b>.mat</b>, <b>.lst</b>) and <b>.graphML</b> formats;`,
@@ -19,7 +18,6 @@ const projects = [
         logo: "../pictures/road_to_the_centre.svg",
         link: "https://github.com/KacperWojciechowski/RoadToTheCenter",
         technicalStack: ["C++20", "GTest", "CMake"],
-        support: false,
         features: [
             "Made during an amateur game jam between friends;",
             "A text-based economy game, where the goal is to travel to the center of the galaxy;",
@@ -32,7 +30,6 @@ const projects = [
         logo: "../pictures/dungeon_crawler.svg",
         link: "https://github.com/KacperWojciechowski/DungeonCrawler",
         technicalStack: ["Java 8, Maven"],
-        support: false,
         features: [
             "Text-based dungeon crawler game in a client-server model;",
             "The game state is controlled and validated by the server, while the client acts exclusively as a front-end;",
@@ -66,13 +63,6 @@ function renderProject(project) {
             <p class="note green">
                 Available at <img class="github-icon" src="https://img.shields.io/badge/-GitHub-gray?style=flat&logo=GitHub&logoColor=white" alt="GitHub">
             </p>`
-    if (!project["support"])
-    {
-        out += `<p class="note red">
-                    <img class="note-icon" src="../pictures/exclamation.svg"></img>
-                    Support for the project has been discontinued
-                </p>`
-    }
     out += `<ul>
                 ${project["features"].map(feature => `<li><p>${feature}</p></li>`).join('')}
             </ul>
@@ -88,12 +78,12 @@ function renderProject(project) {
 
 window.addEventListener('DOMContentLoaded', function() {
     let element = this.document.getElementById("id-projects-container");
+    if (!element) return;
+
+    let html = '';
     for (let i = 0; i < projects.length; i++) {
-    {
-        element.innerHTML += renderProject(projects[i]);
-        if (i < projects.length - 1) {
-            element.innerHTML += `<hr>`
-        }
+        html += renderProject(projects[i]);
+        if (i < projects.length - 1) html += `<hr>`;
     }
-    }
+    element.innerHTML = html;
 });

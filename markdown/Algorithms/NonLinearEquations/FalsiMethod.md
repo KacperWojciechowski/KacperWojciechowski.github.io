@@ -1,3 +1,0 @@
-# Falsi method
-
-TODO

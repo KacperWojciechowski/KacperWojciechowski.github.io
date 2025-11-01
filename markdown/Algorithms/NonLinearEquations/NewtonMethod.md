@@ -1,3 +1,0 @@
-# Newton method
-
-TODO

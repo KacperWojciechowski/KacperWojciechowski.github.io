@@ -1,3 +1,0 @@
-# Gauss-Siedel method
-
-TODO

@@ -1,3 +1,0 @@
-# Fixed point method
-
-TODO

@@ -1,6 +1,4 @@
 html, body {
-    height: 100%;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -10,28 +8,27 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
     background-image: url('../pictures/StockCake-Advanced circuit technology_1728060876.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .site {
-    max-width: 1980px;
+    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border-left: 0.3rem solid rgb(119, 151, 194);
+    border-right: 0.3rem solid rgb(119, 151, 194);
+    box-shadow: 0 0 0.5rem 0.5rem rgba(122, 193, 252, 0.5), 
+                0 0 0.5rem rgba(89, 140, 235, 0.5) inset;
 }
 
 .banner {
     width: 100%;
     color: white;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -51,25 +48,19 @@ hr {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
 }
 
 .footer {
     background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 0px 0;
-    height: 50px;
+    height: 40px;
     position: relative;
     width: 100%;
     z-index: 2;
 }
 
 .footer p {
+    color: white;
     text-align: center;
-    justify-content: center;
 }
 
 .main-area {
@@ -107,6 +98,8 @@ hr {
     flex: 1 1 0;
 }
 
-.main-window::-webkit-scrollbar {
-    display: none;
+@Media (max-width: 1920px) {
+    .site {
+        border: none;
+    }
 }

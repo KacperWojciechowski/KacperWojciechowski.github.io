@@ -1,3 +1,0 @@
-# Secant method
-
-TODO

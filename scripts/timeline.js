@@ -14,5 +14,13 @@ function resizeTimelineItems() {
     });
 }
 
+function debounce(fn, wait = 120) {
+    let t;
+    return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), wait);
+    }
+}
+
 window.addEventListener('load', resizeTimelineItems);
-window.addEventListener('resize', resizeTimelineItems);
+window.addEventListener('resize', debounce(resizeTimelineItems, 120));

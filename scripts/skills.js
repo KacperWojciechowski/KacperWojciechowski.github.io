@@ -68,6 +68,14 @@ function renderVerticalTable(table)
         </table>`;
 }
 
+function renderLabel(label) {
+    return `<div class="label">
+            <img src="../pictures/circuit-left.png" alt="Circuit Icon">
+            <p>${label}</p>
+            <img src="../pictures/circuit-right.png" alt="Circuit Icon">
+        </div>`;
+}
+
 window.addEventListener('DOMContentLoaded', function() {
     this.document.getElementById("prog-lang-table-desktop").innerHTML = renderLabel("Programming:") + renderHorizontalTable(programmingLanguages);
     this.document.getElementById("embedded-table-desktop").innerHTML = renderLabel("Embedded Systems:") + renderHorizontalTable(embedded);

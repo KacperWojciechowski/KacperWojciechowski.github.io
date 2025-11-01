@@ -34,33 +34,3 @@ function renderCode(code, noSpaceKeywords) {
     }
     return out;
 }
-
-function renderTerminal(terminal) {
-    let out = '';
-    for (const line of Object.entries(terminal)) {
-        const [style, content] = line;
-        out += `<span style="terminal-span" class="${style}">${content}</span>`;
-    }
-    return out;
-}
-
-async function iterativelyRenderTerminal(elementId, content) {
-    const element = this.document.getElementById(elementId);
-    if (!element) {
-        console.error(`Element with ID ${elementId} not found.`);
-        return;
-    }
-
-    let index = 0;
-    const delay = ms => new Promise(res => this.setTimeout(res, ms));
-    let handle = this.setInterval((text) => {
-        if (index < text.length) {
-            element.innerHTML += text.charAt(index++);
-                //let lastIndex = element.innerHTML.lastIndexOf('</span>');
-                //element.innerHTML = element.innerHTML.substring(0, lastIndex) + string.charAt(index++) + '</span>';
-        }
-        }, 35, content);
-    await delay(content.length * 35 + 100);
-    this.clearInterval(handle);
-    element.innerHTML += '<br>';
-}

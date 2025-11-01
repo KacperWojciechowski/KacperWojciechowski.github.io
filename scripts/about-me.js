@@ -9,11 +9,11 @@ const aboutMeCode = [
     { "type code-tab" : "void", "function" : "hire", "brace" : "()", "keyword _1" : ";" },
     { "keyword" : "private:" },
     { "type code-tab" : "std::uint8_t", "variable" : "age", "keyword _1" : "=", "" : "<span id=\"id-age\" class=\"number\"></div>", "keyword _2" : ";" },
-    { "type code-tab" : "std::string", "variable" : "occupation", "keyword" : "=", "string" : "\"Software Engineer\"", "keyword _1" : ";" },
-    { "type code-tab" : "std::string", "variable" : "specialization", "keyword" : "=", "string" : "\"Cpp, SW Architecture\"", "keyword _1" : ";" },
-    { "type code-tab" : "std::string", "variable" : "degree_type", "keyword" : "=", "string" : "\"Master's\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "occupation", "keyword" : "=", "string" : "\"Embedded Software Engineer\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "specialization", "keyword" : "=", "string" : "\"Software Architecture and Design\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "degree_type", "keyword" : "=", "string" : "\"Master degree\"", "keyword _1" : ";" },
     { "type code-tab" : "std::string", "variable" : "degree_field", "keyword" : "=", "string" : "\"Computer Science\"", "keyword _1" : ";" },
-    { "type code-tab" : "std::string", "variable" : "cityOfResidence", "keyword" : "=", "string" : "\"Wschowa\"", "keyword _1" : ";" },
+    { "type code-tab" : "std::string", "variable" : "cityOfResidence", "keyword" : "=", "string" : "\"Zielona Góra\"", "keyword _1" : ";" },
     { "type code-tab" : "std::string", "variable" : "countryOfResidence", "keyword" : "=", "string" : "\"Poland\"", "keyword _1" : ";" },
     {},
     { "keyword code-tab" : "struct", "type" : "WorkExperience", "brace" : "{"},
@@ -25,36 +25,6 @@ const aboutMeCode = [
     { "brace" : "}", "keyword" : ";" },
 ]
 
-const terminalSeparator = { "comment" : "------------------------------------------------------"}
-
-const terminalFrame = [
-    { 
-        "terminal-prompt" : "Ubuntu@home:</span><span class=\"directory\">~/repos/cv/build</span><span class=\"terminal-prompt\">$ ", 
-        "cursor" : "<span id=\"terminal-cursor\">|</span>", 
-        "command" : "<span id=\"id-terminal-command\" style=\"command\"></span>",
-        "terminal-output" : "<p id=\"id-terminal-output\" style=\"terminal-output\"></p>"
-    },
-    { 
-        "terminal-prompt" : "Ubuntu@home:</span><span class=\"directory\">~/repos/cv/build</span><span class=\"terminal-prompt\">$ ", 
-        "cursor" : "<span id=\"terminal-cursor-2\">|</span>", 
-        "command" : "<span id=\"id-terminal-command-2\" style=\"command\"></span>", 
-        "terminal-output" : "<span id=\"id-terminal-output-2\" style=\"terminal-output\"></span>" 
-    }
-]
-
-const terminalCommand = "g++ -std=c++20 -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out";
-const terminalContent = ["[!] Oh, I see you made it! Glad to have you here!",
-    "- Welcome to my humble abode.",
-    "- My name is Kacper.",
-    "- I work professionally as a Software Engineer, specializing in C++ and Software Architecture.",
-    "- Since you're here, I presume you want to know a bit more about me.",
-    "- As such, feel free to explore the content of this page. I hope you will find it interesting.",
-    `- My professional experience includes both high-level and low-level software solutions.
-    This makes me think I'll catch your attention regardless of the project you have at hand.`,
-    "- If you have any questions, feel free to reach out to me via e-mail.",
-    "- If any of my projects strikes you fancy, I encourage you to take a look at it's repository on GitHub!",
-    "- Hope you have a great day!"];
-
 function calculateDateDiffTillNow(startDate, endDate = new Date()) {
     let age = endDate.getFullYear() - startDate.getFullYear();
     const monthDiff = endDate.getMonth() - startDate.getMonth();
@@ -62,6 +32,21 @@ function calculateDateDiffTillNow(startDate, endDate = new Date()) {
         age--;
     }
     return age;
+}
+
+function focusInputAtEnd(element) {
+    if (!element) return;
+    element.focus();
+    try {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(element);
+        range.collapse(false);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    } catch (e) {
+        element.focus();
+    }
 }
 
 function calculateDateDiffWithMonths(startDate, endDate = new Date()) {
@@ -120,12 +105,12 @@ function placeIntroductionBlock() {
     `;
 }
 
-function placeInterrestsBlock() {
+function placeInterestsBlock() {
     return `
     <div class="content" id="side-tile">
         <div class="label">
             <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-            <p>Primary Interrests:</p>
+            <p>Primary Interests:</p>
             <img src="../pictures/circuit-right.png" alt="Circuit Icon">
         </div>
         <div class="flowing-container-wrapper">
@@ -201,6 +186,12 @@ function placeSpecialtityBlock()
                 </div>
             </span>
             <span class="flowing-container">
+                <a href="https://www.flaticon.com/free-icons/programming-language" title="programming language icons" alt="Programming language icons created by Soremba - Flaticon" target="_blank"><img src="../pictures/c-(1).png"/></a>
+                <div class="flowing-container-text">
+                    <p>C</p>
+                </div>
+            </span>
+            <span class="flowing-container">
                 <img src="../pictures/sw-architecture.svg">
                 <div class="flowing-container-text">
                     <p>Software Architecture</p>
@@ -217,42 +208,391 @@ function placeSpecialtityBlock()
     `;
 }
 
-function cursorBlink(cursorClass)
-{
-    const cursor = this.document.getElementById(cursorClass);
-    if (cursor) {
-        cursor.style.visibility = (cursor.style.visibility === 'hidden' ? '' : 'hidden');
+/*
+New terminal implementation
+*/
+
+const defaultCommand = "g++ -std=c++20 -o out main.cpp kacperwojciechowski.cpp > /dev/null && ./out";
+
+const executedCommandPreDelayMs = 200;
+
+const commandsTree = {
+    [defaultCommand]: [
+        "[!] Oh, I see you made it! Glad to have you here!",
+        "- Welcome to my humble abode.",
+        "- My name is Kacper.",
+        "- I work professionally as a Software Engineer, specializing in C, C++ and Software Architecture.",
+        "- My professional experience includes both high-level and low-level software solutions.",
+        "- Since you're here, I presume you want to know more about me?",
+        "- As such, feel free to explore the content of this website. I hope you will find it interesting.",
+        "- My somewhat unique perspective makes me think I'll catch your attention regardless of the project you have at hand.",
+        "- If you have any questions, feel free to reach out to me via e-mail.",
+        "- If any of my projects strike you fancy, I encourage you to take a look at it's repository on GitHub!",
+        "- Hope you have a great day!"
+    ],
+    "g++": {
+        _output: ["g++: fatal error: no input files", "compilation terminated."],
+        _children: {
+            "-v": {
+                _output: [
+                    "Using built-in specs.",
+                    "COLLECT_GCC=g++",
+                    "COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper",
+                    "Target: x86_64-linux-gnu",
+                    "Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.3.0-17ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib/gcc/x86_64-linux-gnu/9 --enable-nls --with-sysroot"
+                ]
+            },
+            "-E": {
+                _output: ["<preprocessed output omitted>"]
+            },
+            "*": {
+                _output: ["compiling files..."],
+                _children: {
+                    "&&": {
+                        _children: {
+                            "./out": {
+                                _output: ["Hello world"]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "gcc": {
+    },
+    "echo" : {
+        _children: {
+            "*": {
+
+            }
+        }
+    },
+    // Add help for given commands here
+    "help" : {
+        _output: ["Available commands:", "- help [command]", "- g++ [switch] [file]", "- gcc [switch] [file]", "- git [switch]", "- echo <text>"],
     }
 }
 
-async function engageTerminal()
-{
-    this.document.getElementById("about-me-terminal").innerHTML = renderTerminal(terminalFrame[0]);
-    let blinkingInterval = this.setInterval(cursorBlink, 500, "terminal-cursor");
-    const delay = ms => new Promise(res => this.setTimeout(res, ms));
-    await delay(750);
-    this.clearInterval(blinkingInterval);
-    this.document.getElementById("terminal-cursor").innerHTML = '';
-    await iterativelyRenderTerminal("id-terminal-command", terminalCommand);
-    await delay(500);
-    for (const line of terminalContent) {
-        await iterativelyRenderTerminal("id-terminal-output", line);
+function tokenizeCommand(cmd) {
+    const tokens = [];
+    const re = /[^\s"]+|"([^"]*)"/g;
+    let m;
+    while ((m = re.exec(cmd)) !== null) {
+        tokens.push(m[1] !== undefined ? m[1] : m[0]);
     }
-    await delay(500);
-    this.document.getElementById("about-me-terminal").innerHTML += renderTerminal(terminalFrame[1]);
+    return tokens;
+}
 
-    this.setInterval(cursorBlink, 500, "terminal-cursor-2");
+function createTerminalSkeleton(container) {
+    container.innerHTML = '';
+    const outArea = document.createElement('div');
+    outArea.className = 'terminal-output';
+    outArea.id = 'about-me-terminal-output';
+    outArea.style.whiteSpace = 'pre-wrap';
+    outArea.style.wordBreak = 'break-word';
+    outArea.style.display = 'flex';
+    outArea.style.flexDirection = 'column';
+    outArea.style.justifyContent = 'flex-start';
+    outArea.style.alignItems = 'stretch';
+    outArea.style.overflowY = 'auto';
+    outArea.scrollTop = 0;
+
+    const lineArea = document.createElement('div');
+    lineArea.className = 'terminal-line';
+    lineArea.id = 'about-me-terminal-line';
+
+    const promptSpan = document.createElement('span');
+    promptSpan.className = 'terminal-prompt';
+    promptSpan.textContent = 'k.woj@Ubuntu:~';
+
+    const dirSpan = document.createElement('span');
+    dirSpan.className = 'directory';
+    dirSpan.textContent = ' ~/repos/cv/build';
+
+    const dollarSpan = document.createElement('span');
+    dollarSpan.className = 'terminal-prompt';
+    dollarSpan.textContent = ' $ ';
+
+    const inputSpan = document.createElement('span');
+    inputSpan.className = 'terminal-input';
+    inputSpan.classList.add('command', 'terminal-input-line');
+    inputSpan.id = 'about-me-terminal-input';
+    inputSpan.contentEditable = 'true';
+    inputSpan.spellcheck = false;
+    inputSpan.setAttribute('role', 'textbox');
+    inputSpan.setAttribute('aria-label', 'terminal input');
+    inputSpan.tabIndex = 0;
+    inputSpan.addEventListener('focus', () => {
+        inputSpan.style.outline = 'none';
+    });
+
+    const cursorSpan = document.createElement('span');
+    cursorSpan.className = 'terminal-cursor';
+    cursorSpan.id = 'about-me-terminal-cursor';
+    cursorSpan.textContent = '|';
+
+    lineArea.appendChild(promptSpan);
+    lineArea.appendChild(dirSpan);
+    lineArea.appendChild(dollarSpan);
+    lineArea.appendChild(inputSpan);
+    lineArea.appendChild(cursorSpan);
+
+    container.appendChild(outArea);
+    container.appendChild(lineArea);
+
+    return {outArea, inputSpan, cursorSpan, lineArea};
+}
+
+function debounce(fn, wait = 120) {
+    let t;
+    return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(this, args), wait);
+    };
+}
+
+function renderAsciiSeparator(sepId = 'terminal-separator', char = '-') {
+    const sepEl = document.getElementById(sepId);
+    if (!sepEl) return;
+
+    sepEl.classList.add('terminal-separator');
+    const meas = document.createElement('span');
+    meas.style.visibility = 'hidden';
+    meas.style.position = 'absolute';
+    meas.style.whiteSpace = 'nowrap';
+    
+    const cs = getComputedStyle(sepEl);
+    meas.style.fontFamily = cs.fontFamily || 'monospace';
+    meas.style.fontSize = cs.fontSize || '1rem';
+
+    meas.textContent = char.repeat(12);
+    document.body.appendChild(meas);
+    const charWidth = Math.max(1, meas.getBoundingClientRect().width / 12);
+    document.body.removeChild(meas);
+
+    const parent = sepEl.parentElement || sepEl;
+    const available = Math.max(0, parent.clientWidth - 4);
+    const count = Math.max(1, Math.floor(available / charWidth));
+
+    sepEl.textContent = char.repeat(count);
+}
+
+function typeIntoTextNode(node, text, msPerChar = 15) {
+    return new Promise(resolve => {
+        let i = 0;
+        let last = 0;
+        
+        function step(timestamp) {
+            if (!last) last = timestamp;
+            const elapsed = timestamp - last;
+            const charsToAdd = Math.floor(elapsed / msPerChar);
+            if (charsToAdd > 0) {
+                const end = Math.min(i + charsToAdd, text.length);
+                node.data += text.slice(i, end);
+                i = end;
+                last = timestamp;
+            }
+            if (i < text.length) requestAnimationFrame(step);
+            else resolve();
+        }
+        requestAnimationFrame(step);
+    });
+}
+
+async function appendAndTypeLine(outArea, lineText, msPerChar = 15) {
+    const lineDiv = document.createElement('div');
+    const text = document.createTextNode('');
+    lineDiv.appendChild(text);
+    outArea.appendChild(lineDiv);
+    await typeIntoTextNode(text, lineText, msPerChar);
+}
+
+function clearOutput(outArea) {
+    outArea.textContent = '';
+    try { outArea.scrollTop = 0; } catch (e) {}
+}
+
+function printExecutedCommand(outArea, command) {
+    const cmdLine = document.createElement('div');
+    cmdLine.className = 'executed-command-line';
+
+    const p = document.createElement('span');
+    p.className = 'terminal-prompt';
+    p.textContent = 'k.woj@Ubuntu:~';
+
+    const d = document.createElement('span');
+    d.className = 'directory';
+    d.textContent = ' ~/repos/cv/build';
+    const dollar = document.createElement('span');
+    dollar.className = 'terminal-prompt';
+    dollar.textContent = ' $ ';
+    const cmd = document.createElement('span');
+    cmd.className = 'command';
+    cmd.textContent = command;
+    
+    cmdLine.appendChild(p);
+    cmdLine.appendChild(d);
+    cmdLine.appendChild(dollar);
+    cmdLine.appendChild(cmd);
+    outArea.appendChild(cmdLine);
+}
+
+async function runCommand(command, outArea, msPerChar = 5, opts = {clearOutput: true}) {
+    if (opts.clearOutput) clearOutput(outArea);
+    printExecutedCommand(outArea, command);
+
+    await new Promise(res => setTimeout(res, executedCommandPreDelayMs));
+
+    if (command === defaultCommand) {
+        const hardOutput = commandsTree[defaultCommand];
+        if (Array.isArray(hardOutput)) {
+            for (const line of hardOutput) {
+                await appendAndTypeLine(outArea, line, msPerChar);
+            }
+            return;
+        }
+    }
+
+    const tokens = tokenizeCommand(command);
+    if (tokens.length === 0) return;
+
+    const rootToken = tokens[0];
+
+    if (rootToken === 'echo') {
+        const payload = tokens.slice(1).join(' ');
+        await appendAndTypeLine(outArea, payload, msPerChar);
+        return;
+    }
+
+    let node = commandsTree[rootToken];
+    if (!node) {
+        await appendAndTypeLine(outArea, `bash: command not found: ${command}`, msPerChar);
+        await appendAndTypeLine(outArea, "- Type 'help' to see available commands.", msPerChar);
+        return;
+    }
+
+    if (node._output && tokens.length === 1) {
+        for (const line of node._output) {
+            await appendAndTypeLine(outArea, line, msPerChar);
+        }
+    }
+
+    let cur = node;
+    for (let i = 1; i < tokens.length; i++) {
+        const tk = tokens[i];
+
+        if (tk === '&&') {
+            const rest = tokens.slice(i + 1).join(' ').trim();
+            if (rest.length > 0) {
+                await runCommand(rest, outArea, msPerChar, {clearOutput: false});
+            }
+            return;
+        }
+
+        if (cur._children && cur._children[tk]) {
+            cur = cur._children[tk];
+            if (cur._output) {
+                for (const line of cur._output) {
+                    await appendAndTypeLine(outArea, line, msPerChar);
+                }
+            }
+            continue;
+        }
+
+        if (cur._children && cur._children['*']) {
+            cur = cur._children['*'];
+            if (cur._output) {
+                for (const line of cur._output) {
+                    await appendAndTypeLine(outArea, line.replace('{arg}', tk), msPerChar);
+                }
+            continue;
+            }
+        }
+
+        await appendAndTypeLine(outArea, `(unrecognized argument: ${tk})`, msPerChar);
+        return;
+    }
+}
+
+function wireInput(inputSpan, cursorSpan, outArea, lineArea) {
+    inputSpan.addEventListener('keydown', async function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const command = inputSpan.textContent.trim();
+            lineArea.style.display = 'none';
+            inputSpan.contentEditable = 'false';
+            inputSpan.textContent = '';
+            await runCommand(command || defaultCommand, outArea);
+            lineArea.style.display = '';
+            inputSpan.contentEditable = 'true';
+            inputSpan.focus();
+        } else if (event.key === 'Tab') {
+            // TODO
+        } else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+            // TODO
+        } else if (event.key == 'c' && event.ctrlKey) {
+            event.preventDefault();
+            inputSpan.textContent = '';
+            await appendAndTypeLine(outArea, '^C', 15);
+            inputSpan.focus();
+        }
+    });
+
+    let visible = true;
+    setInterval(() => {
+        visible = !visible;
+        cursorSpan.style.visibility = visible ? '' : 'hidden';
+    }, 500);
+
+    inputSpan.focus();
+}
+
+async function initTerminal() {
+    const termContainer = document.getElementById('about-me-terminal');
+    if (!termContainer) return;
+
+    const {outArea, inputSpan, cursorSpan, lineArea} = createTerminalSkeleton(termContainer);
+
+    try {outArea.scrollTop = 0; } catch (e) {}
+
+    inputSpan.textContent = '';
+    await typeIntoTextNode(inputSpan.firstChild || (function() { inputSpan.appendChild(document.createTextNode('')); return inputSpan.firstChild; })(), defaultCommand, 35);
+
+    const cmd = inputSpan.textContent.trim();
+    // initial animation
+    lineArea.style.display = 'none';
+    inputSpan.textContent = '';
+    await runCommand(cmd, outArea, 5);
+
+    try {outArea.scrollTop = 0; } catch (e) {}
+
+    lineArea.style.display = '';
+    termContainer.addEventListener('click', (ev) => {
+        if (ev.target && ev.target.closest && ev.target.closest('a, button, input, textarea')) {
+            return;
+        }
+        focusInputAtEnd(inputSpan);
+    });
+
+    wireInput(inputSpan, cursorSpan, outArea, lineArea);
 }
 
 window.addEventListener('DOMContentLoaded', async function() {
-    this.document.getElementById("id-introduction").innerHTML = placeIntroductionBlock();
-    this.document.getElementById("id-interrests").innerHTML = placeInterrestsBlock();
-    this.document.getElementById("id-speciality").innerHTML = placeSpecialtityBlock();
-    this.document.getElementById("id-github").innerHTML = placeGitHubBlock();
-    this.document.getElementById("about-me-code").innerHTML = renderCode(aboutMeCode, noSpaceCppKeywords);
-    this.document.getElementById("id-age").innerHTML = Math.trunc(calculateDateDiffWithMonths(new Date(1999, 7, 27))[0]);
-    this.document.getElementById("terminal-separator").innerHTML = renderTerminal(terminalSeparator);
+    document.getElementById("id-introduction").innerHTML = placeIntroductionBlock();
+    document.getElementById("id-interrests").innerHTML = placeInterestsBlock();
+    document.getElementById("id-speciality").innerHTML = placeSpecialtityBlock();
+    document.getElementById("id-github").innerHTML = placeGitHubBlock();
+    document.getElementById("about-me-code").innerHTML = renderCode(aboutMeCode, noSpaceCppKeywords);
+    document.getElementById("id-age").innerHTML = Math.trunc(calculateDateDiffWithMonths(new Date(1999, 7, 27))[0]);
+    const separator = this.document.getElementById("terminal-separator");
+    if (separator) {
+        renderAsciiSeparator('terminal-separator', '-');
+        this.window.addEventListener('resize', debounce(() => renderAsciiSeparator('terminal-separator', '-'), 120));
+    }
+    // TODO - populate labels
+    let labels = this.document.getElementById("id-label");
     calculateExperience();
-    await engageTerminal();
+    await initTerminal();
 });
 

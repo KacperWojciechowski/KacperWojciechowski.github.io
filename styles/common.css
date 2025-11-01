@@ -13,8 +13,12 @@
     height: 25px;
 }
 
-p {
+p, span, a {
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     word-wrap: break-word;
+}
+
+p, span {
     text-align: justify;
 }
 
@@ -69,7 +73,8 @@ p {
 }
 
 .label p {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
+    padding-bottom: .3rem;
     color: white;
     border: 5px solid black;
     border-radius: 1rem;
@@ -178,7 +183,7 @@ p {
 }
 
 .command {
-    color: #f5db87;
+    color: #e4cf8a;
 }
 
 .terminal-output {
@@ -236,4 +241,9 @@ p {
         max-width: 100%;
         height: auto;
     }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }

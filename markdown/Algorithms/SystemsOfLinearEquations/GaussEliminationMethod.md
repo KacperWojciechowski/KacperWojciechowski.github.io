@@ -1,3 +1,0 @@
-# Gauss elimination method
-
-TODO

@@ -15,6 +15,18 @@ const programmingLanguages = {
                 "Structured bindings",
                 "C++ Guidelines and good practices"
             ],
+            "C": [
+                "Standards: 98 (ANSI), 11",
+                "Operations on contiguous memory blocks",
+                "Memory management",
+                "Memory alignment",
+                "OOP-style system design",
+                "Gcc compiler attributes",
+                "Ceedling unit test framework",
+                "Placement-new style memory management",
+                "Ring buffers",
+                "Callbacks and function pointers"
+            ],
             "TTCN3": [
                 "Designing and implementing flow-container-based test frameworks",
                 "Operating on components",
@@ -24,7 +36,10 @@ const programmingLanguages = {
                 "Parallel message reception"
             ],
             "Rust": [
-                "Currently learning",
+                "Mutability and ownership concepts",
+                "Fundamentals of OOP-style design using structs",
+                "Borrowing mechanism and lifetimes",
+                "Project management using Cargo"
             ],
             "Python": [
                 "Working with fundamental data structures - lists, tuples, sets and dictionaries",

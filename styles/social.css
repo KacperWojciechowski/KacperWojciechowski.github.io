@@ -16,10 +16,7 @@
 
 .social-media-container {
     list-style: none;
-    margin-top: 0;
-    padding: 0;
     justify-content: center;
-    width: 100%;
 }
 
 .social-media-container ul {
@@ -33,7 +30,7 @@
 }
 
 .social-media-container ul li {
-    margin: .4rem 0;
+    margin: .2rem 0;
 }
 
 .social-media-container ul li a {
