@@ -237,40 +237,196 @@ const commandsTree = {
                 _output: [
                     "Using built-in specs.",
                     "COLLECT_GCC=g++",
-                    "COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper",
+                    "COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/15.2.1/lto-wrapper",
                     "Target: x86_64-linux-gnu",
-                    "Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.3.0-17ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib/gcc/x86_64-linux-gnu/9 --enable-nls --with-sysroot"
+                    "Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.3.0-17ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,c++,go,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib/gcc/x86_64-linux-gnu/9 --enable-nls --with-sysroot",
+                    "Thread model: posix",
+                    "Supported LTO compression algorithms: zlib zstd",
+                    "gcc version 15.2.1 20250813 (GCC)"
                 ]
             },
             "-E": {
                 _output: ["<preprocessed output omitted>"]
             },
-            "*": {
-                _output: ["compiling files..."],
-                _children: {
-                    "&&": {
-                        _children: {
-                            "./out": {
-                                _output: ["Hello world"]
-                            }
-                        }
-                    }
-                }
+            "default": {
+                _output: ["I'm sorry Dave, I'm afraid I can't do that."]
             }
         }
     },
     "gcc": {
+        _output: ["gcc: fatal error: no input files", "compilation terminated."],
+        _children: {
+            "-v": {
+                _output: [
+                    "Using built-in specs.",
+                    "COLLECT_GCC=gcc",
+                    "COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper",
+                    "Target: x86_64-pc-linux-gnu",
+                    "Configured with: /build/gcc/src/gcc/configure --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust,cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc/-/issues --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror",
+                    "Thread model: posix",
+                    "Supported LTO compression algorithms: zlib zstd",
+                    "gcc version 15.2.1 20250813 (GCC)"
+                ],
+            },
+            "-E": {
+                _output: ["<preprocessed output omitted>"]
+            },
+            "default": {
+                _output: ["I'm sorry Dave, I'm afraid I can't do that."]
+            }
+        }
+    },
+    "git": {
+        _output: ["git: 'git' is not a git command. See 'git --help'."],
+        _children: {
+            "help": {
+                _output: [
+                    "usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]",
+                    "[--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]",
+                    "[-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]",
+                    "[--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]",
+                    "[--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]",
+                    "<command> [<args>]",
+                    "",
+                    "These are common Git commands used in various situations:",
+                    "",
+                    "start a working area (see also: git help tutorial)",
+                    "   clone      Clone a repository into a new directory",
+                    "   init       Create an empty Git repository or reinitialize an existing one",
+                    "",
+                    "work on the current change (see also: git help everyday)",
+                    "   add        Add file contents to the index",
+                    "   mv         Move or rename a file, a directory, or a symlink",
+                    "   restore    Restore working tree files",
+                    "   rm         Remove files from the working tree and from the index",
+                    "",
+                    "examine the history and state (see also: git help revisions)",
+                    "   bisect     Use binary search to find the commit that introduced a bug",
+                    "   diff       Show changes between commits, commit and working tree, etc",
+                    "   grep       Print lines matching a pattern",
+                    "   log        Show commit logs",
+                    "   show       Show various types of objects",
+                    "   status     Show the working tree status",
+                    "",
+                    "grow, mark and tweak your common history",
+                    "   backfill   Download missing objects in a partial clone",
+                    "   branch     List, create, or delete branches",
+                    "   commit     Record changes to the repository",
+                    "   merge      Join two or more development histories together",
+                    "   rebase     Reapply commits on top of another base tip",
+                    "   reset      Reset current HEAD to the specified state",
+                    "   switch     Switch branches",
+                    "   tag        Create, list, delete or verify a tag object signed with GPG",
+                    "",
+                    "collaborate (see also: git help workflows)",
+                    "   fetch      Download objects and refs from another repository",
+                    "   pull       Fetch from and integrate with another repository or a local branch",
+                    "   push       Update remote refs along with associated objects",
+                    "",
+                    "'git help -a' and 'git help -g' list available subcommands and some",
+                    "concept guides. See 'git help <command>' or 'git help <concept>'",
+                    "to read about a specific subcommand or concept.",
+                    "See 'git help git' for an overview of the system."
+                ]
+            },
+            "default": {
+                _output: ["I'm sorry Dave, I'm afraid I can't do that."]
+            }
+        }
     },
     "echo" : {
         _children: {
-            "*": {
-
-            }
+            "*": {}
         }
     },
     // Add help for given commands here
     "help" : {
+        _children: {
+            "echo": {
+                _output: [
+                    "echo: echo [-neE] [arg ...]",
+                    "Write arguments to the standard output.",
+                    "",
+                    "Display the ARGs, separated by a single space character and followed by a\
+                    newline, on the standard output.",    
+                    "Options:",
+                    "-n	do not append a newline",
+                    "-e	enable interpretation of the following backslash escapes",
+                    "-E	explicitly suppress interpretation of backslash escapes",
+                    "",
+                    "'echo' interprets the following backslash-escaped characters:",
+                    "\\a	alert (bell)",
+                    "\\b	backspace",
+                    "\\c	suppress further output",
+                    "\\e	escape character",
+                    "\\E	escape character",
+                    "\\f	form feed",
+                    "\\n	new line",
+                    "\\r	carriage return",
+                    "\\t	horizontal tab",
+                    "\\v	vertical tab",
+                    "\\\\	backslash",
+                    "\\0nnn	the character whose ASCII code is NNN (octal).  NNN can be \
+                            0 to 3 octal digits",
+                    "\\xHH	the eight-bit character whose value is HH (hexadecimal).  HH \
+                            can be one or two hex digits",
+                    "\\uHHHH	the Unicode character whose value is the hexadecimal value HHHH. \
+                            HHHH can be one to four hex digits.",
+                    "\\UHHHHHHHH the Unicode character whose value is the hexadecimal value \
+                            HHHHHHHH. HHHHHHHH can be one to eight hex digits.",
+                    "",
+                    "Exit Status:",
+                    "Returns success unless a write error occurs."
+                ]
+            },
+            "gcc": {
+                _output: [
+                    "bash: help: no help topics match `gcc'.  Try `help help' or `man -k gcc' or `info gcc'."
+                ]
+            },
+            "g++": {
+                _output: [
+                    "bash: help: no help topics match `g++'.  Try `help help' or `man -k g++' or `info g++'."
+                ]
+            },
+            "git": {
+                _output: [
+                    "bash: help: no help topics match `git'.  Try `help help' or `man -k git' or `info git'."
+                ]
+            }
+        },
         _output: ["Available commands:", "- help [command]", "- g++ [switch] [file]", "- gcc [switch] [file]", "- git [switch]", "- echo <text>"],
+    },
+    "man": {
+        _children: {
+            "-k": {
+                _children: {
+                    "gcc": {
+                        _output: [
+                            "gcc (1)              - GNU project C and C++ compiler"
+                        ]
+                    },
+                    "g++": {
+                        _output: [
+                            "g++ (1)              - GNU project C and C++ compiler"
+                        ]
+                    },
+                    "git": {    
+                        _output: [
+                            "git (1)              - the stupid content tracker"
+                        ]
+                    },
+                    "default": {
+                        _output: [
+                            "Unrecognized package name."
+                        ]
+                    }
+                }
+            },
+            "default": {
+                _output: ["I'm sorry Dave, I'm afraid I can't do that."]
+            }
+        }
     }
 }
 
@@ -510,6 +666,16 @@ async function runCommand(command, outArea, msPerChar = 5, opts = {clearOutput: 
             }
         }
 
+        if (cur._children && cur._children['default']) {
+            cur = cur._children['default'];
+            if (cur._output) {
+                for (const line of cur._output) {
+                    await appendAndTypeLine(outArea, line, msPerChar);
+                }
+            return;
+            }
+        }
+
         await appendAndTypeLine(outArea, `(unrecognized argument: ${tk})`, msPerChar);
         return;
     }
@@ -527,10 +693,6 @@ function wireInput(inputSpan, cursorSpan, outArea, lineArea) {
             lineArea.style.display = '';
             inputSpan.contentEditable = 'true';
             inputSpan.focus();
-        } else if (event.key === 'Tab') {
-            // TODO
-        } else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-            // TODO
         } else if (event.key == 'c' && event.ctrlKey) {
             event.preventDefault();
             inputSpan.textContent = '';
@@ -538,6 +700,24 @@ function wireInput(inputSpan, cursorSpan, outArea, lineArea) {
             inputSpan.focus();
         }
     });
+
+    inputSpan.addEventListener('paste', (e) => e.preventDefault());
+    inputSpan.addEventListener('drop', (e) => e.preventDefault());
+    inputSpan.addEventListener('dragover', (e) => e.preventDefault());
+    inputSpan.addEventListener('copy', (e) => e.preventDefault());
+    inputSpan.addEventListener('cut', (e) => e.preventDefault());
+    inputSpan.addEventListener('beforeinput', (e) => {
+        const t = e.inputType || '';
+        if (t.toLowerCase().includes('paste') || t.toLowerCase().includes('drop') || t.toLowerCase().includes('yank')) {
+            e.preventDefault();
+        }
+    });
+
+    inputSpan.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'v') {
+            e.preventDefault();
+        } 
+    })
 
     let visible = true;
     setInterval(() => {
@@ -555,6 +735,12 @@ async function initTerminal() {
     const {outArea, inputSpan, cursorSpan, lineArea} = createTerminalSkeleton(termContainer);
 
     try {outArea.scrollTop = 0; } catch (e) {}
+
+    termContainer.addEventListener('paste', (e) => e.preventDefault());
+    termContainer.addEventListener('copy', (e) => e.preventDefault());
+    termContainer.addEventListener('cut', (e) => e.preventDefault());
+    termContainer.addEventListener('drop', (e) => e.preventDefault());
+    termContainer.addEventListener('dragover', (e) => e.preventDefault());
 
     inputSpan.textContent = '';
     await typeIntoTextNode(inputSpan.firstChild || (function() { inputSpan.appendChild(document.createTextNode('')); return inputSpan.firstChild; })(), defaultCommand, 35);
