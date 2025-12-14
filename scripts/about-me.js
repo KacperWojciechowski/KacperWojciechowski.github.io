@@ -154,11 +154,40 @@ function placeGitHubBlock() {
     <div class="content">
         <div class="label">
             <img src="../pictures/circuit-left.png" alt="Circuit Icon">
-            <p>GitHub Stats:</p>
+            <p>Resources:</p>
             <img src="../pictures/circuit-right.png" alt="Circuit Icon">
         </div>
-        <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-            <img class="gh-stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KacperWojciechowski&size_weight=1&count_weight=0&theme=vision-friendly-dark&layout=donut&bg_color=201A4240&title_color=000000&text_color=000000&border_radius=10" alt="GitHub Languages">
+        <div class="flowing-container-wrapper">
+            <span class="flowing-container">
+                <a href="https://github.com/KacperWojciechowski/Notes" target="_blank">
+                    <img src="../pictures/document-general-letter-2-svgrepo-com.svg" alt="Technical Notes Icon">
+                </a>
+                <a href="https://github.com/KacperWojciechowski/Notes" target="_blank">
+                <div class="flowing-container-text">
+                    <p>Technical notes</p>
+                </div>
+                </a>
+            </span>
+            <span class="flowing-container">
+                <a href="https://www.twitch.tv/thejourneymansguide" target="_blank">
+                    <img src="../pictures/twitch-svgrepo-com.svg" alt="Twitch Icon">
+                </a>
+                <a href="https://www.twitch.tv/thejourneymansguide" target="_blank">
+                <div class="flowing-container-text">
+                    <p>Twitch</p>
+                </div>
+                </a>
+            </span>
+            <span class="flowing-container">
+                <a href="https://www.youtube.com/@journeymansguide" target="_blank">
+                    <img src="../pictures/youtube-svgrepo-com.svg" alt="YouTube Icon">
+                </a>
+                <a href="https://www.youtube.com/@journeymansguide" target="_blank">
+                <div class="flowing-container-text">
+                    <p>YouTube</p>
+                </div>
+                </a>
+            </span>
         </div>
     </div>`;
 }

@@ -17,15 +17,19 @@ const programmingLanguages = {
             ],
             "C": [
                 "Standards: 98 (ANSI), 11",
-                "Operations on contiguous memory blocks",
                 "Memory management",
                 "Memory alignment",
                 "OOP-style system design",
-                "Gcc compiler attributes",
-                "Ceedling unit test framework",
-                "Placement-new style memory management",
+                "Gcc compiler attributes and compilation flags",
+                "CMock unit test framework with Ceedling test runner",
+                "Automated unit testing embedded application logic on host desktop machine",
+                "CMock",
+                "Arm-none-eabi toolchain",
                 "Ring buffers",
-                "Callbacks and function pointers"
+                "Callbacks and function pointers",
+                "Redesign and refactoring of legacy code",
+                "Determining guidelines for improving safety, reliability and scalability of C code",
+                "Analyzing compiled .elf files using objdump and assembly inspection"
             ],
             "TTCN3": [
                 "Designing and implementing flow-container-based test frameworks",
@@ -35,12 +39,6 @@ const programmingLanguages = {
                 "Message-based communication between components",
                 "Parallel message reception"
             ],
-            "Rust": [
-                "Mutability and ownership concepts",
-                "Fundamentals of OOP-style design using structs",
-                "Borrowing mechanism and lifetimes",
-                "Project management using Cargo"
-            ],
             "Python": [
                 "Working with fundamental data structures - lists, tuples, sets and dictionaries",
                 "Creating and using classes and objects",
@@ -49,9 +47,11 @@ const programmingLanguages = {
             "Bash": [
                 "Creating automatization scripts and small tools",
                 "Creating parametrized scripts",
+                "Creating scripts utilizing switches",
                 "Creating scripts operating on files and directories",
                 "Creating script-invoking commands using aliases",
-                "Using environment variables"
+                "Using environment variables",
+                "Creating scripts for configuration of Docker-based environments"
             ]
         }
     }
@@ -70,13 +70,14 @@ const embedded = {
                 "Understanding of task scheduling and synchronization",
                 "Task priority, preemption and context switching",
                 "Managing task stack size",
-                "Handlers for interrupt routines and events such as task termination"
+                "Handlers for interrupt routines and events such as task termination",
+                "ISR-based task triggering for processing data"
             ]
         },
         "Microcontrollers": {
             "STM32": [
                 "Utilizing HAL library for peripheral management",
-                "Configuring peripherals using MCU registers",
+                "Configuring peripherals using MCU peripheral registers",
                 "Creating bare metal applications",
                 "Implementing communication using USART",
                 "Implementing ISR handling routines",
@@ -84,6 +85,13 @@ const embedded = {
                 "Configuring DMA for data transfer with peripherals",
                 "Configuring LwIP routines",
                 "Utilizing GPIO for input and output",
+                "Resolving race conditions between application logic and peripheral interfaces",
+                "Synchronization and managing boot logic between cores of dual-core MCUs (STM32H7 series)",
+                "Working with linker scripts",
+                "Managing and updating FLASH memory",
+                "Debugging embedded applications using CPU registers and memory inspection",
+                "Working with STM32CubeMX and STM32CubeProgrammer",
+                "Creating mechanisms for switching between multiple applications on a single core"
             ],
             "Arduino": [
                 "Utilizing GPIO for input and output",
@@ -94,6 +102,13 @@ const embedded = {
             ]
         },
         "Hardware" : {
+            "MCU parts and peripherals": [
+                "CPU internal registers",
+                "NOR-based FLASH memory",
+                "GPIO lines",
+                "USART serial communication peripheral",
+                "Clock configuration and management in embedded systems"
+            ],
             "Components": [
                 "Working with DC and BLDC motors",
                 "Working with logic gates",
@@ -105,6 +120,7 @@ const embedded = {
                 "Soldering components",
                 "Analyzing signals using oscilloscope",
                 "Measuring power and component parameters using multimeter",
+                "Reading memory dumps from embedded devices using ST-Link programmer"
             ]
         }
     }
@@ -118,18 +134,25 @@ const tools = {
                 "Creating symbolic links for files and directories",
                 "Practical experience with building projects in a Linux-based environment",
                 "Using Linux native tools for developing custom Bash scripts",
-                "Managing Linux packages using apt",
-                "Hands-on experience with Ubuntu",
+                "Managing Linux packages using apt, yay and pacman",
+                "Hands-on experience with Ubuntu, EndevourOS (Arch Linux) and Garuda Linux (Arch Linux) distributions",
+                "Using SSH for remote server management",
             ],
             "Windows": [
                 "Hands-on experience with Windows systems starting from Windows XP up to Windows 11",
-                "Hands-on experience setting up, configuring and operating WSL2 with Ubuntu instance"    
+                "Hands-on experience setting up, configuring and operating WSL2 with Ubuntu instance",
+                "Integrating Windows host OS with Docker Linux-based containers",    
             ]
         },
         "Code analysis and quality": {
             "Clang-format" : [
                 "Configuring Clang-format for tailored code formatting",
-                "Integrating Clang-format with Git hooks for automated formatting"
+                "Integrating Clang-format with Git hooks for automated formatting",
+                "Creating stand-alone scripts for formatting code bases in provided directories, with the ability to exclude specific files and folders",
+            ],
+            "Clang-tidy": [
+                "Configuring fine-tuned set of Clang-tidy checks",
+                "Creating stand-alone scripts for code analysis of repositories in provided directories, with the ability to exclude specific files and folders",
             ],
             "Gdb": [
                 "Debugging C++ application crashes using Gdb and backtraces",
@@ -152,10 +175,10 @@ const tools = {
             "Git": [
                 "Creating and managing repositories",
                 "Branching and merging strategies",
-                "Using Git hooks for automation",
                 "Collaborating using pull requests",
                 "Managing conflicts and rebasing",
-                "Operating git-based web platforms such as GitHub, GitLab, BitBucket and Gerrit"
+                "Operating git-based web platforms such as GitHub, GitLab, BitBucket and Gerrit",
+                "Creating git hooks for automating code formatting and static analysis"
             ],
             "Known Git-based repositories": [
                 "GitHub - Managing repositories, issues and pull requests",
@@ -163,12 +186,13 @@ const tools = {
                 "Gerrit - Managing changes, performing code review"
             ]
         },
-        "Build and dependency management systems": {
+        "Build systems": {
             "CMake": [
                 "Creating, building and maintaining projects based on CMake scripts",
             ],
-            "Cargo": [
-                "Currently learning"
+            "Ceedling": [
+                "Configuration of Ceedling-based unit test projects",
+                "Detailed configuration of test binaries compilation flags and defines"
             ]
         },
         
@@ -177,10 +201,21 @@ const tools = {
                 "Hands-on experience with code design and refactoring using GitHub Copilot",
                 "Hands-on experience with accelerated troubleshooting with help of GitHub Copilot"
             ],
-            "ChatGPT": [
-                "Basic experience with information search using ChatGPT"
-            ]
         },
+        "Containers and virtualization": {
+            "Docker": [
+                "Configuring, building and maintaining Docker containers for development environments",
+                "Synchronizing environmental variables between host and Docker containers",
+                "Creating Dockerfiles for custom container images",
+                "Working with Docker volumes",
+                "Exchanging files between Docker container and the host OS",
+                "Optimizing configuration and updating process of Docker images and containers, using Docker volumes, Docker's layer mechanism, bash configuration scripts and environmental variables file"
+            ],
+            "WSL2": [
+                "Setting up and configuring WSL2 with Ubuntu instance",
+                "Integrating WSL2 with Windows host OS for seamless file sharing and command execution",
+            ]
+        }
         
     }
 };
@@ -196,7 +231,11 @@ const knowhow = {
                 "Familiarity with Clean Code principles",
                 "Hands-on experience with identifying and fixing side effects",
                 "Hands-on experience with refactoring legacy code",
-                "Hands-on experience with Test Driven Development"
+                "Hands-on experience with Test Driven Development",
+                "Hands-on experience with modular code design",
+                "Hands-on experience in leveraging OOP principles in C",
+                "Expertese in code review process and static code analysis",
+                "Designing modules and entities in software systems which ensure their own safety and reliability regardless of other system entities"
             ],
             "Digital circuits": [
                 "Designing circuits using logic gates and latches",
@@ -215,13 +254,19 @@ const knowhow = {
                 "Hands-on experience with implementing graph library in C++",
                 "Experience with solving problems such as finding shortest path, coloring, topological sort and traversing graphs with C++"
             ],
-            "<span class=\"desktop\">Telecommunication</span><span class=\"mobile\">Telecom- munication</span>": [
+            "Telecom": [
                 "Understanding of Carrier Aggregation functionality",
                 "Understanding of Dual Connectivity functionality",
                 "Understanding of 5G RAN architecture, including CU-DU split and CP-UP split",
                 "Understanding of SCTP protocol",
                 "Hands-on experience with troubleshooting and analyzing 5G RAN issues",
                 "Hands-on experience with utilizing 3GPP documentation"
+            ],
+            "Working with data": [
+                "Experience in designing organized data structures",
+                "Analyzing data using regexes",
+                "Working with binary data",
+                "Working with data of different endianness",
             ]
         }
     }

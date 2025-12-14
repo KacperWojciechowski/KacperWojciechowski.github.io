@@ -12,6 +12,7 @@ const experiences = [
             "Research about algorithms, standards and capabilities of the hardware platforms we base our solutions on",
             "Research about integration of potential solution concepts",
             "Creating proof-of-concept software for given solution",
+            "Debugging software and hardware issues encountered during testing of the PoC and target solution",
             "Unit tests, simulations and stress testing",
             "Turning PoC solutions into production-grade version and integrating it with the existing products firmware",
             "Analyzing capabilities and characteristics of new hardware platforms for future products",
@@ -21,7 +22,9 @@ const experiences = [
             "Researching tools for streamlining software development process",
             "Assisting with setting up Continuous Integration pipelines",
             "Researching and proposing improvements to existing development processes and tools",
-            "Researching and proposing new approaches to software design and architecture, and code quality"
+            "Researching and proposing new approaches to software design and architecture, and code quality",
+            "Spearheading introduction of code quality assurance tools and processes",
+            "Sharing knowledge and experience about approaches to software design and architecture with other R&D members"
         ],
         technicalStack: [
             "C (C11)",
@@ -34,7 +37,8 @@ const experiences = [
             "ST HAL library",
             "Docker",
             "FreeRTOS",
-            "GitLab"
+            "GitLab",
+            "Assembly (ARM Cortex-M)"
         ]
     },
     {

@@ -145,7 +145,7 @@
     left: -12px;
     top: 50%;
     transform: translateY(-50%);
-    border-width: 6px;
+    border-width: 4px;
     border-style: solid;
     border-color: transparent #0096C7 transparent transparent;
 }
@@ -161,7 +161,7 @@
     left: -12px;
     top: 50%;
     transform: translateY(-50%);
-    border-width: 6px;
+    border-width: 4px;
     border-style: solid;
     border-color: transparent #0096C7 transparent transparent;
 }
