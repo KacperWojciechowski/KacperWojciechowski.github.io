@@ -13,7 +13,7 @@ const educationEntries = [
         thesisTitle: "Comparative Analysis of Machine Learning Libraries in C++ for Application in Biostatistics",
         thesisLink: "https://www.researchgate.net/publication/382162127_Comparative_Analysis_of_Machine_Learning_Libraries_in_C_for_Applications_in_Biostatistics",
         activities: [
-            { "Space Engineering Science Club" : "software and electronics engineer, team leader" }
+            { "Space Engineering Science Club" : "software and electronics engineer, team leader, system architect" }
         ],
         achievements: [
             "Designed the target electronic system of a marsian rover at <a href=\"\">The Space Engineering Science Club</a>",

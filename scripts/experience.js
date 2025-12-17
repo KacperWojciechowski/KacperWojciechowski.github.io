@@ -8,19 +8,11 @@ const experiences = [
         startDate: "October 2025",
         endDate: "Ongoing",
         responsibilities: [
-            "Co-creation of concepts for overcomming obstacles encountered by navigation systems based on embedded systems technology, which operate in a radio range of the electromagnetic spectrum",
-            "Research about algorithms, standards and capabilities of the hardware platforms we base our solutions on",
-            "Research about integration of potential solution concepts",
-            "Creating proof-of-concept software for given solution",
-            "Debugging software and hardware issues encountered during testing of the PoC and target solution",
-            "Unit tests, simulations and stress testing",
-            "Turning PoC solutions into production-grade version and integrating it with the existing products firmware",
-            "Analyzing capabilities and characteristics of new hardware platforms for future products",
-            "Creating custom software tools that are capable of performing tasks which already available tools cannot performed"
+            "Developing embedded C software for multi-core STM32 microcontrollers with FreeRTOS and Bare Metal approach",
+            "Creating and configuring custom tools including Bash scripts, Linux Docker containers, static code analyzer and code formatter",
         ],
         additionalActivities: [
             "Researching tools for streamlining software development process",
-            "Assisting with setting up Continuous Integration pipelines",
             "Researching and proposing improvements to existing development processes and tools",
             "Researching and proposing new approaches to software design and architecture, and code quality",
             "Spearheading introduction of code quality assurance tools and processes",
@@ -32,6 +24,7 @@ const experiences = [
             "Git",
             "CMake",
             "Linux",
+            "Bash",
             "CMock",
             "Clang tools (Clang-Tidy, Clang-Format)",
             "Arm-none-eabi toolchain",
@@ -53,19 +46,12 @@ const experiences = [
         startDate: "December 2022",
         endDate: "September 2025",
         responsibilities: [
-            "Developing new functionalities within the 5G RAN Control Plane layer",
-            "Creating unit test regression using GTest framework",
-            "Creating component level integration tests using TTCN3 language",
-            "Creating Acceptance Criteria in form of descriptions and UML sequence diagrams for component level testing, based on specification of the system",
-            "Participating in preparing technical requirements for new features",
-            "Upholding code quality of solutions made by my team and other teams",
-            "Troubleshooting errors encountered at entity, system or performance level testing, and reported by the client",
-            "Improving legacy code quality and robustness by refactoring, redesigning and side-effect/undefined-behavior-proofing existing code entities",
-            "creating technical reports and analysis during troubleshooting process, for cooperating with other teams, and archivisation purposes",
-            "Screening of upcomming features based on provided requirements, defining tasks they will consist of, their dependencies and estimating their complexity",
-            "Providing technical insight and technical feedback to support decision making process within the team and by management staff within my department",
-            "Providing technical answers, technical summaries and estimates for client team in regards to any client querries",
-            "Leading task-related kick-off meetings with teams that are being added to the task, or that a task is being transferred to",
+            "Development of 5G RAN C-Plane (L3) software in C++",
+            "Working with extensive proprietary documentation and public 3GPP standard",
+            "Serving as a designated code reviewer, aiding in keeping huge (1M+ lines of code) codebase secure, well structured and maintainable",
+            "Hands-on experience with Carrier Aggrregation (CA), Dual Connectivity (DC), Admission and Mobility functionalities in 5G RAN",
+            "Leading task-related kick-off mettings with other teams",
+            "Facilitating adressing of technical debt and issues within the project with all involved parties"
         ],
         additionalActivities: [
             "External code reviewer - designated member for reviewing code across multiple teams, ensuring code quality in a two-step reviewing process",
@@ -84,6 +70,7 @@ const experiences = [
             "UML, PlantUML",
             "Git, GitLab",
             "Linux",
+            "Bash",
             "SCTP Protocol",
             "3GPP-defined functionalities of 5G RAN Control Plane"
         ]
@@ -97,9 +84,8 @@ const experiences = [
         startDate: "October 2021",
         endDate: "February 2022",
         responsibilities: [
-            "Analysis of technical documentation regarding TI-RTOS middleware and accompanying Hardware Abstraction Layer (HAL)",
-            "Preparing technical documentation on using TI-RTOS and its HAL",
-            "Finding and analysing related technical documentation online"
+            "Functional analysis of TI-RTOS system available in the ROM memory of series CC1352 microcontrollers by Texas Instruments",
+            "Procuring technical manual for utilizing TI-RTOS"
         ],
         additionalActivities: [],
         technicalStack: [
@@ -118,24 +104,41 @@ const experiences = [
         startDate: "July 2021",
         endDate: "August 2021",
         responsibilities: [
-            "Development of the embedded layer of <a href=\"https://soloworkout.com/user/\" target=\"_blank\">SOLO&trade;</a> smart workout system",
-            "Developing software for ARM Cortex microcontrollers for STM32L4xxx and STM32L0xxx series",
-            "Manual testing of implemented solutions",
-            "Working with extensive microcontroller documentation by ST Microelectronics"
+            "Development of the embedded layer of <a href=\"https://soloworkout.com/user/\" target=\"_blank\">SOLO&trade;</a> smart workout ecosystem",
+            "Creating C++ software for STM32 microcontrollers",
+            "Manual testing of embedded solutions",
         ],
         additionalActivities: [],
         technicalStack: [
             "C++ (C++11/14)",
-            "C",
             "Make",
-            "STM32 ARM Cortex microcontrollers",
-            "STM32CubeProgrammer",
+            "Git",
+            "ARM Cortex",
             "FreeRTOS",
             "Serial Port communication",
             "DMA (Direct Memory Access)",
             "Linux",
             "Soldering",
             "Operating an oscilloscope"
+        ]
+    },
+    {
+        position: "Intern C++ Embedded Engineer",
+        company: "Heavy Kinematic Machines",
+        companyLink: "https://www.linkedin.com/company/heavykinematic/?originalSubdomain=pl",
+        city: "Zielona Góra",
+        country: "Poland",
+        startDate: "August 2020",
+        endDate: "September 2020",
+        responsibilities: [
+            "Developing C++ software for STM32 microcontrollers",
+            "Creating a debug mode using UART for signals from photo-sensors on STM32 platform"
+        ],
+        additionalActivities: [],
+        technicalStack: [
+            "C++ (C++11/14)",
+            "STM32 Microcontrollers",
+            "Git"
         ]
     }
 ]
