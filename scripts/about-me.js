@@ -168,26 +168,6 @@ function placeGitHubBlock() {
                 </div>
                 </a>
             </span>
-            <span class="flowing-container">
-                <a href="https://www.twitch.tv/thejourneymansguide" target="_blank">
-                    <img src="../pictures/twitch-svgrepo-com.svg" alt="Twitch Icon">
-                </a>
-                <a href="https://www.twitch.tv/thejourneymansguide" target="_blank">
-                <div class="flowing-container-text">
-                    <p>Twitch</p>
-                </div>
-                </a>
-            </span>
-            <span class="flowing-container">
-                <a href="https://www.youtube.com/@journeymansguide" target="_blank">
-                    <img src="../pictures/youtube-svgrepo-com.svg" alt="YouTube Icon">
-                </a>
-                <a href="https://www.youtube.com/@journeymansguide" target="_blank">
-                <div class="flowing-container-text">
-                    <p>YouTube</p>
-                </div>
-                </a>
-            </span>
         </div>
     </div>`;
 }
