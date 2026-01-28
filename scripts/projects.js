@@ -1,7 +1,7 @@
 const projects = [
     {
 	name: "CMock (from ThrowTheSwitch) - issue #490, PR #526",
-	logo: "",
+	logo: "../pictures/github-svgrepo-com.svg",
 	link: "https://github.com/ThrowTheSwitch/CMock/pull/526",
 	technicalStack: ["Bash", "Docker", "Git"],
 	features: [
