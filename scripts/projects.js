@@ -1,9 +1,21 @@
 const projects = [
     {
+	name: "CMock (from ThrowTheSwitch) - issue #490, PR #526",
+	logo: "",
+	link: "https://github.com/ThrowTheSwitch/CMock/pull/526",
+	technicalStack: ["Bash", "Docker", "Git"],
+	features: [
+	    "Docker environment for CMock developers with automatic setup of dependencies and repository cloning;",
+	    "Setup and managing scripts that allow ease of access;",
+	    "SSH-based, non-persistant credential loading for safe use;",
+	    "Automatic repository fork resolution based on github user email stored in local .env file;"
+	]
+    },
+    {
         name: "GraphCake",
         logo: "../pictures/graph_cake.svg",
         link: "https://github.com/KacperWojciechowski/GraphCake",
-        technicalStack: ["C++20", "GTest", "CMake"],
+        technicalStack: ["C++20", "GTest", "CMake", "Git"],
         features: [
             "Set of universal, interchangeable graph representations;",
             `Support for <a href="" target="_blank">House of Graphs</a> formats (<b>.mat</b>, <b>.lst</b>) and <b>.graphML</b> formats;`,
@@ -17,7 +29,7 @@ const projects = [
         name: "Road to the Center",
         logo: "../pictures/road_to_the_centre.svg",
         link: "https://github.com/KacperWojciechowski/RoadToTheCenter",
-        technicalStack: ["C++20", "GTest", "CMake"],
+        technicalStack: ["C++20", "GTest", "CMake", "Git"],
         features: [
             "Made during an amateur game jam between friends;",
             "A text-based economy game, where the goal is to travel to the center of the galaxy;",
@@ -29,7 +41,7 @@ const projects = [
         name: "Dungeon Crawler",
         logo: "../pictures/dungeon_crawler.svg",
         link: "https://github.com/KacperWojciechowski/DungeonCrawler",
-        technicalStack: ["Java 8, Maven"],
+        technicalStack: ["Java 8, Maven", "Git"],
         features: [
             "Text-based dungeon crawler game in a client-server model;",
             "The game state is controlled and validated by the server, while the client acts exclusively as a front-end;",
