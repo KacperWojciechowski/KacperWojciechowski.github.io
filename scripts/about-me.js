@@ -168,6 +168,16 @@ function placeGitHubBlock() {
                 </div>
                 </a>
             </span>
+	    <span class="flowing-container">
+	        <a href="https://github.com/KacperWojciechowski/KacperWojciechowski/blob/main/SelfDevelopment.md" target="_blank">
+		    <img src="../pictures/book-shelf-books-education-learning-school-study-svgrepo-com.svg" alt="Self-development icon">
+		</a>
+		<a href="https://github.com/KacperWojciechowski/KacperWojciechowski/blob/main/SelfDevelopment.md" target="_blank">
+		<div class="flowing-container-text">
+		    <p>Self-development</p>
+		</div>
+		</a>
+            </span>
         </div>
     </div>`;
 }
