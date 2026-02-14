@@ -6,6 +6,7 @@ const experiences = [
         city: "Katowice",
         country: "Poland",
         startDate: "March 2026",
+        endDate: "Ongoing",
         responsibilities: [
             "Developing software for Arista network equipment products",
             "Participating in technical documentation creation",
