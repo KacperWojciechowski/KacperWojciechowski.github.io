@@ -2,7 +2,7 @@ const programmingLanguages = {
     0: {
         0: {
             "C++": [
-                "Standards: 11, 14, 17, 20",
+                "Standards: 11-20",
                 "STL containers and algorithms",
                 "Concurrency - synchronization, multithreading",
                 "Memory alignment",
@@ -13,7 +13,10 @@ const programmingLanguages = {
                 "G++ compiler attributes",
                 "GTest - regular, parametrized and typed tests",
                 "Structured bindings",
-                "C++ Guidelines and good practices"
+                "Modules",
+                "Concepts",
+                "C++ Guidelines and good practices",
+                "Boost::MSM and Boost::ASIO"
             ],
             "C": [
                 "Standards: 98 (ANSI), 11",
@@ -45,13 +48,13 @@ const programmingLanguages = {
                 "Using and managing external libraries",
             ],
             "Bash": [
-                "Creating automatization scripts and small tools",
-                "Creating parametrized scripts",
-                "Creating scripts utilizing switches",
-                "Creating scripts operating on files and directories",
-                "Creating script-invoking commands using aliases",
-                "Using environment variables",
-                "Creating scripts for configuration of Docker-based environments"
+                "Automatization scripts and small tools",
+                "Parametrized scripts",
+                "Scripts utilizing switches",
+                "Scripts operating on files and directories",
+                "Script-invoking commands using aliases",
+                "Environment variables",
+                "Scripts for configuration of Docker-based environments"
             ]
         }
     }
@@ -59,62 +62,39 @@ const programmingLanguages = {
 
 const embedded = {
     0: {
-        "Real-time operating systems": {
-            "TI-RTOS": [
-                "Understanding of task scheduling and synchronization",
-                "Task priority, preemption and context switching",
-                "Managing task stack size",
-                "Handlers for interrupt routines and events such as task termination"
-            ],
-            "FreeRTOS": [
+        0: {
+            "Real-time operating systems": [
                 "Understanding of task scheduling and synchronization",
                 "Task priority, preemption and context switching",
                 "Managing task stack size",
                 "Handlers for interrupt routines and events such as task termination",
-                "ISR-based task triggering for processing data"
-            ]
-        },
-        "Microcontrollers": {
-            "STM32": [
-                "Utilizing HAL library for peripheral management",
-                "Configuring peripherals using MCU peripheral registers",
-                "Creating bare metal applications",
-                "Implementing communication using USART",
-                "Implementing ISR handling routines",
-                "Implementing PWM control for DC motors",
-                "Configuring DMA for data transfer with peripherals",
-                "Configuring LwIP routines",
-                "Utilizing GPIO for input and output",
+                "ISR-based task triggering for processing data",
+                "FreeRTOS",
+                "TI-RTOS"
+            ],
+            "Microcontrollers": [
+                "STM32 HAL library",
+                "MCU peripheral registers",
+                "Bare metal applications",
+                "USART",
+                "ISR",
+                "PWM control for DC motors",
+                "DMA for data transfer with peripherals",
+                "LwIP routines",
+                "GPIO",
                 "Resolving race conditions between application logic and peripheral interfaces",
                 "Synchronization and managing boot logic between cores of dual-core MCUs (STM32H7 series)",
-                "Working with linker scripts",
-                "Managing and updating FLASH memory",
+                "Linker scripts",
+                "Modifying FLASH memory",
                 "Debugging embedded applications using CPU registers and memory inspection",
-                "Working with STM32CubeMX and STM32CubeProgrammer",
-                "Creating mechanisms for switching between multiple applications on a single core"
+                "Switching between multiple applications on a single core"
             ],
-            "Arduino": [
-                "Utilizing GPIO for input and output",
-                "Implementing PWM control for DC motors",
-                "Implementing ISR handling routines",
-                "Implementing timer-based concurrency framework",
-                "Implementing communication using UART and I2C",
-            ]
-        },
-        "Hardware" : {
             "MCU parts and peripherals": [
                 "CPU internal registers",
                 "NOR-based FLASH memory",
                 "GPIO lines",
                 "USART serial communication peripheral",
                 "Clock configuration and management in embedded systems"
-            ],
-            "Components": [
-                "Working with DC and BLDC motors",
-                "Working with logic gates",
-                "Working with logic level converters",
-                "Working with external sensors utilizing I2C, UART and GPIO",
-                "Working with relays"
             ],
             "Tools": [
                 "Soldering components",
@@ -128,95 +108,59 @@ const embedded = {
 
 const tools = {
     0: {
-        "Operating systems": {
-            "Linux": [
-                "Managing files and directories using terminal",
-                "Creating symbolic links for files and directories",
-                "Practical experience with building projects in a Linux-based environment",
-                "Using Linux native tools for developing custom Bash scripts",
-                "Managing Linux packages using apt, yay and pacman",
-                "Hands-on experience with Ubuntu, EndevourOS (Arch Linux) and Garuda Linux (Arch Linux) distributions",
-                "Using SSH for remote server management",
+        0: {
+            "Operating systems": [
+                "Managing dependencies with Linux package managers (apt, yay, pacman)",
+                "Running Docker Linux-based containers on Windows and native Linux",
+                "Creating tailored Docker images for development and running tools",
+                "Working in remote environments over SSH",
+                "Resource management using symbolic links"
             ],
-            "Windows": [
-                "Hands-on experience with Windows systems starting from Windows XP up to Windows 11",
-                "Hands-on experience setting up, configuring and operating WSL2 with Ubuntu instance",
-                "Integrating Windows host OS with Docker Linux-based containers",    
-            ]
-        },
-        "Code analysis and quality": {
-            "Clang-format" : [
-                "Configuring Clang-format for tailored code formatting",
-                "Integrating Clang-format with Git hooks for automated formatting",
-                "Creating stand-alone scripts for formatting code bases in provided directories, with the ability to exclude specific files and folders",
+            "Code analysis and quality": [
+                "Creating tailored clang-format configurations",
+                "Making git hooks for automatic formatting of changed filles on commit",
+                "Making scripts generating a unit test configuration and docker-based environment for running them",
+                "Clang-format",
+                "Clang-tidy",
+                "Clangd"
+                "Checking backtrace with Gdb"
             ],
-            "Clang-tidy": [
-                "Configuring fine-tuned set of Clang-tidy checks",
-                "Creating stand-alone scripts for code analysis of repositories in provided directories, with the ability to exclude specific files and folders",
+            "Documentation": [
+                "Doxygen",
+                "Making technical documents using Markdown and PlantUML"
             ],
-            "Gdb": [
-                "Debugging C++ application crashes using Gdb and backtraces",
-            ]
-        },
-        "Documentation": {
-            "Generated": [
-                "Generating documentation using Doxygen based on in-code comments",
-            ],
-            "Hand-made": [
-                "Creating descriptive documentation using Markdown",
-                "Basic knowledge of AsciiDoc",
-                "Hands-on experience with creating and maintaining PlantUML diagrams",
-                "Hands-on experience with designing and analyzing UML flow diagrams"
-            ]
         },
     },
     1: {
-        "Version control systems": {
-            "Git": [
-                "Creating and managing repositories",
-                "Branching and merging strategies",
-                "Collaborating using pull requests",
-                "Managing conflicts and rebasing",
-                "Operating git-based web platforms such as GitHub, GitLab, BitBucket and Gerrit",
-                "Creating git hooks for automating code formatting and static analysis"
+        0: {
+            "Version control systems": [
+                "Creating, organizing and managing Git repositories and releases",
+                "Issue boards",
+                "Rebasing, solving merge conflicts, cherry-picking",
+                "Performing code review using Merge/Pull Requests",
+                "Git hooks",
+                "GitHub, GitLab, BitBucket, Gerrit",
+                "Fundamentals of Git LFS"
             ],
-            "Known Git-based repositories": [
-                "GitHub - Managing repositories, issues and pull requests",
-                "GitLab - Managing repositories, issues, issue boards, labels and pull requests",
-                "Gerrit - Managing changes, performing code review"
-            ]
-        },
-        "Build systems": {
-            "CMake": [
-                "Creating, building and maintaining projects based on CMake scripts",
+            "Build systems": [
+                "Executable and static library, library-based compilation using CMake",
+                "Configuration of Ceedling unit tests",
             ],
-            "Ceedling": [
-                "Configuration of Ceedling-based unit test projects",
-                "Detailed configuration of test binaries compilation flags and defines"
-            ]
-        },
-        
-        "AI assistants": {
-            "GitHub Copilot": [
-                "Hands-on experience with code design and refactoring using GitHub Copilot",
-                "Hands-on experience with accelerated troubleshooting with help of GitHub Copilot"
+            "AI assistants": [
+                "Accelerated research, PoC generation, assisted debugging using ChatGPT, GitHub Copilot, Google Gemini"
             ],
-        },
-        "Containers and virtualization": {
-            "Docker": [
-                "Configuring, building and maintaining Docker containers for development environments",
-                "Synchronizing environmental variables between host and Docker containers",
-                "Creating Dockerfiles for custom container images",
-                "Working with Docker volumes",
-                "Exchanging files between Docker container and the host OS",
-                "Optimizing configuration and updating process of Docker images and containers, using Docker volumes, Docker's layer mechanism, bash configuration scripts and environmental variables file"
-            ],
-            "WSL2": [
-                "Setting up and configuring WSL2 with Ubuntu instance",
-                "Integrating WSL2 with Windows host OS for seamless file sharing and command execution",
+            "Containers and virtualization": [
+                "Custom tailored Docker containers for running tools and applications",
+                "Custom tailored Docker development environments",
+                "Simplifying Docker configuration using Bash scripts",
+                "Optimizing build times using docker layers",
+                "Automatic init scripts",
+                "Docker volumes",
+                "Sourcing and propagating environment variables",
+                "Exchanging files between container and host OS",
+                "WSL2 fundamentals with Ubuntu"
             ]
         }
-        
     }
 };
     
@@ -224,49 +168,48 @@ const tools = {
 const knowhow = {
     0: { 
         0: {
-            "Software design": [
-                "Utilizing SOLID principles",
-                "Designing and implementing finite state machines",
-                "Utilizing design patterns",
-                "Familiarity with Clean Code principles",
-                "Hands-on experience with identifying and fixing side effects",
-                "Hands-on experience with refactoring legacy code",
-                "Hands-on experience with Test Driven Development",
-                "Hands-on experience with modular code design",
-                "Hands-on experience in leveraging OOP principles in C",
-                "Expertese in code review process and static code analysis",
-                "Designing modules and entities in software systems which ensure their own safety and reliability regardless of other system entities"
+            "Software design and architecture": [
+                "SOLID",
+                "Finite State Machines",
+                "Design patterns",
+                "Concurrent system design",
+                "Designing systems with asynchronous operations",
+                "Triangulating side effects",
+                "Legacy code refactoring",
+                "Modular design",
+                "Designing stateless components",
+                "Limiting resource visibility"
             ],
             "Digital circuits": [
                 "Designing circuits using logic gates and latches",
-                "Understanding of basics of software-hardware functional decomposition",
+                "Software-hardware functional decomposition",
+                "Logic function optimization"
             ],
             "Machine learning": [
-                "Understanding of shallow learning algorithms",
-                "Understanding of neural network models, such as FFNN, CNN and RNN",
-                "Experience with analyzing model quality metrics",
-                "Hands-on experience with preprocessing data for training",
-                "Slight experience with training models using TensorFlow",
-                "Slight experience with training models using Shark-ML, Shogun and DLib"
+                "Shallow learning",
+                "Feed-Forward, Convolutional and Recurrent Neural Networks",
+                "Loss functions and model quality metrics",
+                "Data preprocessing",
+                "Shark-ML, Shogun and DLib libraries in C++"
             ],
             "Graph theory": [
-                "Understanding of graph theory basics",
-                "Hands-on experience with implementing graph library in C++",
-                "Experience with solving problems such as finding shortest path, coloring, topological sort and traversing graphs with C++"
+                "Coloring algorithms",
+                "Shortest path algorithms",
+                "Topological sort, Critical Path Method"
             ],
             "Telecom": [
-                "Understanding of Carrier Aggregation functionality",
-                "Understanding of Dual Connectivity functionality",
-                "Understanding of 5G RAN architecture, including CU-DU split and CP-UP split",
-                "Understanding of SCTP protocol",
-                "Hands-on experience with troubleshooting and analyzing 5G RAN issues",
-                "Hands-on experience with utilizing 3GPP documentation"
+                "Carrier Aggregation",
+                "Dual Connectivity",
+                "Mobility",
+                "5G RAN architecture (CU-DU split, CP-UP split)"
+                "SCTP",
+                "Analyzing and troubleshooting 5G RAN systems",
+                "3GPP"
             ],
-            "Working with data": [
-                "Experience in designing organized data structures",
-                "Analyzing data using regexes",
-                "Working with binary data",
-                "Working with data of different endianness",
+            "Other": [
+                "Regex",
+                "Binary protocols",
+                "Endianess"
             ]
         }
     }
