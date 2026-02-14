@@ -1,7 +1,7 @@
 const projects = [
     {
         name: "Grimoire",
-        logo: "../pictures/grimoire.png",
+        logo: "../pictures/grimoire_png.png",
         link: "",
         technicalStack: ["C++23", "C", "CMake", "Unicorn", "ARM-Cortex", "GTest", "Git"],
         features: [
@@ -27,7 +27,7 @@ const projects = [
     },
     {
         name: "GraphCake",
-        logo: "../pictures/graph_cake.svg",
+        logo: "../pictures/cake_png.png",
         link: "https://github.com/KacperWojciechowski/GraphCake",
         technicalStack: ["C++20", "GTest", "CMake", "Git"],
         features: [
@@ -41,7 +41,7 @@ const projects = [
     },
     {
         name: "Road to the Center",
-        logo: "../pictures/road_to_the_centre.svg",
+        logo: "../pictures/galaxy_png.png",
         link: "https://github.com/KacperWojciechowski/RoadToTheCenter",
         technicalStack: ["C++20", "GTest", "CMake", "Git"],
         features: [
@@ -53,7 +53,7 @@ const projects = [
     },
     {
         name: "Dungeon Crawler",
-        logo: "../pictures/skeleton.png",
+        logo: "../pictures/skeleton_png.png",
         link: "https://github.com/KacperWojciechowski/DungeonCrawler",
         technicalStack: ["Java 8, Maven", "Git"],
         features: [
@@ -73,10 +73,10 @@ const projects = [
 function renderProject(project) {
     let out = `
     <div class="project-item">
-        <img class="project-logo desktop" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
+        <img class="project-logo desktop" src="${project["logo"]}" alt="${project["name"]} Logo" width="150" height="150">
         <div class="content">
             <div class="project-name-wrapper">
-            <img class="project-logo mobile" src="${project["logo"]}" alt="${project["name"]} Logo" width="100" height="100">
+            <img class="project-logo mobile" src="${project["logo"]}" alt="${project["name"]} Logo" width="150" height="150">
             <a style="text-decoration-color: white;" class="project-name" href="${project["link"]}" target="_blank">
                 <span class="label">
                     <img src="../pictures/circuit-left.png" alt="Circuit Icon"></img>
