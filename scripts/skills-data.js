@@ -146,9 +146,6 @@ const tools = {
                 "Executable and static library, library-based compilation using CMake",
                 "Configuration of Ceedling unit tests",
             ],
-            "AI assistants": [
-                "Accelerated research, PoC generation, assisted debugging using ChatGPT, GitHub Copilot, Google Gemini"
-            ],
             "Containers and virtualization": [
                 "Custom tailored Docker containers for running tools and applications",
                 "Custom tailored Docker development environments",
