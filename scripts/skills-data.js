@@ -1,6 +1,5 @@
 const programmingLanguages = {
     0: {
-        0: {
             "C++": [
                 "Standards: 11-20",
                 "STL containers and algorithms",
@@ -56,13 +55,11 @@ const programmingLanguages = {
                 "Environment variables",
                 "Scripts for configuration of Docker-based environments"
             ]
-        }
     }
 };
 
 const embedded = {
     0: {
-        0: {
             "Real-time operating systems": [
                 "Understanding of task scheduling and synchronization",
                 "Task priority, preemption and context switching",
@@ -102,13 +99,11 @@ const embedded = {
                 "Measuring power and component parameters using multimeter",
                 "Reading memory dumps from embedded devices using ST-Link programmer"
             ]
-        }
     }
 };
 
 const tools = {
     0: {
-        0: {
             "Operating systems": [
                 "Managing dependencies with Linux package managers (apt, yay, pacman)",
                 "Running Docker Linux-based containers on Windows and native Linux",
@@ -129,10 +124,8 @@ const tools = {
                 "Doxygen",
                 "Making technical documents using Markdown and PlantUML"
             ],
-        },
     },
     1: {
-        0: {
             "Version control systems": [
                 "Creating, organizing and managing Git repositories and releases",
                 "Issue boards",
@@ -160,14 +153,12 @@ const tools = {
                 "Exchanging files between container and host OS",
                 "WSL2 fundamentals with Ubuntu"
             ]
-        }
     }
 };
     
 
 const knowhow = {
     0: { 
-        0: {
             "Software design and architecture": [
                 "SOLID",
                 "Finite State Machines",
@@ -211,6 +202,5 @@ const knowhow = {
                 "Binary protocols",
                 "Endianess"
             ]
-        }
     }
 }
