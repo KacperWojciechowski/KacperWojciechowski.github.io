@@ -1,7 +1,7 @@
 const projects = [
     {
         name: "Grimoire",
-        logo: "",
+        logo: "../pictures/spellbook-svgrepo-com.svg",
         link: "",
         technicalStack: ["C++23", "C", "CMake", "Unicorn", "ARM-Cortex", "GTest", "Git"],
         features: [
@@ -15,7 +15,7 @@ const projects = [
     },
     {
 	    name: "CMock (from ThrowTheSwitch) - issue #490, PR #526",
-	    logo: "../pictures/github-svgrepo-com.svg",
+	    logo: "../pictures/github-code-source-svgrepo-com.svg",
 	    link: "https://github.com/ThrowTheSwitch/CMock/pull/526",
 	    technicalStack: ["Bash", "Docker", "Git"],
 	    features: [
