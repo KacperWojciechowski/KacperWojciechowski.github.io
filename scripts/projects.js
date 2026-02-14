@@ -6,7 +6,7 @@ const projects = [
         technicalStack: ["C++23", "C", "CMake", "Unicorn", "ARM-Cortex", "GTest", "Git"],
         features: [
             "Regression component tests for embedded firmware",
-            "Peripheral registers monitorring in tests",
+            "Peripheral registers monitoring in tests",
             "Interleaved, alternated and transactional asserts",
             "Microcontroller memory layout definitions",
             "Built-in matches and ability to make custom matchers",
