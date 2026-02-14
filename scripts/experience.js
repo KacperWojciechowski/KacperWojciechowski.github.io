@@ -1,12 +1,33 @@
 const experiences = [
     {
+        position: "Software Engineer",
+        company: "Arista Networks, Inc.",
+        companyLink: "https://www.arista.com/en/",
+        city: "Katowice",
+        country: "Poland",
+        startDate: "March 2026",
+        responsibilities: [
+            "Developing software for Arista network equipment products",
+            "Participating in technical documentation creation",
+            "Providing test coverage for created solutions"
+        ],
+        additionalActivities: [],
+        technicalStack: [
+            "C++",
+            "Linux",
+            "Git",
+            "Gdb",
+            "Bash"
+        ]
+    },
+    {
         position: "Embedded Software Engineer",
         company: "Hertz Systems Ltd.",
         companyLink: "https://www.hertzsystems.com/en/",
         city: "Zielona Góra",
         country: "Poland",
         startDate: "October 2025",
-        endDate: "Ongoing",
+        endDate: "February 2026",
         responsibilities: [
             "Developing embedded C software for multi-core STM32 microcontrollers with FreeRTOS and Bare Metal approach",
             "Creating and configuring custom tools including Bash scripts, Linux Docker containers, static code analyzer and code formatter",

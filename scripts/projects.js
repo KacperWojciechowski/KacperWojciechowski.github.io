@@ -1,15 +1,29 @@
 const projects = [
     {
-	name: "CMock (from ThrowTheSwitch) - issue #490, PR #526",
-	logo: "../pictures/github-svgrepo-com.svg",
-	link: "https://github.com/ThrowTheSwitch/CMock/pull/526",
-	technicalStack: ["Bash", "Docker", "Git"],
-	features: [
-	    "Docker environment for CMock developers with automatic setup of dependencies and repository cloning;",
-	    "Setup and managing scripts that allow ease of access;",
-	    "SSH-based, non-persistant credential loading for safe use;",
-	    "Automatic repository fork resolution based on github user email stored in local .env file;"
-	]
+        name: "Grimoire",
+        logo: "",
+        link: "",
+        technicalStack: ["C++23", "C", "CMake", "Unicorn", "ARM-Cortex", "GTest", "Git"],
+        features: [
+            "Regression component tests for embedded firmware",
+            "Peripheral registers monitorring in tests",
+            "Interleaved, alternated and transactional asserts",
+            "Microcontroller memory layout definitions",
+            "Built-in matches and ability to make custom matchers",
+            "GTest-inspired syntax"
+        ]
+    },
+    {
+	    name: "CMock (from ThrowTheSwitch) - issue #490, PR #526",
+	    logo: "../pictures/github-svgrepo-com.svg",
+	    link: "https://github.com/ThrowTheSwitch/CMock/pull/526",
+	    technicalStack: ["Bash", "Docker", "Git"],
+	    features: [
+	        "Docker environment for CMock developers with automatic setup of dependencies and repository cloning;",
+	        "Setup and managing scripts that allow ease of access;",
+	        "SSH-based, non-persistant credential loading for safe use;",
+	        "Automatic repository fork resolution based on github user email stored in local .env file;"
+	    ]   
     },
     {
         name: "GraphCake",
