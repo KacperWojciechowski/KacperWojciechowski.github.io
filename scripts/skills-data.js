@@ -122,7 +122,7 @@ const tools = {
                 "Making scripts generating a unit test configuration and docker-based environment for running them",
                 "Clang-format",
                 "Clang-tidy",
-                "Clangd"
+                "Clangd",
                 "Checking backtrace with Gdb"
             ],
             "Documentation": [
@@ -201,7 +201,7 @@ const knowhow = {
                 "Carrier Aggregation",
                 "Dual Connectivity",
                 "Mobility",
-                "5G RAN architecture (CU-DU split, CP-UP split)"
+                "5G RAN architecture (CU-DU split, CP-UP split)",
                 "SCTP",
                 "Analyzing and troubleshooting 5G RAN systems",
                 "3GPP"
