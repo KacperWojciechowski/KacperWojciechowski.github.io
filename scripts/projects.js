@@ -1,7 +1,7 @@
 const projects = [
     {
         name: "Grimoire",
-        logo: "../pictures/test_icon.svg",
+        logo: "../pictures/background_layer.svg",
         link: "",
         technicalStack: ["C++23", "C", "CMake", "Unicorn", "ARM-Cortex", "GTest", "Git"],
         features: [
@@ -53,7 +53,7 @@ const projects = [
     },
     {
         name: "Dungeon Crawler",
-        logo: "../pictures/dungeon_crawler.svg",
+        logo: "../pictures/background_skeleton.svg",
         link: "https://github.com/KacperWojciechowski/DungeonCrawler",
         technicalStack: ["Java 8, Maven", "Git"],
         features: [
