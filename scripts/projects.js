@@ -1,7 +1,7 @@
 const projects = [
     {
         name: "Grimoire",
-        logo: "../pictures/spellbook-svgrepo-com.svg",
+        logo: "../pictures/test_icon.svg",
         link: "",
         technicalStack: ["C++23", "C", "CMake", "Unicorn", "ARM-Cortex", "GTest", "Git"],
         features: [
